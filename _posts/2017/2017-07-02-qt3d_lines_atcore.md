@@ -1,10 +1,7 @@
 ---
 title: "QT3D, Lines and AtCore"
-image:
-    feature: "/assets/QT3DLines/cube.png"
-#    teaser: "/assets/QT3DLines/cube.png"
-#    image: "/assets/QT3DLines/cube.png"
-#    og_image: "/assets/QT3DLines/cube.png"
+header:
+    teaser: /assets/QT3DLines/cube.png
 tags:
     - AtCore
     - Atelier
