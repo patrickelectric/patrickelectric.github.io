@@ -1,6 +1,7 @@
 ---
 title: "[GSoC] KDev-Embedded, workflow integration"
-image: "/assetskdev_embedded_workflow/arduinowindow065.png"
+header:
+    teaser: /assets/kdev_embedded_workflow/arduinowindow065.png
 tags: [ "KDE", "Hardware", "Arduino", "ARM", "avrdude", "OpenOCD" ]
 ---
 
