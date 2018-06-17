@@ -1,6 +1,7 @@
 ---
 title: "FM with IQ Demodulation"
-image: "/assets/fm_demodulation/smiley1.jpg"
+header:
+    teaser: /assets/fm_demodulation/smiley1.jpg
 tags: [ "Radio", "FM", "Math", "Demodulation" ]
 ---
 
