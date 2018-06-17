@@ -1,6 +1,7 @@
 ---
 title: "The real tutorial for Galileo Gen 2 Board"
-image: "/assets/the_real_tutorial_for_galileo_gen_2_board/galileo-front-2x1-1038x576.jpg"
+header:
+    teaser: /assets/the_real_tutorial_for_galileo_gen_2_board/galileo-front-2x1-1038x576.jpg
 tags: [ "Intel", "Hardware", "Embedded", "Linux", "Tutorial", "Galileo" ]
 ---
 

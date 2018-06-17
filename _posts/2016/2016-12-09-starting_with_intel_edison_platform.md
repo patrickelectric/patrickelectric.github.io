@@ -1,6 +1,7 @@
 ---
 title: "Starting with Intel® Edison Platform"
-image: "/assets/starting_with_intel_edison_platform/Intel_Edison_with_stamp_nr.jpg"
+header:
+    teaser: /assets/starting_with_intel_edison_platform/Intel_Edison_with_stamp_nr.jpg
 tags: [ "Intel", "Hardware", "Embedded", "Linux", "Tutorial", "Edison" ]
 ---
 
