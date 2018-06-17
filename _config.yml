@@ -86,6 +86,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - _includes
   - assets
 exclude:
   - "*.ignore-this"
