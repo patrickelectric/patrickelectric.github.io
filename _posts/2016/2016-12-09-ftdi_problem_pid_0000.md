@@ -1,6 +1,7 @@
 ---
 title: "FTDI problem: PID 0000"
-image: "/assets/ftdi_problem_pid_0000/arduino-ftdi-vignette1-e1428432287781-1038x576.jpg"
+header:
+    teaser: /assets/ftdi_problem_pid_0000/arduino-ftdi-vignette1-e1428432287781-1038x576.jpg
 tags: [ "FTDI", "Hardware", "ft232r", "eeprom", "USB" ]
 ---
 
