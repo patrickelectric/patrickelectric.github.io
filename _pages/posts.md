@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Posts"
-permalink: /posts/
+permalink: /
 author_profile: true
 ---
 {% include base_path %}
@@ -14,5 +14,5 @@ author_profile: true
 <h2 id="{{ year | slugify }}" class="archive_subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+  {% include archive-i-single.html %}
 {% endfor %}
