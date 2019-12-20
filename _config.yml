@@ -203,4 +203,8 @@ defaults:
       share: true
       related: true
 
+feed:
+  categories:
+    - KDE
+
 remote_theme: "mmistakes/minimal-mistakes"
