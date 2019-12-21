@@ -8,6 +8,8 @@ header = "/assets/ftdi_problem_pid_0000/arduino-ftdi-vignette1-e1428432287781-10
 
 On 29 September 2014, FTDI released an updated version of their USB-to-Serial driver, It was reported by some users that the updated can brick some fake FTDIs chips, by changing their ID to 0000\. After some time, the windows update the version of the drive, now this problem is happening a lot in the last days.
 
+<!-- more -->
+
 # Solving the problem
 
 1.  Use a linux machine (Ubuntu, mint and etc)

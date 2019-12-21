@@ -8,6 +8,8 @@ header = "/assets/the_real_tutorial_for_galileo_gen_2_board/galileo-front-2x1-10
 
 Some of the tutorials on the internet are outdated, and cause a lot of problems to start on the develop of the Galileo Gen 2 Board, to solve this, we will explain what you'll need to do to make the best setup possible.
 
+<!-- more -->
+
 1.  Test tour board.
     Make a simple test, take a FTDI cable.
 

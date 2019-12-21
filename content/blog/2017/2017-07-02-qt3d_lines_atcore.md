@@ -8,6 +8,8 @@ header = "/assets/QT3DLines/cube.png"
 
 After some time working with Qt3D, now Atelier project is one step closer to have a 3D viewer from the GCode and a realtime draw of printer work.
 
+<!-- more -->
+
 ![3D draw with lines](/assets/QT3DLines/atcore.gif)
 
 To know how Qt3D works, you can take a look in this [overview](https://doc.qt.io/qt-5/qt3d-overview.html). Where, working with 3D lines was a bit problematic, but I hope to help someone with this job.

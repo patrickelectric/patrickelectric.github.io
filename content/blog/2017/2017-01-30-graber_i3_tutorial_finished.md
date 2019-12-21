@@ -6,6 +6,8 @@ tags = [ "Graber", "3D Printing", "DIY", "3D", "Printer" ]
 
 **3D printing**, also known as **additive manufacturing (AM)**, refers to various processes used to synthesize a [three-dimensional](https://en.wikipedia.org/wiki/Three-dimensional_space) object.<sup id="cite_ref-engineer_1-0" class="reference">[[1]](https://en.wikipedia.org/wiki/3D_printing#cite_note-engineer-1)</sup> In 3D printing, successive layers of material are formed under computer control to create an object.
 
+<!-- more -->
+
 These objects can be of almost any shape or geometry, and are produced from a [3D model](https://en.wikipedia.org/wiki/3D_modeling "3D modeling") or other electronic data source. A 3D [printer](https://en.wikipedia.org/wiki/Printer_(computing) "Printer (computing)") is a type of [industrial robot](https://en.wikipedia.org/wiki/Industrial_robot "Industrial robot").
 
 After this Wikipedia preview we can start work !

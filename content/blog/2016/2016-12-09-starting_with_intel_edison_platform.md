@@ -11,6 +11,8 @@ The Edison Platform is a little computer with all necessary system and hardware 
 
 As we see the Edson board is an x86-32 architecture, 4 gigabytes to store our files, 1 gigabyte of ram to execute our applications, 2 processing cores to allow the development of parallel programs. this is a development platform with higher performance compared to Respaberry Pi  and 1/40 of its volume.
 
+<!-- more -->
+
 # Starting
 
 You will need two  USBs ([micro B](http://www.usbfirewire.com/usb_cables_a_to_micro-b_non-angled_67.html)), one is for serial communication and the other is for power, ethernet, arduino upload and storage device.

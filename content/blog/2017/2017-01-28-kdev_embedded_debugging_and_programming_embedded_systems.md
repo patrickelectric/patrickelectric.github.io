@@ -8,6 +8,8 @@ The actual embedded system word depends on closed-source IDEs and libraries, wit
 
 The main idea of this project is to provide a plugin integrated with KDevelop to help the debugging and programming process of embedded systems like AVR, ARM and x86 based boards.
 
+<!-- more -->
+
 Since 2011, starting with my electronic engineering graduation the contact with embedded system begun with PIC and ATMEL uC. In 2012 I was accepted in the ROBOTA (competition D&R team) and the ProVANT (Project and Development of UAV in the tilt-rotor configuration), both project working with hardware and software integration.
 
 The development on ProVANT project showed how difficult can be to program an embedded system without using closed source software, It's hard to find a descent IDE to develop in such area, ever harder to do it with open-source programs and tools.

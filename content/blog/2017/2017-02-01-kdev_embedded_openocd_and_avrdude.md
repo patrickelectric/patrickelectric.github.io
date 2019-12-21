@@ -8,6 +8,8 @@ KDev-Embedded  now have OpenOCD integration and a new interface to use avrdude i
 
 With [Arduino-Makefile](https://github.com/sudar/Arduino-Makefile), it's possible to use a makefile to perform compilation of Arduino projects. In the video one the the examples are used to shows how it is possible to use the new avrdude launcher to execute the upload process.
 
+<!-- more -->
+
 <video width="640" height="360" controls>
   	<source src="/assets/kdev_embedded_openocd/arduino1.mp4" type="video/mp4">
 </video>

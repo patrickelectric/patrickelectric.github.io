@@ -13,6 +13,8 @@ Gtreamer is a great tool for everything that need to deal with video transmissio
 - A RTSP server
 - And etc..
 
+<!-- more -->
+
 ![stereo](/assets/gstreamer/stereo.gif)
 
 # Testing 1 2 4, Testing !

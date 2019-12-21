@@ -90,9 +90,9 @@
                           </a>
                         </h1>
                         <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-                        {% if page.raw_content %}
-                        <p>{{ page.raw_content }}</p>
-                        {% endif %}
+
+                        {{ page.summary | safe }} <a href="{{ page.permalink }}#continue-reading">Continue Reading</a>
+
                         {% if page.extra.header %}
                           <div>
                             <img class="banner" src={{ page.extra.header }}>

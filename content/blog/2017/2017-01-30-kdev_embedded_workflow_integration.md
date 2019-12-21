@@ -8,6 +8,8 @@ header = "/assets/kdev_embedded_workflow/arduinowindow065.png"
 
 After some work in the plugin development, now the project have a strong focus in a better integration with KDevelop workflow. Until now the Board Configuration window have some simple features to perform the upload process for beginner users, it's called by the _**embedded**_ submenu in the KDevelop toolbar.
 
+<!-- more -->
+
 <figcaption class="wp-caption-text">Welcome message</figcaption>
 
 ![arduinowindow063](/assets/kdev_embedded_workflow/arduinowindow063.png)

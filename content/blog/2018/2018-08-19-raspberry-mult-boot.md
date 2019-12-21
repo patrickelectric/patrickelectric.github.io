@@ -10,6 +10,8 @@ One question that I receive (from my friends, myself and people that install arc
 
 After a boring day doing some unrelated stuff out of home, and with 1h free to do something before sleep and eating (heating my frozen lasagna), why not solving that ~~secular~~ question that follow me ?
 
+<!-- more -->
+
 I took some time to think about it: [maybe doing something related to the archlinux boot section](https://wiki.archlinux.org/index.php/Category:Boot_loaders), or with [noobs](https://github.com/raspberrypi/noobs), and maybe with [BerryBoot](https://www.berryterminal.com/doku.php/berryboot).
 
 With 1h-ish free I did remove all non-trivial ways.
