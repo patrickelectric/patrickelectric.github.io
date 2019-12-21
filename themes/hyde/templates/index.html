@@ -82,7 +82,7 @@
         <div class="content container">
             {% block content %}
                 <div class="posts">
-                    {% for page in content.orphan_pages | reverse %}
+                    {% for page in section.pages | reverse %}
                       <div class="post">
                         <h1 class="post-title">
                           <a href="{{ page.permalink }}">
