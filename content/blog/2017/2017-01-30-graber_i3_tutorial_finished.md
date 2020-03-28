@@ -242,3 +242,30 @@ After some time in Campinas-SP (Brazil) doing my internship on Intel, doing some
 Willian ([The guy with the cool blog in the top header](http://galvanicloop.com/)) was working with his own 3d printer and have done a extruder to me (You can see the photos below). After one day wiring the things and some tests, the printer is alive !
 
 To make your printer a cool IoT device, add a respberry with Arch linus, wi-fi adapter and [Octoprint](http://octoprint.org/) to print and view the progress in your browser in computer or cellphone.
+
+
+# Update [03/2020]
+I lost a bunch of photos from my old printer in my old server, here you can check a bunch of photos that I got from some friends from my printer.
+
+![](/assets/graber/0.jpg)
+![](/assets/graber/1.jpg)
+![](/assets/graber/2.jpg)
+![](/assets/graber/3.jpg)
+![](/assets/graber/4.jpg)
+![](/assets/graber/5.jpg)
+![](/assets/graber/6.jpg)
+![](/assets/graber/7.jpg)
+![](/assets/graber/8.jpg)
+![](/assets/graber/9.jpg)
+![](/assets/graber/10.jpg)
+![](/assets/graber/11.jpg)
+![](/assets/graber/12.jpg)
+![](/assets/graber/13.jpg)
+![](/assets/graber/14.jpg)
+![](/assets/graber/15.jpg)
+![](/assets/graber/16.jpg)
+![](/assets/graber/17.jpg)
+![](/assets/graber/18.jpg)
+![](/assets/graber/19.jpg)
+![](/assets/graber/20.jpg)
+![](/assets/graber/21.jpg)
