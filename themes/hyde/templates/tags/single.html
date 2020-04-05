@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="taxonomy">
-        <h2>{{ term.name }}</h2>
+        <h2>{{ term.name }} <a href="{{ current_url }}rss"> RSS </a> </h2>
         {% for page in term.pages %}
             <div class="taxonomy__item">
                 <span class="taxonomy__item__time">{{ page.date | date(format="%F") }}</span>
