@@ -7,10 +7,10 @@
         </div>
         <div class="taxonomies__items">
             {% for category in terms %}
-                <a href="{{ category.permalink }}">
+                <li><a href="{{ category.permalink }}">
                     {{ category.name }}
-                    <span class="count">{{ category.pages | length }}</span>
-                </a>
+                    <span class="count">| {{ category.pages | length }}</span>
+                </a> </li>
             {% endfor %}
         </div>
     </div>
