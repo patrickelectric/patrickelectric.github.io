@@ -1,7 +1,7 @@
 +++
 title = "FTDI problem: PID 0000"
 [taxonomies]
-tags = [ "FTDI", "Hardware", "ft232r", "eeprom", "USB" ]
+tags = [ "ftdi", "hardware", "ft232r", "eeprom", "usb" ]
 [extra]
 header = "/assets/ftdi_problem_pid_0000/arduino-ftdi-vignette1-e1428432287781-1038x576.jpg"
 +++

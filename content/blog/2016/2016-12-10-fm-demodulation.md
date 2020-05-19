@@ -1,7 +1,7 @@
 +++
 title = "FM with IQ Demodulation"
 [taxonomies]
-tags = [ "Radio", "FM", "Math", "Demodulation" ]
+tags = [ "radio", "fm", "math", "demodulation" ]
 [extra]
 header = "/assets/fm_demodulation/smiley1.jpg"
 +++

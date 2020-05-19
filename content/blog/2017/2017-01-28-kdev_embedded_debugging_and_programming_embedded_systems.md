@@ -1,7 +1,7 @@
 +++
 title = "[GSoC] KDev-Embedded, Debugging and programming embedded systems"
 [taxonomies]
-tags = [ "KDE", "Hardware", "Arduino", "ARM", "avrdude", "OpenOCD" ]
+tags = [ "kde", "hardware", "arduino", "arm", "avrdude", "openocd" ]
 +++
 
 The actual embedded system word depends on closed-source IDEs and libraries, with high monetary value and deprecated functionalities. Programmers that would like to use ARM based boards without paying for an IDE will have problems setting up such development ambient and synchronized toolkits.

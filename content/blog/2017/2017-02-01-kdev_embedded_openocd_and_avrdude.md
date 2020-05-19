@@ -1,7 +1,7 @@
 +++
 title = "[GSoC] KDev-Embedded, OpenOCD and avrdude"
 [taxonomies]
-tags = [ "KDE", "Hardware", "Arduino", "ARM", "avrdude", "OpenOCD" ]
+tags = [ "kde", "hardware", "arduino", "arm", "avrdude", "openocd" ]
 +++
 
 KDev-Embedded  now have OpenOCD integration and a new interface to use avrdude in launcher.

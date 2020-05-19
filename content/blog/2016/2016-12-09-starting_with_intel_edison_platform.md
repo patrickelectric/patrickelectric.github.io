@@ -1,7 +1,7 @@
 +++
 title = "Starting with Intel® Edison Platform"
 [taxonomies]
-tags = [ "Intel", "Hardware", "Embedded", "Linux", "Tutorial", "Edison" ]
+tags = [ "intel", "hardware", "embedded", "linux", "tutorial", "edison" ]
 [extra]
 header = "/assets/starting_with_intel_edison_platform/Intel_Edison_with_stamp_nr.jpg"
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Graber i3 Tutorial - Finished !"
 [taxonomies]
-tags = [ "Graber", "3D Printing", "DIY", "3D", "Printer" ]
+tags = [ "graber", "diy", "3d", "printer" ]
 +++
 
 **3D printing**, also known as **additive manufacturing (AM)**, refers to various processes used to synthesize a [three-dimensional](https://en.wikipedia.org/wiki/Three-dimensional_space) object.<sup id="cite_ref-engineer_1-0" class="reference">[[1]](https://en.wikipedia.org/wiki/3D_printing#cite_note-engineer-1)</sup> In 3D printing, successive layers of material are formed under computer control to create an object.

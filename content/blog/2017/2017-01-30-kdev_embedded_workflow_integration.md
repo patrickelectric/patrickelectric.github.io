@@ -1,7 +1,7 @@
 +++
 title = "[GSoC] KDev-Embedded, workflow integration"
 [taxonomies]
-tags = [ "KDE", "Hardware", "Arduino", "ARM", "avrdude", "OpenOCD" ]
+tags = [ "kde", "hardware", "arduino", "arm", "avrdude", "openocd" ]
 [extra]
 header = "/assets/kdev_embedded_workflow/arduinowindow065.png"
 +++

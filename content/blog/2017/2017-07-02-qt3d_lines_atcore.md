@@ -1,7 +1,7 @@
 +++
 title = "QT3D, Lines and AtCore"
 [taxonomies]
-tags = ["AtCore", "Atelier", "KDE", "QT3D"]
+tags = ["atcore", "atelier", "kde", "qt3d"]
 [extra]
 header = "/assets/QT3DLines/cube.png"
 +++

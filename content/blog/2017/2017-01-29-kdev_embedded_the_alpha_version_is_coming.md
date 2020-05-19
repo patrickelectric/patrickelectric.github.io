@@ -1,7 +1,7 @@
 +++
 title = "[GSoC] KDev-Embedded, The alpha version is coming !"
 [taxonomies]
-tags = [ "KDE", "Hardware", "Arduino", "ARM", "avrdude", "OpenOCD" ]
+tags = [ "kde", "hardware", "arduino", "arm", "avrdude", "openocd" ]
 [extra]
 header = "/assets/kdev_embedded_the_alpha/Selection_024.png"
 +++
