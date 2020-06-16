@@ -10,6 +10,8 @@ A quick update, QML Online now has a new home!
 - Website: [qmlonline.kde.org](http://qmlonline.kde.org/)
 - Repository: [invent.kde.org/webapps/qmlonline](https://invent.kde.org/webapps/qmlonline)
 
+<!-- more -->
+
 # What is next
 
 Now that the project is under KDE organization, I'll start with the planned new capabilities, such as the Kirigami support and the html element to help with online documentation of qml snippets.
