@@ -1,7 +1,7 @@
 +++
 title = 'QML Online - A new home!'
 [taxonomies]
-tags = [ "KDE", "qml", "qt", "webasm", "web", "internet", "online" ]
+tags = [ "kde", "qml", "qt", "webasm", "web", "internet", "online" ]
 [extra]
 header = "/assets/qmlonline_new_home/banner.png"
 +++
