@@ -1,6 +1,6 @@
 +++
 title = 'QML Online - Can be everywhere!'
-date = 2020-08-01T15:55:39z
+date = 2020-08-03T18:59:39z
 [taxonomies]
 tags = [ "kde", "qml", "qt", "webasm", "web", "internet" ]
 [extra]
