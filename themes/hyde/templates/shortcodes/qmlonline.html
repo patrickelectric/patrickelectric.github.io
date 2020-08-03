@@ -1,0 +1,26 @@
+```js
+{{ body | safe}}
+```
+
+<!--
+<script type="text/javascript" src="https://qmlonline.kde.org/qtloader.js"></script>
+<script type="text/javascript" src="https://qmlonline.kde.org/qml.js"></script>
+-->
+
+<div id="{{name}}"></div>
+
+<script type='text/javascript'>
+    const {{name}} = new QmlOnline("{{name}}")
+    {{name}}.registerCall({
+        qmlMessage: function(msg) {
+            console.log(`qml message: ${msg}`)
+        },
+        qmlError: function(data) {
+            console.log(`qml message: ${JSON.stringify(msg)}`)
+        },
+        posInit: function() {
+            {{name}}.setCode(`{{ body | safe}}`)
+        },
+    })
+    {{name}}.init()
+</script>
