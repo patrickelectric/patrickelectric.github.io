@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Patrick José Pereira</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                          <a href="https:&#x2F;&#x2F;patrickelectric.work"><h2>HOME</h2></a>
+                            <div class="avatar"> <img src="https://avatars3.githubusercontent.com/patrickelectric" alt="Patrick José Pereira" itemprop="image"> </div>
+                            <h6>Patrick José Pereira</h6>
+                            
+                            <p class="lead">I am an Electronics Engineer that works with robotic systems, OSS and OSH.</p>
+                            <div class="author__urls-wrapper">
+                              <!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+                              <!-- Place this tag where you want the button to render. -->
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/patrickelectric" data-show-count="true" aria-label="Follow @patrickelectric on GitHub">Follow @patrickelectric</a>
+                              <ul class="author__urls social-icons">
+
+                                  <li itemprop="homeLocation" itemscope="" itemtype="http://schema.org/Place">
+                                    <i class="fas fa-map-marker-alt"></i> Brazil
+                                  </li>
+                                  <li>
+                                    <a href="mailto:patrickjp@kde.org">
+                                      <meta itemprop="email" content="patrickjp@kde.org">
+                                      <i class="fas fa-envelope-square"></i> Email
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://github.com/patrickelectric">
+                                      <i class="fab fa-github-square"></i> GitHub
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://www.linkedin.com/in/patrickelectric/">
+                                      <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">QML Online - First stable version!</h1>
+  <span class="post-date">2020-05-20</span>
+  <h3 class="post-tags">[
+  
+  <a href="/tags/kde">kde</a>
+  
+  <a href="/tags/qml">qml</a>
+  
+  <a href="/tags/qt">qt</a>
+  
+  <a href="/tags/webasm">webasm</a>
+  
+  <a href="/tags/web">web</a>
+  
+  <a href="/tags/internet">internet</a>
+  
+  <a href="/tags/online">online</a>
+  
+  ]</h3>
+  <p>Finally, after working since October and learning a bunch about <a href="https://webassembly.org/">WebAssembly</a>, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>, <a href="https://wikipedia.org/wiki/HTML">HTML</a> (sad, right ?) and <a href="https://emscripten.org/">emscripten</a>, I can happily announce a stable version of <a href="https://patrickelectric.work/qmlonline/">qmlonline</a>!
+In this post, I'm going to show the idea behind the project and some code that may help you with your future adventures.</p>
+<span id="continue-reading"></span><h1 id="the-initial-steps">The initial steps</h1>
+<p>Everything starts with <a href="https://github.com/patrickelectric/qhot">QHot</a>, that I describe as <em>&quot;Hot reload for nested QML files&quot;</em>, a useful tool for anyone that likes to prototype UI elements or ideas with a real-time feedback of what you are typing in QML. I noticed that compiling the project or recalling qml/qmlscene tools just to test and check my ideas was pretty annoying and time-consuming, the desire to have something like <a href="https://godbolt.org/">godbolt</a> or <a href="http://quick-bench.com/">quick-bench</a> started growing. My objective was something that was closer to these tools but for QML development, and that is how <strong>QHot</strong> was born.</p>
+<p><img src="https://raw.githubusercontent.com/patrickelectric/qhot/master/doc/example.gif" alt="image" /></p>
+<p>With QHot working, I started to add some small features in the command line interface to have mostly of the functionalities that exist in qml/qmlscene, at least the most important ones for my use.</p>
+<p>After some days, the idea of <strong>QHot</strong> working in the browser via webassembly started to grow, and with that, the initial work that would result in <strong>qmlonline</strong>.</p>
+<h1 id="journey">Journey</h1>
+<p>After some tweaks around <strong>QHot</strong>, it was possible to have the first version of qmlonline working.
+The initial version was entirely made with QML, without HTML components, the editor was a <a href="https://doc.qt.io/qt-5/qml-qtquick-textedit.html">TextEdit</a> with a fancy <a href="https://doc.qt.io/qt-5/qsyntaxhighlighter.html">QSyntaxHighlighter</a>. The text inside the <strong>TextEdit</strong> was used to create a new component with <a href="https://doc.qt.io/qt-5/qml-qtqml-qt.html#createQmlObject-method">Qt.createQmlObject</a>.</p>
+<p><img src="/assets/qmlonline-first-version/full-qml.png" alt="image" /></p>
+<p>With the initial version working, I started to move the interface to HTML, this was necessary to have a better shortcut handling system and a better integration with the browser for user inputs.</p>
+<p>The code evolved from a simple <strong>TextEdit</strong> with some controls to a full HTML interface, for that, functions had to be imlpemented to help with the webassembly code to be accessible from the webpage.</p>
+<p>From the beginning, I had an initial singleton class called <strong>Util</strong> that was conceived to be some kind of helper class for the QML code. This same class was used to create the interface between the JS and the webassembly via emscripten.</p>
+<p>In general, two functions were created, <code>std::string Util::codeEMS() const</code> that returns the code that is being used in the QML to render the user component, and <code>void Util::setCodeEMS(const std::string&amp; code)</code> that sets the code that should be rendered.
+To access both functions and the class, <a href="https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html">EMSCRIPTEN_BINDINGS</a> were used.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#b48ead;">#include </span><span style="color:#c0c5ce;">&lt;</span><span style="color:#a3be8c;">emscripten/bind.h</span><span style="color:#c0c5ce;">&gt;
+
+</span><span style="color:#bf616a;">EMSCRIPTEN_BINDINGS</span><span style="color:#c0c5ce;">(util) {
+    emscripten::</span><span style="color:#bf616a;">class_</span><span style="color:#c0c5ce;">&lt;Util&gt;(&quot;</span><span style="color:#a3be8c;">Util</span><span style="color:#c0c5ce;">&quot;)
+        .</span><span style="color:#bf616a;">function</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">code</span><span style="color:#c0c5ce;">&quot;, &amp;Util::codeEMS)
+        .</span><span style="color:#bf616a;">function</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">setCode</span><span style="color:#c0c5ce;">&quot;, &amp;Util::setCodeEMS);
+    </span><span style="color:#bf616a;">emscripten::function</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">self</span><span style="color:#c0c5ce;">&quot;, &amp;Util::self, </span><span style="color:#bf616a;">emscripten::allow_raw_pointers</span><span style="color:#c0c5ce;">());
+}
+</span></pre>
+<p>That's probably the most important piece of code to do the integration between the C++ and JS.</p>
+<p>And for the QML, well, you can check all QML here:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">...
+</span><span style="color:#bf616a;">import Util </span><span style="color:#d08770;">1.0
+
+</span><span style="color:#bf616a;">ApplicationWindow </span><span style="color:#c0c5ce;">{
+    id: window
+    title: &quot;</span><span style="color:#a3be8c;">qmlonline</span><span style="color:#c0c5ce;">&quot;
+    visible: </span><span style="color:#d08770;">true
+
+    </span><span style="color:#bf616a;">Connections </span><span style="color:#c0c5ce;">{
+        target: </span><span style="color:#bf616a;">Util
+        </span><span style="color:#c0c5ce;">onCodeChanged: </span><span style="color:#bf616a;">userParentItem</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">create</span><span style="color:#c0c5ce;">(</span><span style="color:#ebcb8b;">Util</span><span style="color:#c0c5ce;">.code)
+    }
+
+    </span><span style="color:#bf616a;">Item </span><span style="color:#c0c5ce;">{
+        id: </span><span style="color:#bf616a;">userParentItem
+        anchors</span><span style="color:#c0c5ce;">.fill: </span><span style="color:#bf616a;">parent
+        property </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">userItem</span><span style="color:#c0c5ce;">: </span><span style="color:#d08770;">null
+
+        </span><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">create</span><span style="color:#c0c5ce;">(textComponent) {
+            </span><span style="color:#b48ead;">if</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">userItem</span><span style="color:#c0c5ce;">) {
+                </span><span style="color:#bf616a;">userItem</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">destroy</span><span style="color:#c0c5ce;">()
+            }
+            </span><span style="color:#bf616a;">userItem </span><span style="color:#c0c5ce;">= </span><span style="color:#ebcb8b;">Qt</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">createQmlObject</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">textComponent</span><span style="color:#c0c5ce;">, </span><span style="color:#bf616a;">userParentItem</span><span style="color:#c0c5ce;">, &quot;</span><span style="color:#a3be8c;">userItem</span><span style="color:#c0c5ce;">&quot;)
+        }
+
+        </span><span style="color:#ebcb8b;">Component</span><span style="color:#c0c5ce;">.onCompleted: </span><span style="color:#bf616a;">userParentItem</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">create</span><span style="color:#c0c5ce;">(</span><span style="color:#ebcb8b;">Util</span><span style="color:#c0c5ce;">.code)
+    }
+}
+</span></pre>
+<p>Oh, <a href="https://github.com/patrickelectric/qmlonline/blob/71342f68f5f99dcf9c2b69051b63ea2e83010ca8/src/util.cpp">you can check the source code here</a>.</p>
+<p>To build the project, I changed my approach a couple of times.
+For the first test version, I did my development based in the official documents for <a href="https://doc.qt.io/qt-5/wasm.html">Qt webassembly</a>. But, compiling Qt for each machine that I use was a bit of a pain, so I started to use a docker available from this <a href="https://www.qt.io/blog/2019/03/05/using-docker-test-qt-webassembly">Qt blog post</a>.
+And everything was great until newer versions of Qt and emscript were released, and after some time searching, I found this great <a href="https://hub.docker.com/r/madmanfred/qt-webassembly/tags">repository/developer</a> with a couple of Qt containers for webassembly and different emscript versions.</p>
+<p>And after building the project, you can always test it with <code>python3 -m http.server</code>.</p>
+<h1 id="where-i-am">Where I am</h1>
+<p><img src="/assets/qmlonline-first-version/final-version.gif" alt="image" /></p>
+<p>As you can see from the gif, the basic functionality is still the same from the original version, that was full QML.</p>
+<p>The user experience has improved, the interface is now much smoother compared to the full QML version. Qt webassembly is great, but from my tests, the performance was not good and the browser/system integration needs improvement to have the same functionality as a normal webpage or application.</p>
+<p>Again, remember to check <a href="https://patrickelectric.work/qmlonline/">qmlonline</a> in your browser :)</p>
+<p>If you have good QML examples and wish to add those, contact me via email, or create an issue in the <a href="https://github.com/patrickelectric/qmlonline">repository</a>, or send a PR, <a href="https://github.com/patrickelectric/qmlonline/tree/gh-pages/qml/examples">it's really simple</a>.</p>
+<h1 id="what-i-m-working-on">What I'm working on</h1>
+<p>There is a couple of things that I'm still working to improve qmlonline:</p>
+<ul>
+<li>Kirigami support</li>
+<li><a href="https://github.com/ajaxorg/ace/pulls?q=author%3Apatrickelectric+">Better ace editor integration with QML</a></li>
+<li>A qmlonline element to integrate with websites like Qt/KDE website documents</li>
+<li>Start to move qmlonline to be a KDE project</li>
+</ul>
+<p>Any feature request will be much welcome!</p>
+<h1 id="thanks">Thanks!</h1>
+<p>Special thanks to Arthur Turrini, everybody in <a href="https://t.me/qtbrasil">Qt Brasil telegram channel</a> and the KDE members, the project would not be possible without the help and inspiration provided by the developers.</p>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Patrick José Pereira</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                          <a href="https:&#x2F;&#x2F;patrickelectric.work"><h2>HOME</h2></a>
+                            <div class="avatar"> <img src="https://avatars3.githubusercontent.com/patrickelectric" alt="Patrick José Pereira" itemprop="image"> </div>
+                            <h6>Patrick José Pereira</h6>
+                            
+                            <p class="lead">I am an Electronics Engineer that works with robotic systems, OSS and OSH.</p>
+                            <div class="author__urls-wrapper">
+                              <!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+                              <!-- Place this tag where you want the button to render. -->
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/patrickelectric" data-show-count="true" aria-label="Follow @patrickelectric on GitHub">Follow @patrickelectric</a>
+                              <ul class="author__urls social-icons">
+
+                                  <li itemprop="homeLocation" itemscope="" itemtype="http://schema.org/Place">
+                                    <i class="fas fa-map-marker-alt"></i> Brazil
+                                  </li>
+                                  <li>
+                                    <a href="mailto:patrickjp@kde.org">
+                                      <meta itemprop="email" content="patrickjp@kde.org">
+                                      <i class="fas fa-envelope-square"></i> Email
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://github.com/patrickelectric">
+                                      <i class="fab fa-github-square"></i> GitHub
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://www.linkedin.com/in/patrickelectric/">
+                                      <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">Starting with Intel® Edison Platform</h1>
+  <span class="post-date">2016-12-09</span>
+  <h3 class="post-tags">[
+  
+  <a href="/tags/intel">intel</a>
+  
+  <a href="/tags/hardware">hardware</a>
+  
+  <a href="/tags/embedded">embedded</a>
+  
+  <a href="/tags/linux">linux</a>
+  
+  <a href="/tags/tutorial">tutorial</a>
+  
+  <a href="/tags/edison">edison</a>
+  
+  ]</h3>
+  <p>The Edison Platform is a little computer with all necessary system and hardware to provide a good experiment, we have: wi-fi, bluetooth, serial, io pins and alot more.</p>
+<p>As we see the Edson board is an x86-32 architecture, 4 gigabytes to store our files, 1 gigabyte of ram to execute our applications, 2 processing cores to allow the development of parallel programs. this is a development platform with higher performance compared to Respaberry Pi  and 1/40 of its volume.</p>
+<span id="continue-reading"></span><h1 id="starting">Starting</h1>
+<p>You will need two  USBs (<a href="http://www.usbfirewire.com/usb_cables_a_to_micro-b_non-angled_67.html">micro B</a>), one is for serial communication and the other is for power, ethernet, arduino upload and storage device.</p>
+<p>Connecting the two cables in your computer, you can use <a href="http://portableapps.com/apps/internet/putty_portable">Putty</a> if you are using windows, or you can use screenin your linux computer.</p>
+<pre>$ screen /dev/ttyUSB0 115200</pre>
+<p>After connect, type two times the enter key and now we can access the terminal from the <a href="https://www.yoctoproject.org/">Yocto Linux</a>. The login can be root/root or edison/edison.</p>
+<h1 id="configuration">Configuration</h1>
+<p>Now, we can configure Edison with the command <code>$ configure_edison --setup </code>, we can configure almost everything including the Wi-Fi. The board have already an ssh-server enabled by default.</p>
+<pre>$ configure_edison --setup</pre>
+<h1 id="installing-programs">Installing programs</h1>
+<p>The Yocto don't have a package manager with the usual programs, so we need to download the *.deb file of the x86-32 architecture.</p>
+<p>An example, to install nemo (the text editor):</p>
+<pre>$ wget http://www.nano-editor.org/dist/v2.2/nano-2.2.0.tar.gz
+$ tar -xvf nano-2.2.0.tar.gz
+$ cd  nano*
+$ ./configure
+$ make
+$ make install</pre>
+<h1 id="installing-programs-with-opkg">Installing programs with opkg</h1>
+<p>The Intel have a <a href="https://software.intel.com/en-us/iot">repository</a> from the Yocto projecto to the Edison, we can upgrade or system repository to use the Intel IoT devkit.</p>
+<pre>nano /etc/opkg/base-feeds.conf</pre>
+<p>Inside this file, we need to write the local of the Intel repositories.</p>
+<pre>src all http://iotdk.intel.com/repos/1.1/iotdk/all
+src x86 http://iotdk.intel.com/repos/1.1/iotdk/x86
+src i586    http://iotdk.intel.com/repos/1.1/iotdk/i586</pre>
+<p>After that, we can upgrade or package manager database.</p>
+<pre>opkg update</pre>
+<p>And install something util.</p>
+<pre>opkg install git</pre>
+
+</div>
+
+        </div>
+
+    </body>
+
+</html>
