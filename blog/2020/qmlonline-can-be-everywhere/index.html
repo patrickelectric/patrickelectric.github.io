@@ -151,17 +151,8 @@
 <script type="text/javascript" src="https://qmlonline.kde.org/qml.js"></script>
 -->
 <div id="qmlonline"></div>
-<script type='text/javascript'>
-    const qmlonline = new QmlOnline("qmlonline")
-    qmlonline.registerCall({
-        qmlMessage: function(msg) {
-            console.log(`qml message: ${msg}`)
-        },
-        qmlError: function(data) {
-            console.log(`qml message: ${JSON.stringify(msg)}`)
-        },
-        posInit: function() {
-            qmlonline.setCode(`import QtQuick 2.7
+<script type="text/qml">
+import QtQuick 2.7
 import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.12
 Rectangle {
@@ -192,7 +183,19 @@ Rectangle {
             duration: 1500
         }
     }
-}`)
+}
+</script>
+<script type='text/javascript'>
+    const qmlonline = new QmlOnline("qmlonline")
+    qmlonline.registerCall({
+        qmlMessage: function(msg) {
+            console.log(`qml message: ${msg}`)
+        },
+        qmlError: function(data) {
+            console.log(`qml message: ${JSON.stringify(msg)}`)
+        },
+        posInit: function() {
+            qmlonline.setCode(Array.prototype.slice.apply(document.getElementsByTagName('script')).find(e => e.type == 'text/qml').text)
         },
     })
     qmlonline.init()
