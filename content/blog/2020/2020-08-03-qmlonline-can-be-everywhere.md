@@ -84,7 +84,7 @@ It's quite simple, check this minimal HTML example:
                 console.log(`qml message: ${msg}`)
             },
             qmlError: function(data) {
-                console.log(`qml message: ${JSON.stringify(msg)}`)
+                console.log(`qml error: ${JSON.stringify(data)}`)
             },
             posInit: function() {
                 qml.setCode(`
