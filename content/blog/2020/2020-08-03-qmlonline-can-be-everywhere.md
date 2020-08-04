@@ -77,6 +77,29 @@ It's quite simple, check this minimal HTML example:
 
     <div id="qmlonline"></div>
 
+    <script type='text/qml'>
+    import QtQuick 2.7
+    import QtQuick.Controls 2.3
+    Rectangle {
+        color: "#179AF3"
+        anchors.fill: parent
+        Text {
+            text: "KDE"
+            font.pixelSize: 80
+            font.bold: true
+            color: "#82CB38"
+            anchors.centerIn: parent
+            RotationAnimator on rotation {
+                running: true
+                loops: Animation.Infinite
+                from: 0
+                to: 360
+                duration: 1500
+            }
+        }
+    }
+    </script>
+
     <script type='text/javascript'>
         const qml = new QmlOnline("qmlonline")
         qml.registerCall({
@@ -87,28 +110,7 @@ It's quite simple, check this minimal HTML example:
                 console.log(`qml error: ${JSON.stringify(data)}`)
             },
             posInit: function() {
-                qml.setCode(`
-                    import QtQuick 2.7
-                    import QtQuick.Controls 2.3
-                    Rectangle {
-                        color: "#179AF3"
-                        anchors.fill: parent
-                        Text {
-                            text: "KDE"
-                            font.pixelSize: 80
-                            font.bold: true
-                            color: "#82CB38"
-                            anchors.centerIn: parent
-                            RotationAnimator on rotation {
-                                running: true
-                                loops: Animation.Infinite
-                                from: 0
-                                to: 360
-                                duration: 1500
-                            }
-                        }
-                    }
-                `)
+                qml.setCode(Array.prototype.slice.apply(document.getElementsByTagName('script')).find(e => e.type == 'text/qml').text)
             },
         })
         qml.init()
