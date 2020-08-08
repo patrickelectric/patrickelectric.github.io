@@ -7,8 +7,9 @@ tags = [ "kde", "development", "tutorial", "how-to-rock" ]
 header = "/assets/how_to_rock/banner.jpeg"
 +++
 
-After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices. The following post will try to itemize some important tips that can be used for software collaboration and personal projects.
+After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices.
 
+This post will try to itemize some important tips that can be used for software collaboration and personal projects, hopefully it'll help you to have a solid ground of good practices and advices for your contributions in a project. It contains information abut good code practices, a simple guide of helpful API design, code organization, comments, naming variables, development flow and self-criticism. Please enjoy, and any feedback (including critics) is much appreciated!
 
 <!-- more -->
 
@@ -136,7 +137,7 @@ After working for some time collaborating with open source/free software project
     ```
     As you can see, the reason behind each block of code is clear now, and with that, the comments are also not necessary anymore, the code is friendly and readable enough that's possible to understand it without any comments, the function name does the job for free.
 
-- **Avoid comments**, that's a clickbait, comments are really necessary, but they may be unnecessary when you are doing something that's really obvious, and sometimes when something is not obvious, it's better to encapsulate it.
+- **Avoid comments**, that's a clickbait, comments are really necessary, but they may be unnecessary when you are doing something that's really straightforward, and sometimes when something isn't, it's better to encapsulate it.
     ```cpp
         ...// Original version
         void blink_routine() {
