@@ -159,7 +159,8 @@ After working for some time collaborating with open source/free software project
         }
     ```
     Before checking the final version, let me talk more about it:
-      - For each line of code you'll have a comment (like a parrot that repeat what we say), and the worst thing about these comments is that the content is exactly what you can read from the code! You can think that this kind of comment is dead code, something that has the same meaning as the code, but it does not run, resulting in a duplicated amount of lines to maintain. If you forget to update each comment for each line of code, you'll have a comment that does not match with the code, and this will be pretty confuse for someone that's reading it.
+
+    - For each line of code you'll have a comment (like a parrot that repeat what we say), and the worst thing about these comments is that the content is exactly what you can read from the code! You can think that this kind of comment is dead code, something that has the same meaning as the code, but it does not run, resulting in a duplicated amount of lines to maintain. If you forget to update each comment for each line of code, you'll have a comment that does not match with the code, and this will be pretty confuse for someone that's reading it.
 
     - **One of the most important skills about writing comments, is to know when not to write it!**
 
