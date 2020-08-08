@@ -26,15 +26,15 @@ After working for some time collaborating with open source/free software project
         RequestStatus = 232,
     }
     ...
-    uint8_t vid = 0;
-    uint8_t cid = 1;
+    const uint8_t vid = 0;
+    const uint8_t cid = 1;
     start_communication(vid, cid, Messages::RequestStatus);
     // Reviewer: What is vid ? What is cid ?
 
   ...//Final version
     ...
-    uint8_t vehicle_id = 0;
-    uint8_t component_id = 1;
+    const uint8_t vehicle_id = 0;
+    const uint8_t component_id = 1;
     start_communication(vehicle_id, component_id, Messages::RequestStatus);
   ```
   As you can see, the final version makes everything more readable, we know that we are starting the communication with a vehicle that has an id of 0 and the vehicle probably contains a component with id 1, and while calling this function we are also requesting the status. Much better than 0, 1 and 232 right ?
