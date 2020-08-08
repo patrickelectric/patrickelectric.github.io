@@ -7,7 +7,7 @@ tags = [ "kde", "development", "tutorial", "how-to-rock" ]
 header = "/assets/how_to_rock/banner.jpeg"
 +++
 
-After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices. The following post will try to itemize some important tips that can used for software collaboration and personal projects.
+After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices. The following post will try to itemize some important tips that can be used for software collaboration and personal projects.
 
 
 <!-- more -->
