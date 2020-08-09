@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Patrick José Pereira</title>
+        <link>https://patrickelectric.work</link>
+        <description>I am an Electronics Engineer that works with robotic systems, OSS and OSH.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://patrickelectric.work/tags/arm/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>[GSoC] KDev-Embedded, OpenOCD and avrdude</title>
+                <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+                <link>https://patrickelectric.work/blog/2017/kdev-embedded-openocd-and-avrdude/</link>
+                <guid>https://patrickelectric.work/blog/2017/kdev-embedded-openocd-and-avrdude/</guid>
+                <description>&lt;p&gt;KDev-Embedded  now have OpenOCD integration and a new interface to use avrdude in launcher.&lt;&#x2F;p&gt;
+&lt;p&gt;With &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;sudar&#x2F;Arduino-Makefile&quot;&gt;Arduino-Makefile&lt;&#x2F;a&gt;, it&#x27;s possible to use a makefile to perform compilation of Arduino projects. In the video one the the examples are used to shows how it is possible to use the new avrdude launcher to execute the upload process.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;video width=&quot;640&quot; height=&quot;360&quot; controls&gt;
+  	&lt;source src=&quot;&#x2F;assets&#x2F;kdev_embedded_openocd&#x2F;arduino1.mp4&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+&lt;&#x2F;video&gt;
+&lt;p&gt;In the avrdude new interface was added more KComboBox to create a more generic and configurable interface helping advanced users.&lt;&#x2F;p&gt;
+&lt;p&gt;The OpenOCD support can upload the binary to an embedded plataform and launch the OpenOCD server to perform upload and debugging with GDB. The graphic interface still in development for further improvements.&lt;&#x2F;p&gt;
+&lt;video width=&quot;640&quot; height=&quot;360&quot; controls&gt;
+  	&lt;source src=&quot;&#x2F;assets&#x2F;kdev_embedded_openocd&#x2F;lm4f2321.mp4&quot; type=&quot;video&#x2F;mp4&quot;&gt;
+&lt;&#x2F;video&gt;
+&lt;p&gt;In the next steps, we are aiming the OpenOCD interface to be more friendly with basic and advanced users, and a new integration with DFU or other tool for embedded systems.&lt;&#x2F;p&gt;
+&lt;p&gt;Best regards,&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>[GSoC] KDev-Embedded, workflow integration</title>
+                <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+                <link>https://patrickelectric.work/blog/2017/kdev-embedded-workflow-integration/</link>
+                <guid>https://patrickelectric.work/blog/2017/kdev-embedded-workflow-integration/</guid>
+                <description>&lt;p&gt;After some work in the plugin development, now the project have a strong focus in a better integration with KDevelop workflow. Until now the Board Configuration window have some simple features to perform the upload process for beginner users, it&#x27;s called by the &lt;em&gt;&lt;strong&gt;embedded&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt; submenu in the KDevelop toolbar.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;figcaption class=&quot;wp-caption-text&quot;&gt;Welcome message&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;kdev_embedded_workflow&#x2F;arduinowindow063.png&quot; alt=&quot;arduinowindow063&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;Error message&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;kdev_embedded_workflow&#x2F;arduinowindow064.png&quot; alt=&quot;arduinowindow064&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;Success message&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;kdev_embedded_workflow&#x2F;arduinowindow065.png&quot; alt=&quot;arduinowindow065&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The problem is that the Board Configuration window don&#x27;t follow the integrated workflow of KDevelop, and that&#x27;s what are we doing right now, turning the &lt;strong&gt;KDev-Embedded&lt;&#x2F;strong&gt; an integrated plugin helping programmers that already know how to use the software and how to perform what they want. That&#x27;s the idea behind the &lt;strong&gt;Embedded Launcher&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;KDev-Embedded Embedded Launcher&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;kdev_embedded_workflow&#x2F;launch_config70.png&quot; alt=&quot;launch_config70&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The Embedded Launcher try to help beginners and advanced users with presets and a Board menu, until now the preset ComboBox is disabled until we finish the ARM support and the Board menu configure some others features like MCU, Interface baud rate and Arguments, but the user is free to perform modifications in this fields thanks to KComboBox. After the launcher configuration finished the user can save and execute it to perform  the upload process that shows in KDevelop output.&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;KDevelop output showing the programmer feedback&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;kdev_embedded_workflow&#x2F;Selection_074.png&quot; alt=&quot;selection074&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The plugin still in development, supporting  Arduino board and being tested only on some boards like Arduino Nano and Mini. In the next week we&#x27;ll start the ARM support.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>[GSoC] KDev-Embedded, The alpha version is coming !</title>
+                <pubDate>Sun, 29 Jan 2017 00:00:00 +0000</pubDate>
+                <link>https://patrickelectric.work/blog/2017/kdev-embedded-the-alpha-version-is-coming/</link>
+                <guid>https://patrickelectric.work/blog/2017/kdev-embedded-the-alpha-version-is-coming/</guid>
+                <description>&lt;p&gt;The GSoC plan to dominate the world of embedded system developments is near to have his first version !&lt;&#x2F;p&gt;
+&lt;p&gt;Today one of the most important steps was performed, the first upload to a microController. The code was a blink compiled with a makefile and uploaded with the KDev-Embedded plugin to an AVR microController (Arduino Nano board).&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;kdev_embedded_the_alpha&#x2F;Selection_024.png&quot; alt=&quot;upload&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;With the Arduino&#x27;s support done, the plugin will have the first release version and the start of next step (ARM processors).&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>[GSoC] KDev-Embedded, Debugging and programming embedded systems</title>
+                <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
+                <link>https://patrickelectric.work/blog/2017/kdev-embedded-debugging-and-programming-embedded-systems/</link>
+                <guid>https://patrickelectric.work/blog/2017/kdev-embedded-debugging-and-programming-embedded-systems/</guid>
+                <description>&lt;p&gt;The actual embedded system word depends on closed-source IDEs and libraries, with high monetary value and deprecated functionalities. Programmers that would like to use ARM based boards without paying for an IDE will have problems setting up such development ambient and synchronized toolkits.&lt;&#x2F;p&gt;
+&lt;p&gt;The main idea of this project is to provide a plugin integrated with KDevelop to help the debugging and programming process of embedded systems like AVR, ARM and x86 based boards.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;Since 2011, starting with my electronic engineering graduation the contact with embedded system begun with PIC and ATMEL uC. In 2012 I was accepted in the ROBOTA (competition D&amp;amp;R team) and the ProVANT (Project and Development of UAV in the tilt-rotor configuration), both project working with hardware and software integration.&lt;&#x2F;p&gt;
+&lt;p&gt;The development on ProVANT project showed how difficult can be to program an embedded system without using closed source software, It&#x27;s hard to find a descent IDE to develop in such area, ever harder to do it with open-source programs and tools.&lt;&#x2F;p&gt;
+&lt;p&gt;But after some time I discovered &lt;a href=&quot;http:&#x2F;&#x2F;openocd.org&#x2F;&quot;&gt;OpenOCD&lt;&#x2F;a&gt; and &lt;em&gt;arm-none-eabi&lt;&#x2F;em&gt; to do my job. But it was such a pain first time to understand and use everything together but after some time everything start to progress.&lt;&#x2F;p&gt;
+&lt;p&gt;Now I am at Intel doing my internship to finish my electronic engineering graduation and working on KDevelop for GSOC 2016 project to turn KDevelop into a native system to debug and program embedded systems.&lt;&#x2F;p&gt;
+&lt;p&gt;Until now the plugin developed can download and install the Arduino toolkit. This part was strongly based on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;mupuf&#x2F;arduide&quot;&gt;ArduIDE&lt;&#x2F;a&gt; project for which I have contributed by updating the Arduino supported version and some corrections of the code, with a great help of Mupuf. Also a window in development to configure that board and interface to program.&lt;&#x2F;p&gt;
+&lt;p&gt;The GSOC submission can be found &lt;a href=&quot;http:&#x2F;&#x2F;patrickjp.com&#x2F;wp-content&#x2F;uploads&#x2F;2016&#x2F;04&#x2F;gsoc.pdf&quot;&gt;here&lt;&#x2F;a&gt; for download.&lt;&#x2F;p&gt;
+&lt;p&gt;TLDR: The focus of the project is a versatile plugin that can be used for both first travel and experienced programmers in the word of embedded systems !&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ll try to update the blog as the project progress.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>
