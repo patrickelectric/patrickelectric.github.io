@@ -86,7 +86,7 @@ This post will try to itemize some important tips that can be used for software 
         // Check if we are open to talk
         if (!_port || _port->register() != 0xb0001) {
             log("Serial port is not open!");
-            return false;
+            return;
         }
 
         // Send a 10ms serial break signal
@@ -128,7 +128,7 @@ This post will try to itemize some important tips that can be used for software 
     void Serial::start_serial_communication() {
         if (!is_port_open()) {
             log("Serial port is not open!");
-            return false;
+            return;
         }
 
         force_baudrate_detection();
