@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Patrick José Pereira</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      <!-- Math rendering -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+      onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                          <a href="https:&#x2F;&#x2F;patrickelectric.work"><h2>HOME</h2></a>
+                            <div class="avatar"> <img src="https://avatars3.githubusercontent.com/patrickelectric" alt="Patrick José Pereira" itemprop="image"> </div>
+                            <h6>Patrick José Pereira</h6>
+                            
+                            <p class="lead">I am an Electronics Engineer that works with robotic systems, OSS and OSH.</p>
+                            <div class="author__urls-wrapper">
+                              <!-- Place this tag in your head or just before your close body tag. -->
+                              <script async defer src="https://buttons.github.io/buttons.js"></script>
+                              <!-- Place this tag where you want the button to render. -->
+                              <a class="github-button" href="https://github.com/patrickelectric" data-show-count="true" aria-label="Follow @patrickelectric on GitHub">Follow @patrickelectric</a>
+                              <ul class="author__urls social-icons">
+
+                                  <li itemprop="homeLocation" itemscope="" itemtype="http://schema.org/Place">
+                                    <i class="fas fa-map-marker-alt"></i> Brazil
+                                  </li>
+                                  <li>
+                                    <a href="mailto:patrickjp@kde.org">
+                                      <meta itemprop="email" content="patrickjp@kde.org">
+                                      <i class="fas fa-envelope-square"></i> Email
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://github.com/patrickelectric">
+                                      <i class="fab fa-github-square"></i> GitHub
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://www.linkedin.com/in/patrickelectric/">
+                                      <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">How to rock: First tips</h1>
+  <span class="post-date">2020-08-08</span>
+  <h3 class="post-tags">[
+  
+  <a href="/tags/kde">kde</a>
+  
+  <a href="/tags/development">development</a>
+  
+  <a href="/tags/tutorial">tutorial</a>
+  
+  <a href="/tags/how-to-rock">how-to-rock</a>
+  
+  ]</h3>
+  <p>After working for some time collaborating with open source/free software projects, I started to help newcomers to contribute and push the development further with good practices.</p>
+<p>This post will try to itemize some important tips that can be used for software collaboration and personal projects, hopefully it'll help you to have a solid ground of good practices and advices for your contributions in a project. It contains information abut good code practices, a simple guide of helpful API design, code organization, comments, naming variables, development flow and self-criticism. Please enjoy, and any feedback (including critics) is much appreciated!</p>
+<span id="continue-reading"></span><h1 id="code-practices">Code practices</h1>
+<ul>
+<li>
+<p><strong>Encapsulate magic variables</strong>:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// First version
+</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">start_communication</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">232</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">  </span><span style="color:#65737e;">// Reviewer: What is the meaning of 0 ? What is 1 ? Why 232 ?
+
+</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Second version
+</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">enum class </span><span style="color:#c0c5ce;">Messages {
+</span><span style="color:#c0c5ce;">      ...
+</span><span style="color:#c0c5ce;">      RequestStatus = </span><span style="color:#d08770;">232</span><span style="color:#c0c5ce;">,
+</span><span style="color:#c0c5ce;">  }
+</span><span style="color:#c0c5ce;">  ...
+</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t vid = </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t cid = </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">start_communication</span><span style="color:#c0c5ce;">(vid, cid, Messages::RequestStatus);
+</span><span style="color:#c0c5ce;">  </span><span style="color:#65737e;">// Reviewer: What is vid ? What is cid ?
+
+</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">//Final version
+</span><span style="color:#c0c5ce;">  ...
+</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t vehicle_id = </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t component_id = </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">start_communication</span><span style="color:#c0c5ce;">(vehicle_id, component_id, Messages::RequestStatus);
+</span></pre>
+<p>As you can see, the final version makes everything more readable, we know that we are starting the communication with a vehicle that has an id of 0 and the vehicle probably contains a component with id 1, and while calling this function we are also requesting the status. Much better than 0, 1 and 232 right ?
+Doing this will help the reviewers and future developers to understand what is the meaning of such numbers.
+It's also necessary to avoid variables that contains only single letters or really short abbreviations, is much harder to understand this: $$C^2 = A^2 + B^2$$
+over this: $$hypotenuse^2 = catheti_1^2 + catheti_2^2$$</p>
+</li>
+<li>
+<p><strong>Avoid multiple arguments</strong>:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// First version
+</span><span style="color:#b48ead;">auto</span><span style="color:#c0c5ce;"> vehicle = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Vehicle</span><span style="color:#c0c5ce;">(
+</span><span style="color:#c0c5ce;">    VehicleType::Car,
+</span><span style="color:#c0c5ce;">    </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">,
+</span><span style="color:#c0c5ce;">    {</span><span style="color:#d08770;">28</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">31</span><span style="color:#c0c5ce;">},
+</span><span style="color:#c0c5ce;">    Fuel::Electric,
+</span><span style="color:#c0c5ce;">    </span><span style="color:#d08770;">1.2</span><span style="color:#c0c5ce;">,
+</span><span style="color:#c0c5ce;">    </span><span style="color:#d08770;">613
+</span><span style="color:#c0c5ce;">);
+</span><span style="color:#65737e;">// Reviewer: What is the meaning of all this values ?
+</span><span style="color:#65737e;">//           How can we make it better ?
+
+</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Second version
+</span><span style="color:#b48ead;">auto</span><span style="color:#c0c5ce;"> vehicle = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Vehicle</span><span style="color:#c0c5ce;">(VehicleType::Car)
+</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setNumberOfTires</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setTirePressure</span><span style="color:#c0c5ce;">({</span><span style="color:#d08770;">28</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">31</span><span style="color:#c0c5ce;">});
+</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setFuel</span><span style="color:#c0c5ce;">(Fuel::Electric);
+</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setWeightInTons</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1.2</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setAutonomyInKm</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">613</span><span style="color:#c0c5ce;">);
+
+</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// It&#39;s also possible to use aggregate initialization in C++20
+</span><span style="color:#65737e;">// and user-defined literals from C++11
+</span><span style="color:#b48ead;">auto</span><span style="color:#c0c5ce;"> vehicle = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Vehicle</span><span style="color:#c0c5ce;">({
+</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">type </span><span style="color:#c0c5ce;">= VehicleType::Car,
+</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">numberOfTires </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">,
+</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">tirePressure </span><span style="color:#c0c5ce;">= {</span><span style="color:#d08770;">28_psi</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">31_psi</span><span style="color:#c0c5ce;">},
+</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">fuel </span><span style="color:#c0c5ce;">= Fuel::Electric,
+</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">weight </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">1.2_tn</span><span style="color:#c0c5ce;">,
+</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">autonomy </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">613_km</span><span style="color:#c0c5ce;">,
+</span><span style="color:#c0c5ce;">});
+</span></pre>
+<p>Both second and C++20/C++11 alternatives are valid for a better readability of the code, to choose between both alternatives will depend of how are you going to design your API, probably if you are more familiar with the Qt API, the second version appears to be the most common, the C++20/C++11 alternative appears to be a bit more verbose but can be useful to avoid multiple function calls and helpful when dealing with a simpler code base.</p>
+</li>
+<li>
+<p><strong>Encapsulate code when necessary</strong>, try to break functions in a more readable and explanatory way:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Original version
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::start_serial_communication</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Check if we are open to talk
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(!_port || _port-&gt;</span><span style="color:#bf616a;">register</span><span style="color:#c0c5ce;">() != </span><span style="color:#d08770;">0xb0001</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Serial port is not open!</span><span style="color:#c0c5ce;">&quot;);
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">    }
+
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send a 10ms serial break signal
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">msleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">usleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send intercalated binary for detection
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">U</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">flush</span><span style="color:#c0c5ce;">();
+
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send start AT command
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">AT+start</span><span style="color:#c0c5ce;">&quot;);
+</span><span style="color:#c0c5ce;">}
+
+</span><span style="color:#65737e;">// Reviewer: Try to make it more readable encapsulating
+</span><span style="color:#65737e;">//            some functionalities
+
+</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Second version
+</span><span style="color:#b48ead;">bool </span><span style="color:#8fa1b3;">Serial::is_port_open</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">return </span><span style="color:#c0c5ce;">!_port || _port-&gt;</span><span style="color:#bf616a;">register</span><span style="color:#c0c5ce;">() != </span><span style="color:#d08770;">0xb0001</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">}
+
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::force_baudrate_detection</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send a 10ms serial break signal
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">msleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">usleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send intercalated binary for detection
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">U</span><span style="color:#c0c5ce;">&#39;);
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">flush</span><span style="color:#c0c5ce;">();
+</span><span style="color:#c0c5ce;">}
+
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::send_message</span><span style="color:#c0c5ce;">(Message </span><span style="color:#bf616a;">message_type</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">messageFromType</span><span style="color:#c0c5ce;">(message_type));
+</span><span style="color:#c0c5ce;">}
+
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::start_serial_communication</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(!</span><span style="color:#bf616a;">is_port_open</span><span style="color:#c0c5ce;">()) {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Serial port is not open!</span><span style="color:#c0c5ce;">&quot;);
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">    }
+
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">force_baudrate_detection</span><span style="color:#c0c5ce;">();
+</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">send_message</span><span style="color:#c0c5ce;">(Message::Start)
+</span><span style="color:#c0c5ce;">}
+</span></pre>
+<p>As you can see, the reason behind each block of code is clear now, and with that, the comments are also not necessary anymore, the code is friendly and readable enough that's possible to understand it without any comments, the function name does the job for free.</p>
+</li>
+<li>
+<p><strong>Avoid comments</strong>, that's a clickbait, comments are really necessary, but they may be unnecessary when you are doing something that's really straightforward, and sometimes when something isn't, it's better to encapsulate it.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">    ...</span><span style="color:#65737e;">// Original version
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">blink_routine</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#65737e;">// Use the LED builtin
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">const int</span><span style="color:#c0c5ce;"> led_builtin = LED_BUILTIN;
+</span><span style="color:#c0c5ce;">        </span><span style="color:#65737e;">// Configure ping to output
+</span><span style="color:#c0c5ce;">        </span><span style="color:#bf616a;">setPinAsOutput</span><span style="color:#c0c5ce;">(led_builtin);
+
+</span><span style="color:#c0c5ce;">        </span><span style="color:#65737e;">// Loop forever
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">while</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Turn the LED on
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOn</span><span style="color:#c0c5ce;">(led_builtin);
+</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Wait for a second
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Turn the LED off
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOff</span><span style="color:#c0c5ce;">(led_builtin);
+</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Wait for a second
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">        }
+</span><span style="color:#c0c5ce;">    }
+</span></pre>
+<p>Before checking the final version, let me talk more about it:</p>
+<ul>
+<li>
+<p>For each line of code you'll have a comment (like a parrot that repeat what we say), and the worst thing about these comments is that the content is exactly what you can read from the code! You can think that this kind of comment is dead code, something that has the same meaning as the code, but it does not run, resulting in a duplicated amount of lines to maintain. If you forget to update each comment for each line of code, you'll have a comment that does not match with the code, and this will be pretty confuse for someone that's reading it.</p>
+</li>
+<li>
+<p><strong>One of the most important skills about writing comments, is to know when not to write it!</strong></p>
+</li>
+<li>
+<p>A comment should bring a value to the code, if you can remove the comment and the code can be understandable by a newcomer, the comment is not important.</p>
+</li>
+</ul>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Final version
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">blink_routine</span><span style="color:#c0c5ce;">() {
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">const int</span><span style="color:#c0c5ce;"> led_builtin = LED_BUILTIN;
+</span><span style="color:#c0c5ce;">        </span><span style="color:#bf616a;">setPinAsOutput</span><span style="color:#c0c5ce;">(led_builtin);
+
+</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">while</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOn</span><span style="color:#c0c5ce;">(led_builtin);
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOff</span><span style="color:#c0c5ce;">(led_builtin);
+</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+</span><span style="color:#c0c5ce;">        }
+</span><span style="color:#c0c5ce;">    }
+</span></pre>
+<p>There is a good video about this subject by <a href="https://www.youtube.com/watch?v=NLebZ3XT92E">Walter E. Brown in cppcon 2017, &quot;Whitespace ≤ Comments ＜＜ Code&quot;</a>.</p>
+<p>And to finish, you should not avoid comments, you should understand when comments are necessary, like this:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#65737e;">// From ArduPilot - GPIO_RPI
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">set_gpio_mode_alt</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">pin</span><span style="color:#c0c5ce;">, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">alternative</span><span style="color:#c0c5ce;">) {
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// **Moved content from cpp for this example**
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t pins_per_register = </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Calculates the position of the 3 bit mask in the 32 bits register
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t tree_bits_position_in_register = (pin%pins_per_register)*</span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">/** Creates a mask to enable the alternative function based in the following logic:
+</span><span style="color:#65737e;">    *
+</span><span style="color:#65737e;">    * | Alternative Function | 3 bits value |
+</span><span style="color:#65737e;">    * |:--------------------:|:------------:|
+</span><span style="color:#65737e;">    * |      Function 0      |     0b100    |
+</span><span style="color:#65737e;">    * |      Function 1      |     0b101    |
+</span><span style="color:#65737e;">    * |      Function 2      |     0b110    |
+</span><span style="color:#65737e;">    * |      Function 3      |     0b111    |
+</span><span style="color:#65737e;">    * |      Function 4      |     0b011    |
+</span><span style="color:#65737e;">    * |      Function 5      |     0b010    |
+</span><span style="color:#65737e;">    */
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t alternative_value =
+</span><span style="color:#c0c5ce;">        (alternative &lt; </span><span style="color:#d08770;">4 </span><span style="color:#c0c5ce;">? (alternative + </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">) : (alternative == </span><span style="color:#d08770;">4 </span><span style="color:#c0c5ce;">? </span><span style="color:#d08770;">3 </span><span style="color:#c0c5ce;">: </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">));
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// 0b00&#39;000&#39;000&#39;000&#39;000&#39;000&#39;000&#39;ALT&#39;000&#39;000&#39;000 enables alternative for the 4th pin
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint32_t mask_with_alt = static_cast&lt;uint32_t&gt;(alternative_value) &lt;&lt; tree_bits_position_in_register;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint32_t mask = </span><span style="color:#d08770;">0b111 </span><span style="color:#c0c5ce;">&lt;&lt; tree_bits_position_in_register;
+</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Clear all bits in our position and apply our mask with alt values
+</span><span style="color:#c0c5ce;">    uint32_t register_value = _gpio[pin / pins_per_register];
+</span><span style="color:#c0c5ce;">    register_value &amp;= ~mask;
+</span><span style="color:#c0c5ce;">    _gpio[pin / pins_per_register] = register_value | mask_with_alt;
+</span><span style="color:#c0c5ce;">}
+</span></pre>
+<p>Mostly of the lines in this code can be impossible to understand without access or reading the datasheet directly,
+the comments are here to understand what is going on and why, otherwise anyone that'll touch this code will need to do a reverse engineer to understand it.</p>
+</li>
+</ul>
+<h1 id="development-flow">Development flow</h1>
+<ul>
+<li>
+<p><strong>Avoid creating multiple Pull Requests (PRs)</strong>, update the ones that are still open.</p>
+<ul>
+<li>E.g: You created a Pull Request called &quot;Add button feature&quot;, some modifications will be necessary after the review process, and for that you'll need to update the same branch over creating new ones. That's necessary to help the project maintainers to see previous comments and the development history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create atomic and self-contained commits</strong>, avoid doing multiple tasks in the same commit.</p>
+<ul>
+<li>
+<p>E.g: You created a commit to fix the serial communication class, and inside the same commit you are doing 3 different tasks, removing trailing spaces, fixing a pointer validation check and a typo in the documentation of a different class. This appear to be silly and bureaucratic, but there are good reasons to break this simple commit and at least 3 different commits, one for the pointer check, a second one for the typo and a third one for the trailing space.</p>
+<p>Developers usually track lines history to understand the changes behind a functionality, it's common to search with grep history from commits or line changes in specific commits to understand the history of a library, function, class, or a small feature, if the commits start to be polluted with unnecessary changes, this development practice will be almost impossible to be done, since a bunch of unrelated lines will me changed between commits and this technic will be unable to help the dear developer. <code>git blame</code> will also be of little help.</p>
+<p>The example was also really simple, but you can imagine what happens if you change different parts of the code, for unrelated things, and a bug appears, technics such as <code>git bisect</code> will still work, but the result will be much harder to understand and to find which line is the one that created such bug.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Create atomic and self-sustained PRs</strong>, avoid doing multiple things in the same PR, like different features. They may appear simple with small pieces of code/functionality but they can escalate quickly after a review process, and if both features are somehow related or dependently, it's recommended to break it in multiple PRs with code to maintain compatibility with current code base.</p>
+<ul>
+<li>E.g: You have applied a PR for software notifications, and somehow you also added a URL fetch functionality to grab new software versions from the server. After the first review, the maintainer asks to create a more abstracted way to fetch data from a REST API and to deal with network requirements, this will start to convolute the PR, moving the initial idea of the notification feature to an entire network REST API architecture. With that, it's better to break the PR in two, one that only provides the notification and a second PR that is used for the REST API related code.</li>
+</ul>
+</li>
+<li>
+<p><strong>Do your own review</strong>, the final and probably most important tip of all, doing that will train your mind and eyes to detect poor code standards or bad practices, it'll also make your PR be merged easily and faster, since you'll be able to catch problems before the reviewer feedback. Some reviewers may think that reviewing your own PR is a must, since we are talking about open source projects and free software, you should understand that the people that are reviewing your code are not obligated to do so, the majority are collaborating and donating their own time to help the development and maintenance of such projects, doing your own review is a sign of empathy about the project and maintainer time.</p>
+</li>
+</ul>
+<h1 id="final-comment">Final comment</h1>
+<p>This is the first post of a series that I'm planning to do. Hope that some of these points may help you in your journey.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=MBRoCdtZOYg">CppCon 2019: Kate Gregory “Naming is Hard: Let's Do Better”</a></li>
+<li><a href="https://www.youtube.com/watch?v=n0Ak6xtVXno">CppCon 2018: Kate Gregory “Simplicity: Not Just For Beginners”</a></li>
+<li><a href="https://www.youtube.com/watch?v=kYVxGyido9g">CppCon 2018: Kate Gregory “What Do We Mean When We Say Nothing At All?”</a></li>
+<li><a href="https://www.youtube.com/watch?v=YWiAUUblD34">CppCon 2017: Lars Knoll “Qt as a C++ Framework: History, Present State and Future”</a></li>
+<li><a href="https://www.youtube.com/watch?v=XkDEzfpdcSg">CppCon 2017: Kate Gregory “10 Core Guidelines You Need to Start Using Now”</a></li>
+<li><a href="https://wiki.qt.io/API_Design_Principles">API Design Principles - TQtC</a></li>
+<li><a href="https://doc.qt.io/archives/qq/qq13-apis.html">Designing Qt-Style C++ APIs - Matthias Ettrich</a></li>
+<li><a href="https://people.mpi-inf.mpg.de/%7Ejblanche/api-design.pdf">The Little Manual of API Design - Jasmin Blanchette</a></li>
+</ul>
+
+</div>
+
+<footer>
+  <p style="text-align: center;">If it was helpful, consider giving a start:</p>
+  <!-- Place this tag where you want the button to render. -->
+  <div style="text-align: center;">
+    <a class="github-button" href="https://github.com/patrickelectric/patrickelectric.github.io" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star patrickelectric/patrickelectric.github.io on GitHub">Star</a>
+  </div>
+</footer>
+
+
+        </div>
+
+    </body>
+
+</html>

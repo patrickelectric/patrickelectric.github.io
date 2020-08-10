@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Patrick José Pereira</title>
+        <link>https://patrickelectric.work</link>
+        <description>I am an Electronics Engineer that works with robotic systems, OSS and OSH.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://patrickelectric.work/tags/ch341a/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 21 Aug 2018 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>The magic &quot;CH341A USB to I2C&#x2F;IIC&#x2F;SPI&#x2F;UART&#x2F;TTL&#x2F;ISP&#x2F;GPIO adapter, EPP&#x2F;MEM parallel port converter!&quot;</title>
+                <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+                <link>https://patrickelectric.work/blog/2018/ch341a-dongle/</link>
+                <guid>https://patrickelectric.work/blog/2018/ch341a-dongle/</guid>
+                <description>&lt;p&gt;A &lt;del&gt;long&lt;&#x2F;del&gt; time ago I saw &lt;a href=&quot;https:&#x2F;&#x2F;hackaday.com&#x2F;2018&#x2F;02&#x2F;21&#x2F;linux-adds-ch341-gpio&#x2F;&quot;&gt;this in hackaday&lt;&#x2F;a&gt;, after investigation over it on internet, I decided to get one from &lt;a href=&quot;https:&#x2F;&#x2F;pt.aliexpress.com&#x2F;item&#x2F;ALL-IN-1-CH341A-USB-to-SPI-I2C-IIC-UART-TTL-ISP-Serial-Adapter-Module-EPP&#x2F;32878482645.html&quot;&gt;aliexpress&lt;&#x2F;a&gt; ($9).&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;front1_1.jpg&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;Front&lt;&#x2F;figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;back1_1.jpg&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;Back&lt;&#x2F;figcaption&gt;
+&lt;p&gt;This dongle should provide:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;SPI&#x2F;ISP [Front (4)]&lt;&#x2F;li&gt;
+&lt;li&gt;I²C [Front (6)]&lt;&#x2F;li&gt;
+&lt;li&gt;UART-TTL [Front (3, 7, 8)]&lt;&#x2F;li&gt;
+&lt;li&gt;GPIO [Front (3, 4), Back (1)]&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The main CI is the CH341A.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;ch341a.jpg&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;&lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;CH341DS1.pdf&quot;&gt;CH341DS1 Datasheet (I don&#x27;t know how similar the CIs are)&lt;&#x2F;a&gt;&lt;&#x2F;figcaption&gt;
+&lt;p&gt;In [Back (2)] we have a 3.3V regulator.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;3v3regulator.jpg&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;&lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;ds1117.pdf&quot;&gt;AMS1117 Datasheet&lt;&#x2F;a&gt;&lt;&#x2F;figcaption&gt;
+&lt;p&gt;The switch in [Front (1)] will change the USB PID value.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;For I²C and SPI: &lt;code&gt;idVendor=1a86, idProduct=5512, bcdDevice= 3.04&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;For UART: &lt;code&gt;idVendor=1a86, idProduct=5523, bcdDevice= 3.04&lt;&#x2F;code&gt;
+Making the USB driver to select the correct kernel module to deal with it.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It&#x27;s also possible to change the output voltage with the voltage selection switches [Front (2, 5)].&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m pretty happy with the hardware, the selection keys makes everything easy to configure and dealing between all the modes sounds pretty possible. It would be better to have all modes at the same time, but that is not possible and does not sound as a terrible thing right now for me. Besides that, the 3.3V regulator can provide up to 1A, and that sounds pretty good also.&lt;&#x2F;p&gt;
+&lt;p&gt;The serial interface mode works without any problem as a normal ch341a serial interface (some Arduinos does use it).&lt;&#x2F;p&gt;
+&lt;p&gt;The big question is the other modes, like I²C, GPIO and SPI. But the great and beautiful community has already the modules for all functionalities.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;allanbian1017&#x2F;i2c-ch341-usb&quot;&gt;For I²C: allanbian1017&#x2F;i2c-ch341-usb&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gschorcht&#x2F;i2c-ch341-usb&quot;&gt;For I²C + GPIO: gschorcht&#x2F;i2c-ch341-usb&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gschorcht&#x2F;spi-ch341-usb&quot;&gt;For SPI + GPIO: gschorcht&#x2F;spi-ch341-usb&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;I did corrections in all repositories, you can check my forks or the PRs in each one.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;how-to-compile-load-and-remove-a-module&quot;&gt;How to compile, load and remove a module&lt;&#x2F;h2&gt;
+&lt;p&gt;First things first:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;To load something that you compiled
+&lt;ul&gt;
+&lt;li&gt;Compile with &lt;code&gt;make&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Load with &lt;code&gt;sudo insmod module_name.ko&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Unload with &lt;code&gt;sudo rmmod module_name&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;To load a kernel module
+&lt;ul&gt;
+&lt;li&gt;Load with &lt;code&gt;sudo modprobe module&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Unload with &lt;code&gt;sudo rmmod module&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;That&#x27;s what you need to know, for anything else you can use Google.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gpio-and-i2c&quot;&gt;GPIO and I²C&lt;&#x2F;h2&gt;
+&lt;p&gt;All GPIOs are provided with &lt;code&gt;sysfs&lt;&#x2F;code&gt;, I would personally prefer something like &lt;a href=&quot;https:&#x2F;&#x2F;wiki.analog.com&#x2F;resources&#x2F;tools-software&#x2F;linux-software&#x2F;libiio&quot;&gt;libiio&lt;&#x2F;a&gt; or providing &lt;code&gt;&#x2F;dev&#x2F;*&lt;&#x2F;code&gt; devices (Like in: &lt;a href=&quot;https:&#x2F;&#x2F;www.kernel.org&#x2F;doc&#x2F;Documentation&#x2F;i2c&#x2F;dev-interface&quot;&gt;I²C&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;www.kernel.org&#x2F;doc&#x2F;Documentation&#x2F;spi&#x2F;spidev&quot;&gt;SPI&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;(The GPIO in both SPI and I²C are D* Pins in [Back (1)] and CS* in [Front (4)]).&lt;&#x2F;p&gt;
+&lt;p&gt;Ok, to check the I²C, you need to make sure that your &lt;strong&gt;i2c-dev&lt;&#x2F;strong&gt; module is loaded, you can search it in &lt;code&gt;&#x2F;lib&#x2F;modules &lt;&#x2F;code&gt; with &lt;code&gt;find . | grep i2c-dev &lt;&#x2F;code&gt; and load it with &lt;code&gt;sudo modprobe i2c-dev&lt;&#x2F;code&gt;, this will allow the modules to show the I²C devices under &lt;code&gt;&#x2F;dev&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;gschorcht&#x2F;i2c-ch341-usb&lt;&#x2F;strong&gt; driver will returns in &lt;code&gt;dmesg&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[314374.047570] usb 1-1.1.1: new full-speed USB device number 109 using xhci_hcd
+[314374.138693] usb 1-1.1.1: New USB device found, idVendor=1a86, idProduct=5512, bcdDevice= 3.04
+[314374.138702] usb 1-1.1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[314374.148039] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio0 gpio=0 irq=0
+[314374.148049] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio1 gpio=1 irq=1
+[314374.148055] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio2 gpio=2 irq=2
+[314374.148061] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio3 gpio=3 irq=3
+[314374.148068] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio4 gpio=4 irq=4 (hwirq)
+[314374.148074] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio5 gpio=5 irq=5
+[314374.148080] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio6 gpio=6 irq=6
+[314374.148086] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio7 gpio=7 irq=7
+[314374.148349] i2c-ch341-usb 1-1.1.1:1.0: ch341_i2c_probe: created i2c device &#x2F;dev&#x2F;i2c-8
+[314374.148354] i2c-ch341-usb 1-1.1.1:1.0: ch341_i2c_set_speed: Change i2c bus speed to 100 kbps
+[314374.149365] i2c-ch341-usb 1-1.1.1:1.0: ch341_usb_probe: connected
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Showing our 8 pins plus the &lt;code&gt;i2c-8&lt;&#x2F;code&gt; device running at 100khz.&lt;&#x2F;p&gt;
+&lt;p&gt;I was able to do a simple test with &lt;code&gt;i2cdetect 8&lt;&#x2F;code&gt;. (You can get it from i2c-tools).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;i2cdetect.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;figcaption class=&quot;wp-caption-text&quot;&gt;I²C detect running in CH341A and analyzed with saleae.&lt;&#x2F;figcaption&gt;
+&lt;p&gt;You can download my i2cdetect test &lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;i2cdetect.logicdata&quot;&gt;raw .logicdata&lt;&#x2F;a&gt; or a &lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;i2cdetect.csv&quot;&gt;csv&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I did a simple test with &lt;code&gt;while true; do echo 1 &amp;gt; &#x2F;sys&#x2F;class&#x2F;gpio&#x2F;gpio0&#x2F;value; echo 0 &amp;gt; &#x2F;sys&#x2F;class&#x2F;gpio&#x2F;gpio0&#x2F;value; done&lt;&#x2F;code&gt;, and the example &lt;code&gt;gpio_output.c&lt;&#x2F;code&gt; file, both were able to toggle the GPIO at average 10khz.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;gpio.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;gpio2.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can download my gpio test &lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;gpio.logicdata&quot;&gt;raw .logicdata&lt;&#x2F;a&gt; or a &lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;gpio.csv&quot;&gt;csv&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;spi&quot;&gt;SPI&lt;&#x2F;h2&gt;
+&lt;p&gt;For the spi device, you need also to load the device module called &lt;strong&gt;spidev&lt;&#x2F;strong&gt;, &lt;code&gt;sudo modprove spidev&lt;&#x2F;code&gt;. Now with the driver loaded, you should just compile and load the spi module.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;[315818.960403] usb 1-1.1.1: USB disconnect, device number 117
+[315819.771286] usbcore: registered new interface driver spi-ch341-usb
+[315824.287292] usb 1-1.1.1: new full-speed USB device number 118 using xhci_hcd
+[315824.381352] usb 1-1.1.1: New USB device found, idVendor=1a86, idProduct=5512, bcdDevice= 3.04
+[315824.381358] usb 1-1.1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[315824.391008] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs0 SPI slave with cs=0
+[315824.391013] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs1 SPI slave with cs=1
+[315824.391016] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs2 SPI slave with cs=2
+[315824.391020] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio4 gpio=0 irq=0 (hwirq)
+[315824.391023] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio5 gpio=1 irq=1
+[315824.391028] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI master connected to SPI bus 0
+[315824.391307] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device &#x2F;dev&#x2F;spidev0.0 created
+[315824.391645] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device &#x2F;dev&#x2F;spidev0.1 created
+[315824.391981] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device &#x2F;dev&#x2F;spidev0.2 created
+[315824.392423] spi-ch341-usb 1-1.1.1:1.0: ch341_usb_probe: connected
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The SPI was running with 1.5MHz, the tests was done with python-spidev.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;spidev
+spi = spidev.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SpiDev&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;()
+spi.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;open&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;)
+to_send = []
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;range&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;30&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;):
+	to_send += [i]
+spi.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;xfer&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c0c5ce;&quot;&gt;(to_send)
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;More than 30 bytes will give:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;&quot;&gt;
+&lt;span style=&quot;color:#c0c5ce;&quot;&gt;Traceback (most recent call last):
+  File &amp;quot;test.py&amp;quot;, line 7, in &amp;lt;module&amp;gt;
+    spi.xfer(to_send)
+TimeoutError: [Errno 110] Connection timed out
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I&#x27;m not sure why.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;spi1.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;spi2.png&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can download my spi test &lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;spi.logicdata&quot;&gt;raw .logicdata&lt;&#x2F;a&gt; or a &lt;a href=&quot;&#x2F;assets&#x2F;ch341a_dongle&#x2F;spi.csv&quot;&gt;csv&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;final&quot;&gt;Final&lt;&#x2F;h2&gt;
+&lt;p&gt;Yes, I give a positive vote in this device, everything appears to be working with the correct kernel modules.
+I don&#x27;t have time right now to test with real devices&#x2F;sensors, but everything shows that will work, I&#x27;ll &lt;strong&gt;try&lt;&#x2F;strong&gt; to update this subject in the future.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.kroah.com&#x2F;lkn&#x2F;&quot;&gt;Linux Kernel in a nutshell&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;elixir.bootlin.com&#x2F;linux&#x2F;latest&#x2F;source&#x2F;drivers&#x2F;usb&quot;&gt;Linux Kernel usb &lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.zoobab.com&#x2F;ch341-usb-spi-i2c-uart-isp-dongle&quot;&gt;zoobab from Benjamin Henrion (Thank you very much !)&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>

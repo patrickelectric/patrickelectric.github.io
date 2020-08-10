@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Patrick José Pereira</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
+      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      <!-- Math rendering -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+      onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                          <a href="https:&#x2F;&#x2F;patrickelectric.work"><h2>HOME</h2></a>
+                            <div class="avatar"> <img src="https://avatars3.githubusercontent.com/patrickelectric" alt="Patrick José Pereira" itemprop="image"> </div>
+                            <h6>Patrick José Pereira</h6>
+                            
+                            <p class="lead">I am an Electronics Engineer that works with robotic systems, OSS and OSH.</p>
+                            <div class="author__urls-wrapper">
+                              <!-- Place this tag in your head or just before your close body tag. -->
+                              <script async defer src="https://buttons.github.io/buttons.js"></script>
+                              <!-- Place this tag where you want the button to render. -->
+                              <a class="github-button" href="https://github.com/patrickelectric" data-show-count="true" aria-label="Follow @patrickelectric on GitHub">Follow @patrickelectric</a>
+                              <ul class="author__urls social-icons">
+
+                                  <li itemprop="homeLocation" itemscope="" itemtype="http://schema.org/Place">
+                                    <i class="fas fa-map-marker-alt"></i> Brazil
+                                  </li>
+                                  <li>
+                                    <a href="mailto:patrickjp@kde.org">
+                                      <meta itemprop="email" content="patrickjp@kde.org">
+                                      <i class="fas fa-envelope-square"></i> Email
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://github.com/patrickelectric">
+                                      <i class="fab fa-github-square"></i> GitHub
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://www.linkedin.com/in/patrickelectric/">
+                                      <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">QT3D, Lines and AtCore</h1>
+  <span class="post-date">2017-07-02</span>
+  <h3 class="post-tags">[
+  
+  <a href="/tags/atcore">atcore</a>
+  
+  <a href="/tags/atelier">atelier</a>
+  
+  <a href="/tags/kde">kde</a>
+  
+  <a href="/tags/qt3d">qt3d</a>
+  
+  ]</h3>
+  <p>After some time working with Qt3D, now Atelier project is one step closer to have a 3D viewer from the GCode and a realtime draw of printer work.</p>
+<span id="continue-reading"></span>
+<p><img src="/assets/QT3DLines/atcore.gif" alt="3D draw with lines" /></p>
+<p>To know how Qt3D works, you can take a look in this <a href="https://doc.qt.io/qt-5/qt3d-overview.html">overview</a>. Where, working with 3D lines was a bit problematic, but I hope to help someone with this job.</p>
+<h1 id="rendering">Rendering</h1>
+<p>To render, we need our mesh and the material. This simple cube have something more than 1300 lines, and if you are thinking about it, you can can handle big models like this <a href="https://www.thingiverse.com/thing:51415">Dragon Head</a> with around 706000 lines in 60fps.</p>
+<p><img src="/assets/QT3DLines/dragon.png" alt="dragon" /></p>
+<h3 id="mesh">Mesh</h3>
+<p>It's done with a C++ code, where a 4D vector is used to perform the buffer population, the 4D is because a 3D printer have 4 dimensions in a actuation space, (X, Y, Z and E) where E is the extruder that move the filament to perform the extrusion.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#8fa1b3;">LineMeshGeometry::LineMeshGeometry</span><span style="color:#c0c5ce;">(QList&lt;QVector4D&gt; </span><span style="color:#bf616a;">vertices</span><span style="color:#c0c5ce;">, Qt3DCore::QNode *</span><span style="color:#bf616a;">parent</span><span style="color:#c0c5ce;">) :
+    </span><span style="color:#8fa1b3;">Qt3DRender::QGeometry</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">parent</span><span style="color:#c0c5ce;">)
+    , </span><span style="color:#bf616a;">_positionAttribute</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Qt3DRender::QAttribute</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">this</span><span style="color:#c0c5ce;">))
+    , </span><span style="color:#bf616a;">_vertexBuffer</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Qt3DRender::QBuffer</span><span style="color:#c0c5ce;">(Qt3DRender::QBuffer::VertexBuffer, </span><span style="color:#bf616a;">this</span><span style="color:#c0c5ce;">))
+{
+    QByteArray vertexBufferData;
+    vertexBufferData.</span><span style="color:#bf616a;">resize</span><span style="color:#c0c5ce;">(vertices.</span><span style="color:#bf616a;">size</span><span style="color:#c0c5ce;">() * </span><span style="color:#d08770;">3 </span><span style="color:#c0c5ce;">* sizeof(</span><span style="color:#b48ead;">float</span><span style="color:#c0c5ce;">));
+    </span><span style="color:#b48ead;">float </span><span style="color:#c0c5ce;">*rawVertexArray = reinterpret_cast&lt;</span><span style="color:#b48ead;">float </span><span style="color:#c0c5ce;">*&gt;(vertexBufferData.</span><span style="color:#bf616a;">data</span><span style="color:#c0c5ce;">());
+    </span><span style="color:#b48ead;">int</span><span style="color:#c0c5ce;"> idx = </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
+    </span><span style="color:#b48ead;">for </span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">const auto </span><span style="color:#c0c5ce;">&amp;v : vertices) {
+        rawVertexArray[idx++] = v.</span><span style="color:#bf616a;">x</span><span style="color:#c0c5ce;">();
+        rawVertexArray[idx++] = v.</span><span style="color:#bf616a;">y</span><span style="color:#c0c5ce;">();
+        rawVertexArray[idx++] = v.</span><span style="color:#bf616a;">z</span><span style="color:#c0c5ce;">();
+        _vertices.</span><span style="color:#bf616a;">append</span><span style="color:#c0c5ce;">(v.</span><span style="color:#bf616a;">toVector3D</span><span style="color:#c0c5ce;">());
+    }
+
+    _vertexBuffer-&gt;</span><span style="color:#bf616a;">setData</span><span style="color:#c0c5ce;">(vertexBufferData);
+
+    _positionAttribute-&gt;</span><span style="color:#bf616a;">setAttributeType</span><span style="color:#c0c5ce;">(Qt3DRender::QAttribute::VertexAttribute);
+    _positionAttribute-&gt;</span><span style="color:#bf616a;">setBuffer</span><span style="color:#c0c5ce;">(_vertexBuffer);
+    _positionAttribute-&gt;</span><span style="color:#bf616a;">setDataType</span><span style="color:#c0c5ce;">(Qt3DRender::QAttribute::Float);
+    _positionAttribute-&gt;</span><span style="color:#bf616a;">setDataSize</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">);
+    _positionAttribute-&gt;</span><span style="color:#bf616a;">setName</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">Qt3DRender::QAttribute::defaultPositionAttributeName</span><span style="color:#c0c5ce;">());
+
+    </span><span style="color:#bf616a;">addAttribute</span><span style="color:#c0c5ce;">(_positionAttribute);
+}
+
+</span><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">LineMeshGeometry::vertexCount</span><span style="color:#c0c5ce;">()
+{
+    </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;"> _vertices.</span><span style="color:#bf616a;">size</span><span style="color:#c0c5ce;">();
+}
+</span></pre>
+<p>With this done, it's possible to easy populate it with a simple class.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#8fa1b3;">LineMesh::LineMesh</span><span style="color:#c0c5ce;">(Qt3DCore::QNode *</span><span style="color:#bf616a;">parent</span><span style="color:#c0c5ce;">) :
+    </span><span style="color:#8fa1b3;">Qt3DRender::QGeometryRenderer</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">parent</span><span style="color:#c0c5ce;">)
+    , </span><span style="color:#bf616a;">_lineMeshGeo</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">nullptr</span><span style="color:#c0c5ce;">)
+{
+    </span><span style="color:#bf616a;">setInstanceCount</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#bf616a;">setIndexOffset</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#bf616a;">setFirstInstance</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#65737e;">// This will allow the line visualization
+    </span><span style="color:#bf616a;">setPrimitiveType</span><span style="color:#c0c5ce;">(Qt3DRender::QGeometryRenderer::LineStrip);
+
+    </span><span style="color:#65737e;">// This will be visualized in qml
+    </span><span style="color:#bf616a;">qRegisterMetaType</span><span style="color:#c0c5ce;">&lt;QList&lt;QVector4D&gt; &gt;(&quot;</span><span style="color:#a3be8c;">QList&lt;QVector4D&gt;</span><span style="color:#c0c5ce;">&quot;);
+    </span><span style="color:#b48ead;">auto</span><span style="color:#c0c5ce;"> gcode = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">GcodeTo3D</span><span style="color:#c0c5ce;">();
+    </span><span style="color:#bf616a;">connect</span><span style="color:#c0c5ce;">(gcode, &amp;GcodeTo3D::posFinished, </span><span style="color:#bf616a;">this</span><span style="color:#c0c5ce;">, &amp;LineMesh::posUpdate);
+}
+
+</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">LineMesh::posUpdate</span><span style="color:#c0c5ce;">(QList&lt;QVector4D&gt; </span><span style="color:#bf616a;">pos</span><span style="color:#c0c5ce;">)
+{
+    _vertices = pos;
+    _lineMeshGeo = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">LineMeshGeometry</span><span style="color:#c0c5ce;">(_vertices, </span><span style="color:#bf616a;">this</span><span style="color:#c0c5ce;">);
+    </span><span style="color:#bf616a;">setVertexCount</span><span style="color:#c0c5ce;">(_lineMeshGeo-&gt;</span><span style="color:#bf616a;">vertexCount</span><span style="color:#c0c5ce;">());
+    </span><span style="color:#bf616a;">setGeometry</span><span style="color:#c0c5ce;">(_lineMeshGeo);
+    emit </span><span style="color:#bf616a;">finished</span><span style="color:#c0c5ce;">();
+}
+</span></pre><h3 id="material-and-entity">Material and Entity</h3>
+<p>The material used in the first GIF was <a href="https://doc.qt.io/qt-5/qml-qt3d-extras-phongmaterial.html">PhongMaterial</a>, this is simple done with:</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">PhongMaterial {
+  id: lineMaterial
+  ambient: &quot;darkGreen&quot;
+}
+</span></pre>
+<p>And in the end, the creation of an Entity.</p>
+<pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">LineMesh {
+  id: lineMesh
+  enabled: true
+}
+</span></pre><pre style="background-color:#2b303b;">
+<span style="color:#c0c5ce;">Entity {
+  id: lineEntity
+  components: [ lineMesh, lineMaterial ]
+}
+</span></pre>
+<p>In the next week we plan to finish our simple 3D viwer and add it in AtCore test GUI.\
+For more info about <a href="https://github.com/kde/atcore">AtCore and Atelier click here !</a></p>
+<p><img src="/assets/QT3DLines/cube2.png" alt="Cube 2" /></p>
+
+</div>
+
+<footer>
+  <p style="text-align: center;">If it was helpful, consider giving a start:</p>
+  <!-- Place this tag where you want the button to render. -->
+  <div style="text-align: center;">
+    <a class="github-button" href="https://github.com/patrickelectric/patrickelectric.github.io" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star patrickelectric/patrickelectric.github.io on GitHub">Star</a>
+  </div>
+</footer>
+
+
+        </div>
+
+    </body>
+
+</html>
