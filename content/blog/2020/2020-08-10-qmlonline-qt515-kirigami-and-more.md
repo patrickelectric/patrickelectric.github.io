@@ -1,6 +1,6 @@
 +++
 title = 'QML Online - Qt 5.15, Kirigami, Breeze and more!'
-date = 2020-08-10T15:55:39z
+date = 2020-08-10T19:20:39z
 [taxonomies]
 tags = [ "kde", "qml", "qt", "webasm", "web", "internet", "online" ]
 [extra]
