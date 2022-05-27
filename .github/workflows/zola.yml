@@ -23,9 +23,14 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Zola Deploy
-      uses: zbrox/zola-deploy-action@0.10.1
+    - name: Run Zola
+      uses: shalzz/zola-deploy-action@master
       env:
-        TOKEN: ${{ secrets.TOKEN }}
-        # User pages should be in master branch
-        PAGES_BRANCH: master
+        BUILD_ONLY: true
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      if: success() && github.event_name != 'pull_request'
+      with:
+        branch: master
+        folder: public
