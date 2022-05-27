@@ -34,9 +34,29 @@ Git is really great, but what matters a great tool if the user interface is not 
 
 `Tig` also allow a bunch of useful arguments, such as `log`, `show`, `status`, `reflog`, `blame`, `grep`, `refs`, `stash` and others, we are going to talk about some of these later.
 
+## Git commit --fixup
+
+Oh my, you need to fix an old commit on your PR ? That's a great use of `fixup`.
+You can create a commit that fixes an old commit with `git commit -a --fixup 00112233`, but who has time to write hashs or copying/pasting it ?
+
+For that, you can create a helpful git alias such as:
+```bash
+# git fix-old number
+# Will apply a fixup in the n-old commit
+fix-old = "!f() { git commit --fixup=$(git rev-parse HEAD~$(($1-1))); }; f"
+```
+
+With that, you can use `fit fix-old 3` to fix the `HEAD~3` commit.
+
 ## Git rebase -i (Interactive rebase)
 
 Interactive rebase is a powerful command, and much more powerful and human friend with interactive mode.
+
+{% img(url="/assets/how_to_rock/rebase-i.png") %}
+ git rebase -i --autosquash origin/master
+{% end %}
+
+Oh well, you can see the `autosquash` option there, this is something that I do to apply fixups automatically on the correct commits, neat right ?
 
 ## Git reflog
 
@@ -279,6 +299,10 @@ Since we have finished talking about git manages our commits, files and everythi
 {% end %}
 
 The previous is a good simple example of how a commit works, first we have a untracked file in our working directory, we stage this file (`git add`) and after that we commit this file (`git commit`) the commit does update the *HEAD* (the hash where we are right now). And doing a checkout to a different hash (or *HEAD*) will result in a change of the working directory to match what was commited.
+
+# Cool extensions to have:
+- [delta](https://github.com/dandavison/delta): A syntax-highlighting pager for git, diff, and grep output
+- [git-absorb](https://github.com/tummychow/git-absorb): `git commit --fixup`, but automatic
 
 # References
 
