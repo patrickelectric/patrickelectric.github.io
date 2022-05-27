@@ -4,9 +4,9 @@ name: Deploy zola page
 # events but only for the master branch
 on:
   push:
-    branches: [ source ]
+    branches: [ master ]
   pull_request:
-    branches: [ source ]
+    branches: [ master ]
   schedule:
     # Run at 00:01
     - cron: 1 0 * * *
@@ -32,5 +32,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.5
       if: success() && github.event_name != 'pull_request'
       with:
-        branch: master
+        branch: gh-pages
         folder: public
