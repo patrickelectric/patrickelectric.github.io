@@ -15,9 +15,9 @@
       <title>Patrick José Pereira</title>
 
       <!-- CSS -->
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/print.css" media="print">
+      <link rel="stylesheet" href="https://patrickelectric.work/poole.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/hyde.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
@@ -126,11 +126,11 @@
 </li>
 <li>
 <p>Now, with everything ready, we should update the partuuid values of <code>/etc/fstab</code> and <code>/boot/cmdline.txt</code>. (<code>sudo blkid</code>)</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">/dev/mmcblk0p1: LABEL=&quot;boot&quot; UUID=&quot;3725-1C05&quot; TYPE=&quot;vfat&quot; PARTUUID=&quot;0155ef5b-01&quot;
-</span><span style="color:#c0c5ce;">/dev/mmcblk0p2: LABEL=&quot;rootfs&quot; UUID=&quot;fd695ef5-f047-44bd-b159-2a78c53af20a&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-02&quot;
-</span><span style="color:#c0c5ce;">/dev/mmcblk0p3: LABEL=&quot;rootfs2&quot; UUID=&quot;3da53eaa-4044-4554-8052-0f8c225f7b8c&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-03&quot;
-</span></pre></li>
+<pre><code>&#x2F;dev&#x2F;mmcblk0p1: LABEL=&quot;boot&quot; UUID=&quot;3725-1C05&quot; TYPE=&quot;vfat&quot; PARTUUID=&quot;0155ef5b-01&quot;
+&#x2F;dev&#x2F;mmcblk0p2: LABEL=&quot;rootfs&quot; UUID=&quot;fd695ef5-f047-44bd-b159-2a78c53af20a&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-02&quot;
+&#x2F;dev&#x2F;mmcblk0p3: LABEL=&quot;rootfs2&quot; UUID=&quot;3da53eaa-4044-4554-8052-0f8c225f7b8c&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-03&quot;
+</code></pre>
+</li>
 <li>
 <p>With all partitions mounted, update:</p>
 <ul>

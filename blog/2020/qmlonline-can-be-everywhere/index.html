@@ -15,9 +15,9 @@
       <title>Patrick José Pereira</title>
 
       <!-- CSS -->
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/print.css" media="print">
+      <link rel="stylesheet" href="https://patrickelectric.work/poole.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/hyde.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
@@ -118,44 +118,51 @@
 <p>QML Online now can be used in any blog or website without much work, like this:</p>
 <script type="text/javascript" src="https://qmlonline.kde.org/qtloader.js"></script>
 <script type="text/javascript" src="https://qmlonline.kde.org/qml.js"></script>
-<pre style="background-color:#2b303b;">
-<span style="color:#b48ead;">import </span><span style="color:#bf616a;">QtQuick </span><span style="color:#d08770;">2.7
-</span><span style="color:#b48ead;">import </span><span style="color:#bf616a;">QtQuick</span><span style="color:#c0c5ce;">.Controls </span><span style="color:#d08770;">2.3
-</span><span style="color:#b48ead;">import </span><span style="color:#bf616a;">QtQuick</span><span style="color:#c0c5ce;">.Layouts </span><span style="color:#d08770;">1.12
-</span><span style="color:#bf616a;">Rectangle </span><span style="color:#c0c5ce;">{
-    color: &quot;</span><span style="color:#a3be8c;">#179AF3</span><span style="color:#c0c5ce;">&quot;
-    </span><span style="color:#bf616a;">anchors</span><span style="color:#c0c5ce;">.fill: </span><span style="color:#bf616a;">parent
-     ColumnLayout</span><span style="color:#c0c5ce;">{
-        </span><span style="color:#bf616a;">anchors</span><span style="color:#c0c5ce;">.bottom: </span><span style="color:#bf616a;">parent</span><span style="color:#c0c5ce;">.bottom
-        </span><span style="color:#bf616a;">anchors</span><span style="color:#c0c5ce;">.right: </span><span style="color:#bf616a;">parent</span><span style="color:#c0c5ce;">.right
-        </span><span style="color:#bf616a;">CheckBox </span><span style="color:#c0c5ce;">{
-            checked: </span><span style="color:#d08770;">true
-            </span><span style="color:#c0c5ce;">text: &quot;</span><span style="color:#a3be8c;">Check this!</span><span style="color:#c0c5ce;">&quot;
+```js
+import QtQuick 2.7
+import QtQuick.Controls 2.3
+import QtQuick.Layouts 1.12
+
+Rectangle {
+    color: "#179AF3"
+    anchors.fill: parent
+
+     ColumnLayout{
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        CheckBox {
+            checked: true
+            text: "Check this!"
         }
-        </span><span style="color:#bf616a;">CheckBox </span><span style="color:#c0c5ce;">{
-            text: &quot;</span><span style="color:#a3be8c;">Or this!</span><span style="color:#c0c5ce;">&quot;
+        CheckBox {
+            text: "Or this!"
         }
     }
-    </span><span style="color:#bf616a;">Text </span><span style="color:#c0c5ce;">{
-        text: &quot;</span><span style="color:#a3be8c;">KDE</span><span style="color:#c0c5ce;">&quot;
-        </span><span style="color:#bf616a;">font</span><span style="color:#c0c5ce;">.pixelSize: </span><span style="color:#d08770;">80
-        </span><span style="color:#bf616a;">font</span><span style="color:#c0c5ce;">.bold: </span><span style="color:#d08770;">true
-        </span><span style="color:#c0c5ce;">color: &quot;</span><span style="color:#a3be8c;">#82CB38</span><span style="color:#c0c5ce;">&quot;
-        </span><span style="color:#bf616a;">anchors</span><span style="color:#c0c5ce;">.centerIn: </span><span style="color:#bf616a;">parent
-        RotationAnimator on rotation </span><span style="color:#c0c5ce;">{
-            running: </span><span style="color:#d08770;">true
-            </span><span style="color:#c0c5ce;">loops: </span><span style="color:#ebcb8b;">Animation</span><span style="color:#c0c5ce;">.Infinite
-            from: </span><span style="color:#d08770;">0
-            </span><span style="color:#c0c5ce;">to: </span><span style="color:#d08770;">360
-            </span><span style="color:#c0c5ce;">duration: </span><span style="color:#d08770;">1500
-        </span><span style="color:#c0c5ce;">}
+
+    Text {
+        text: "KDE"
+        font.pixelSize: 80
+        font.bold: true
+        color: "#82CB38"
+        anchors.centerIn: parent
+        RotationAnimator on rotation {
+            running: true
+            loops: Animation.Infinite
+            from: 0
+            to: 360
+            duration: 1500
+        }
     }
 }
-</span></pre><!--
+```
+
+<!--
 <script type="text/javascript" src="https://qmlonline.kde.org/qtloader.js"></script>
 <script type="text/javascript" src="https://qmlonline.kde.org/qml.js"></script>
 -->
+
 <div id="qmlonline"></div>
+
 <script type='text/javascript'>
     const qmlonline = new QmlOnline("qmlonline")
     qmlonline.registerCall({
@@ -169,9 +176,11 @@
             qmlonline.setCode(`import QtQuick 2.7
 import QtQuick.Controls 2.3
 import QtQuick.Layouts 1.12
+
 Rectangle {
     color: "#179AF3"
     anchors.fill: parent
+
      ColumnLayout{
         anchors.bottom: parent.bottom
         anchors.right: parent.right
@@ -183,6 +192,7 @@ Rectangle {
             text: "Or this!"
         }
     }
+
     Text {
         text: "KDE"
         font.pixelSize: 80
@@ -204,18 +214,17 @@ Rectangle {
 </script>
 <p>And how can this new feature be used ?</p>
 <p>It's quite simple, check this minimal HTML example:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">&lt;</span><span style="color:#bf616a;">html</span><span style="color:#c0c5ce;">&gt;
-&lt;</span><span style="color:#bf616a;">head</span><span style="color:#c0c5ce;">&gt;
-    &lt;</span><span style="color:#bf616a;">title</span><span style="color:#c0c5ce;">&gt;Qml Online minimal example&lt;/</span><span style="color:#bf616a;">title</span><span style="color:#c0c5ce;">&gt;
-&lt;/</span><span style="color:#bf616a;">head</span><span style="color:#c0c5ce;">&gt;
-&lt;</span><span style="color:#bf616a;">body</span><span style="color:#c0c5ce;">&gt;
-    &lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">type</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">text/javascript</span><span style="color:#c0c5ce;">&quot; </span><span style="color:#d08770;">src</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">https://qmlonline.kde.org/qtloader.js</span><span style="color:#c0c5ce;">&quot;&gt;&lt;/</span><span style="color:#bf616a;">script</span><span style="color:#c0c5ce;">&gt;
-    &lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">type</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">text/javascript</span><span style="color:#c0c5ce;">&quot; </span><span style="color:#d08770;">src</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">https://qmlonline.kde.org/qml.js</span><span style="color:#c0c5ce;">&quot;&gt;&lt;/</span><span style="color:#bf616a;">script</span><span style="color:#c0c5ce;">&gt;
+<pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Qml Online minimal example&lt;&#x2F;title&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;https:&#x2F;&#x2F;qmlonline.kde.org&#x2F;qtloader.js&quot;&gt;&lt;&#x2F;script&gt;
+    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;https:&#x2F;&#x2F;qmlonline.kde.org&#x2F;qml.js&quot;&gt;&lt;&#x2F;script&gt;
 
-    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#8fa1b3;">id</span><span style="color:#c0c5ce;">=&quot;</span><span style="color:#a3be8c;">qmlonline</span><span style="color:#c0c5ce;">&quot;&gt;&lt;/</span><span style="color:#bf616a;">div</span><span style="color:#c0c5ce;">&gt;
+    &lt;div id=&quot;qmlonline&quot;&gt;&lt;&#x2F;div&gt;
 
-    &lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">type</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">text/qml</span><span style="color:#c0c5ce;">&#39;&gt;
+    &lt;script type=&#x27;text&#x2F;qml&#x27;&gt;
     import QtQuick 2.7
     import QtQuick.Controls 2.3
     Rectangle {
@@ -236,26 +245,26 @@ Rectangle {
             }
         }
     }
-    &lt;/</span><span style="color:#bf616a;">script</span><span style="color:#c0c5ce;">&gt;
+    &lt;&#x2F;script&gt;
 
-    &lt;</span><span style="color:#bf616a;">script </span><span style="color:#d08770;">type</span><span style="color:#c0c5ce;">=&#39;</span><span style="color:#a3be8c;">text/javascript</span><span style="color:#c0c5ce;">&#39;&gt;
-        </span><span style="color:#b48ead;">const </span><span style="color:#bf616a;">qml </span><span style="color:#c0c5ce;">= new </span><span style="color:#bf616a;">QmlOnline</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">qmlonline</span><span style="color:#c0c5ce;">&quot;)
-        </span><span style="color:#bf616a;">qml</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">registerCall</span><span style="color:#c0c5ce;">({
-            </span><span style="color:#8fa1b3;">qmlMessage</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">function</span><span style="color:#c0c5ce;">(msg) {
-                console.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(`</span><span style="color:#a3be8c;">qml message: </span><span style="color:#c0c5ce;">${</span><span style="color:#bf616a;">msg</span><span style="color:#c0c5ce;">}`)
+    &lt;script type=&#x27;text&#x2F;javascript&#x27;&gt;
+        const qml = new QmlOnline(&quot;qmlonline&quot;)
+        qml.registerCall({
+            qmlMessage: function(msg) {
+                console.log(`qml message: ${msg}`)
             },
-            </span><span style="color:#8fa1b3;">qmlError</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">function</span><span style="color:#c0c5ce;">(data) {
-                console.</span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(`</span><span style="color:#a3be8c;">qml error: </span><span style="color:#c0c5ce;">${</span><span style="color:#ebcb8b;">JSON</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">stringify</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">data</span><span style="color:#c0c5ce;">)}`)
+            qmlError: function(data) {
+                console.log(`qml error: ${JSON.stringify(data)}`)
             },
-            </span><span style="color:#8fa1b3;">posInit</span><span style="color:#c0c5ce;">: </span><span style="color:#b48ead;">function</span><span style="color:#c0c5ce;">() {
-                </span><span style="color:#bf616a;">qml</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">setCode</span><span style="color:#c0c5ce;">(</span><span style="color:#ebcb8b;">Array</span><span style="color:#c0c5ce;">.prototype.slice.</span><span style="color:#bf616a;">apply</span><span style="color:#c0c5ce;">(document.</span><span style="color:#96b5b4;">getElementsByTagName</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">script</span><span style="color:#c0c5ce;">&#39;)).</span><span style="color:#bf616a;">find</span><span style="color:#c0c5ce;">(e </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">e</span><span style="color:#c0c5ce;">.type == &#39;</span><span style="color:#a3be8c;">text/qml</span><span style="color:#c0c5ce;">&#39;).text)
+            posInit: function() {
+                qml.setCode(Array.prototype.slice.apply(document.getElementsByTagName(&#x27;script&#x27;)).find(e =&gt; e.type == &#x27;text&#x2F;qml&#x27;).text)
             },
         })
-        </span><span style="color:#bf616a;">qml</span><span style="color:#c0c5ce;">.</span><span style="color:#bf616a;">init</span><span style="color:#c0c5ce;">()
-    &lt;/</span><span style="color:#bf616a;">script</span><span style="color:#c0c5ce;">&gt;
-&lt;/</span><span style="color:#bf616a;">body</span><span style="color:#c0c5ce;">&gt;
-&lt;/</span><span style="color:#bf616a;">html</span><span style="color:#c0c5ce;">&gt;
-</span></pre>
+        qml.init()
+    &lt;&#x2F;script&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;
+</code></pre>
 <p>As you can see, there is three steps, include both <code>qtloader.js</code> and <code>qml.js</code>, add a <code>div</code> DOM and create a <code>QmlOnline</code> object.
 Since I'm not a web expert, probably there is a better way to organize this approach for the user and bugs may exist.
 Be free to create <a href="https://invent.kde.org/webapps/qmlonline/-/merge_requests">Merge Requests</a>, or get in touch with <a href="https://invent.kde.org/webapps/qmlonline/-/issues/new">feature requests and issues</a>.</p>

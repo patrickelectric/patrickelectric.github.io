@@ -15,9 +15,9 @@
       <title>Patrick José Pereira</title>
 
       <!-- CSS -->
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/print.css" media="print">
+      <link rel="stylesheet" href="https://patrickelectric.work/poole.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/hyde.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
@@ -108,28 +108,27 @@
 <ul>
 <li>
 <p><strong>Encapsulate magic variables</strong>:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// First version
-</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">start_communication</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">232</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">  </span><span style="color:#65737e;">// Reviewer: What is the meaning of 0 ? What is 1 ? Why 232 ?
+<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">...&#x2F;&#x2F; First version
+  start_communication(0, 1, 232);
+  &#x2F;&#x2F; Reviewer: What is the meaning of 0 ? What is 1 ? Why 232 ?
 
-</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Second version
-</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">enum class </span><span style="color:#c0c5ce;">Messages {
-</span><span style="color:#c0c5ce;">      ...
-</span><span style="color:#c0c5ce;">      RequestStatus = </span><span style="color:#d08770;">232</span><span style="color:#c0c5ce;">,
-</span><span style="color:#c0c5ce;">  }
-</span><span style="color:#c0c5ce;">  ...
-</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t vid = </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t cid = </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">start_communication</span><span style="color:#c0c5ce;">(vid, cid, Messages::RequestStatus);
-</span><span style="color:#c0c5ce;">  </span><span style="color:#65737e;">// Reviewer: What is vid ? What is cid ?
+...&#x2F;&#x2F; Second version
+  enum class Messages {
+      ...
+      RequestStatus = 232,
+  }
+  ...
+  const uint8_t vid = 0;
+  const uint8_t cid = 1;
+  start_communication(vid, cid, Messages::RequestStatus);
+  &#x2F;&#x2F; Reviewer: What is vid ? What is cid ?
 
-</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">//Final version
-</span><span style="color:#c0c5ce;">  ...
-</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t vehicle_id = </span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">  </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t component_id = </span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">  </span><span style="color:#bf616a;">start_communication</span><span style="color:#c0c5ce;">(vehicle_id, component_id, Messages::RequestStatus);
-</span></pre>
+...&#x2F;&#x2F;Final version
+  ...
+  const uint8_t vehicle_id = 0;
+  const uint8_t component_id = 1;
+  start_communication(vehicle_id, component_id, Messages::RequestStatus);
+</code></pre>
 <p>As you can see, the final version makes everything more readable, we know that we are starting the communication with a vehicle that has an id of 0 and the vehicle probably contains a component with id 1, and while calling this function we are also requesting the status. Much better than 0, 1 and 232 right ?
 Doing this will help the reviewers and future developers to understand what is the meaning of such numbers.
 It's also necessary to avoid variables that contains only single letters or really short abbreviations, is much harder to understand this: $$C^2 = A^2 + B^2$$
@@ -137,122 +136,119 @@ over this: $$hypotenuse^2 = catheti_1^2 + catheti_2^2$$</p>
 </li>
 <li>
 <p><strong>Avoid multiple arguments</strong>:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// First version
-</span><span style="color:#b48ead;">auto</span><span style="color:#c0c5ce;"> vehicle = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Vehicle</span><span style="color:#c0c5ce;">(
-</span><span style="color:#c0c5ce;">    VehicleType::Car,
-</span><span style="color:#c0c5ce;">    </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">,
-</span><span style="color:#c0c5ce;">    {</span><span style="color:#d08770;">28</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">31</span><span style="color:#c0c5ce;">},
-</span><span style="color:#c0c5ce;">    Fuel::Electric,
-</span><span style="color:#c0c5ce;">    </span><span style="color:#d08770;">1.2</span><span style="color:#c0c5ce;">,
-</span><span style="color:#c0c5ce;">    </span><span style="color:#d08770;">613
-</span><span style="color:#c0c5ce;">);
-</span><span style="color:#65737e;">// Reviewer: What is the meaning of all this values ?
-</span><span style="color:#65737e;">//           How can we make it better ?
+<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">...&#x2F;&#x2F; First version
+auto vehicle = new Vehicle(
+    VehicleType::Car,
+    4,
+    {28, 31},
+    Fuel::Electric,
+    1.2,
+    613
+);
+&#x2F;&#x2F; Reviewer: What is the meaning of all this values ?
+&#x2F;&#x2F;           How can we make it better ?
 
-</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Second version
-</span><span style="color:#b48ead;">auto</span><span style="color:#c0c5ce;"> vehicle = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Vehicle</span><span style="color:#c0c5ce;">(VehicleType::Car)
-</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setNumberOfTires</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setTirePressure</span><span style="color:#c0c5ce;">({</span><span style="color:#d08770;">28</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">31</span><span style="color:#c0c5ce;">});
-</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setFuel</span><span style="color:#c0c5ce;">(Fuel::Electric);
-</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setWeightInTons</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1.2</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">vehicle-&gt;</span><span style="color:#bf616a;">setAutonomyInKm</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">613</span><span style="color:#c0c5ce;">);
+...&#x2F;&#x2F; Second version
+auto vehicle = new Vehicle(VehicleType::Car)
+vehicle-&gt;setNumberOfTires(4);
+vehicle-&gt;setTirePressure({28, 31});
+vehicle-&gt;setFuel(Fuel::Electric);
+vehicle-&gt;setWeightInTons(1.2);
+vehicle-&gt;setAutonomyInKm(613);
 
-</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// It&#39;s also possible to use aggregate initialization in C++20
-</span><span style="color:#65737e;">// and user-defined literals from C++11
-</span><span style="color:#b48ead;">auto</span><span style="color:#c0c5ce;"> vehicle = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">Vehicle</span><span style="color:#c0c5ce;">({
-</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">type </span><span style="color:#c0c5ce;">= VehicleType::Car,
-</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">numberOfTires </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">,
-</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">tirePressure </span><span style="color:#c0c5ce;">= {</span><span style="color:#d08770;">28_psi</span><span style="color:#c0c5ce;">, </span><span style="color:#d08770;">31_psi</span><span style="color:#c0c5ce;">},
-</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">fuel </span><span style="color:#c0c5ce;">= Fuel::Electric,
-</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">weight </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">1.2_tn</span><span style="color:#c0c5ce;">,
-</span><span style="color:#c0c5ce;">    .</span><span style="color:#bf616a;">autonomy </span><span style="color:#c0c5ce;">= </span><span style="color:#d08770;">613_km</span><span style="color:#c0c5ce;">,
-</span><span style="color:#c0c5ce;">});
-</span></pre>
+...&#x2F;&#x2F; It&#x27;s also possible to use aggregate initialization in C++20
+&#x2F;&#x2F; and user-defined literals from C++11
+auto vehicle = new Vehicle({
+    .type = VehicleType::Car,
+    .numberOfTires = 4,
+    .tirePressure = {28_psi, 31_psi},
+    .fuel = Fuel::Electric,
+    .weight = 1.2_tn,
+    .autonomy = 613_km,
+});
+</code></pre>
 <p>Both second and C++20/C++11 alternatives are valid for a better readability of the code, to choose between both alternatives will depend of how are you going to design your API, probably if you are more familiar with the Qt API, the second version appears to be the most common, the C++20/C++11 alternative appears to be a bit more verbose but can be useful to avoid multiple function calls and helpful when dealing with a simpler code base.</p>
 </li>
 <li>
 <p><strong>Encapsulate code when necessary</strong>, try to break functions in a more readable and explanatory way:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Original version
-</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::start_serial_communication</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Check if we are open to talk
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(!_port || _port-&gt;</span><span style="color:#bf616a;">register</span><span style="color:#c0c5ce;">() != </span><span style="color:#d08770;">0xb0001</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Serial port is not open!</span><span style="color:#c0c5ce;">&quot;);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">    }
+<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">...&#x2F;&#x2F; Original version
+void Serial::start_serial_communication() {
+    &#x2F;&#x2F; Check if we are open to talk
+    if (!_port || _port-&gt;register() != 0xb0001) {
+        log(&quot;Serial port is not open!&quot;);
+        return;
+    }
 
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send a 10ms serial break signal
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">msleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">usleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send intercalated binary for detection
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">U</span><span style="color:#c0c5ce;">&#39;);
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">flush</span><span style="color:#c0c5ce;">();
+    &#x2F;&#x2F; Send a 10ms serial break signal
+    _port-&gt;set_break_enabled(true);
+    msleep(10);
+    _port-&gt;set_break_enabled(false);
+    usleep(10);
+    &#x2F;&#x2F; Send intercalated binary for detection
+    _port-&gt;write(&#x27;U&#x27;);
+    _port-&gt;flush();
 
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send start AT command
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">AT+start</span><span style="color:#c0c5ce;">&quot;);
-</span><span style="color:#c0c5ce;">}
+    &#x2F;&#x2F; Send start AT command
+    _port-&gt;write(&quot;AT+start&quot;);
+}
 
-</span><span style="color:#65737e;">// Reviewer: Try to make it more readable encapsulating
-</span><span style="color:#65737e;">//            some functionalities
+&#x2F;&#x2F; Reviewer: Try to make it more readable encapsulating
+&#x2F;&#x2F;            some functionalities
 
-</span><span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Second version
-</span><span style="color:#b48ead;">bool </span><span style="color:#8fa1b3;">Serial::is_port_open</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">return </span><span style="color:#c0c5ce;">!_port || _port-&gt;</span><span style="color:#bf616a;">register</span><span style="color:#c0c5ce;">() != </span><span style="color:#d08770;">0xb0001</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">}
+...&#x2F;&#x2F; Second version
+bool Serial::is_port_open() {
+    return !_port || _port-&gt;register() != 0xb0001;
+}
 
-</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::force_baudrate_detection</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send a 10ms serial break signal
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">msleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">set_break_enabled</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">false</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">usleep</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Send intercalated binary for detection
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">U</span><span style="color:#c0c5ce;">&#39;);
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">flush</span><span style="color:#c0c5ce;">();
-</span><span style="color:#c0c5ce;">}
+void Serial::force_baudrate_detection() {
+    &#x2F;&#x2F; Send a 10ms serial break signal
+    _port-&gt;set_break_enabled(true);
+    msleep(10);
+    _port-&gt;set_break_enabled(false);
+    usleep(10);
+    &#x2F;&#x2F; Send intercalated binary for detection
+    _port-&gt;write(&#x27;U&#x27;);
+    _port-&gt;flush();
+}
 
-</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::send_message</span><span style="color:#c0c5ce;">(Message </span><span style="color:#bf616a;">message_type</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">    _port-&gt;</span><span style="color:#bf616a;">write</span><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">messageFromType</span><span style="color:#c0c5ce;">(message_type));
-</span><span style="color:#c0c5ce;">}
+void Serial::send_message(Message message_type) {
+    _port-&gt;write(messageFromType(message_type));
+}
 
-</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Serial::start_serial_communication</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">if </span><span style="color:#c0c5ce;">(!</span><span style="color:#bf616a;">is_port_open</span><span style="color:#c0c5ce;">()) {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#96b5b4;">log</span><span style="color:#c0c5ce;">(&quot;</span><span style="color:#a3be8c;">Serial port is not open!</span><span style="color:#c0c5ce;">&quot;);
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">return</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">    }
+void Serial::start_serial_communication() {
+    if (!is_port_open()) {
+        log(&quot;Serial port is not open!&quot;);
+        return;
+    }
 
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">force_baudrate_detection</span><span style="color:#c0c5ce;">();
-</span><span style="color:#c0c5ce;">    </span><span style="color:#bf616a;">send_message</span><span style="color:#c0c5ce;">(Message::Start)
-</span><span style="color:#c0c5ce;">}
-</span></pre>
+    force_baudrate_detection();
+    send_message(Message::Start)
+}
+</code></pre>
 <p>As you can see, the reason behind each block of code is clear now, and with that, the comments are also not necessary anymore, the code is friendly and readable enough that's possible to understand it without any comments, the function name does the job for free.</p>
 </li>
 <li>
 <p><strong>Avoid comments</strong>, that's a clickbait, comments are really necessary, but they may be unnecessary when you are doing something that's really straightforward, and sometimes when something isn't, it's better to encapsulate it.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">    ...</span><span style="color:#65737e;">// Original version
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">blink_routine</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#65737e;">// Use the LED builtin
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">const int</span><span style="color:#c0c5ce;"> led_builtin = LED_BUILTIN;
-</span><span style="color:#c0c5ce;">        </span><span style="color:#65737e;">// Configure ping to output
-</span><span style="color:#c0c5ce;">        </span><span style="color:#bf616a;">setPinAsOutput</span><span style="color:#c0c5ce;">(led_builtin);
+<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">    ...&#x2F;&#x2F; Original version
+    void blink_routine() {
+        &#x2F;&#x2F; Use the LED builtin
+        const int led_builtin = LED_BUILTIN;
+        &#x2F;&#x2F; Configure ping to output
+        setPinAsOutput(led_builtin);
 
-</span><span style="color:#c0c5ce;">        </span><span style="color:#65737e;">// Loop forever
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">while</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Turn the LED on
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOn</span><span style="color:#c0c5ce;">(led_builtin);
-</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Wait for a second
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Turn the LED off
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOff</span><span style="color:#c0c5ce;">(led_builtin);
-</span><span style="color:#c0c5ce;">            </span><span style="color:#65737e;">// Wait for a second
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">        }
-</span><span style="color:#c0c5ce;">    }
-</span></pre>
+        &#x2F;&#x2F; Loop forever
+        while(true) {
+            &#x2F;&#x2F; Turn the LED on
+            turnPinOn(led_builtin);
+            &#x2F;&#x2F; Wait for a second
+            wait_seconds(1);
+            &#x2F;&#x2F; Turn the LED off
+            turnPinOff(led_builtin);
+            &#x2F;&#x2F; Wait for a second
+            wait_seconds(1);
+        }
+    }
+</code></pre>
 <p>Before checking the final version, let me talk more about it:</p>
 <ul>
 <li>
@@ -265,51 +261,49 @@ over this: $$hypotenuse^2 = catheti_1^2 + catheti_2^2$$</p>
 <p>A comment should bring a value to the code, if you can remove the comment and the code can be understandable by a newcomer, the comment is not important.</p>
 </li>
 </ul>
-<pre style="background-color:#2b303b;">
-<span style="color:#c0c5ce;">...</span><span style="color:#65737e;">// Final version
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">blink_routine</span><span style="color:#c0c5ce;">() {
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">const int</span><span style="color:#c0c5ce;"> led_builtin = LED_BUILTIN;
-</span><span style="color:#c0c5ce;">        </span><span style="color:#bf616a;">setPinAsOutput</span><span style="color:#c0c5ce;">(led_builtin);
+<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">...&#x2F;&#x2F; Final version
+    void blink_routine() {
+        const int led_builtin = LED_BUILTIN;
+        setPinAsOutput(led_builtin);
 
-</span><span style="color:#c0c5ce;">        </span><span style="color:#b48ead;">while</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">true</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOn</span><span style="color:#c0c5ce;">(led_builtin);
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">turnPinOff</span><span style="color:#c0c5ce;">(led_builtin);
-</span><span style="color:#c0c5ce;">            </span><span style="color:#bf616a;">wait_seconds</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
-</span><span style="color:#c0c5ce;">        }
-</span><span style="color:#c0c5ce;">    }
-</span></pre>
+        while(true) {
+            turnPinOn(led_builtin);
+            wait_seconds(1);
+            turnPinOff(led_builtin);
+            wait_seconds(1);
+        }
+    }
+</code></pre>
 <p>There is a good video about this subject by <a href="https://www.youtube.com/watch?v=NLebZ3XT92E">Walter E. Brown in cppcon 2017, &quot;Whitespace ≤ Comments ＜＜ Code&quot;</a>.</p>
 <p>And to finish, you should not avoid comments, you should understand when comments are necessary, like this:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#65737e;">// From ArduPilot - GPIO_RPI
-</span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">set_gpio_mode_alt</span><span style="color:#c0c5ce;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">pin</span><span style="color:#c0c5ce;">, </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">alternative</span><span style="color:#c0c5ce;">) {
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// **Moved content from cpp for this example**
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t pins_per_register = </span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Calculates the position of the 3 bit mask in the 32 bits register
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t tree_bits_position_in_register = (pin%pins_per_register)*</span><span style="color:#d08770;">3</span><span style="color:#c0c5ce;">;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">/** Creates a mask to enable the alternative function based in the following logic:
-</span><span style="color:#65737e;">    *
-</span><span style="color:#65737e;">    * | Alternative Function | 3 bits value |
-</span><span style="color:#65737e;">    * |:--------------------:|:------------:|
-</span><span style="color:#65737e;">    * |      Function 0      |     0b100    |
-</span><span style="color:#65737e;">    * |      Function 1      |     0b101    |
-</span><span style="color:#65737e;">    * |      Function 2      |     0b110    |
-</span><span style="color:#65737e;">    * |      Function 3      |     0b111    |
-</span><span style="color:#65737e;">    * |      Function 4      |     0b011    |
-</span><span style="color:#65737e;">    * |      Function 5      |     0b010    |
-</span><span style="color:#65737e;">    */
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint8_t alternative_value =
-</span><span style="color:#c0c5ce;">        (alternative &lt; </span><span style="color:#d08770;">4 </span><span style="color:#c0c5ce;">? (alternative + </span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">) : (alternative == </span><span style="color:#d08770;">4 </span><span style="color:#c0c5ce;">? </span><span style="color:#d08770;">3 </span><span style="color:#c0c5ce;">: </span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">));
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// 0b00&#39;000&#39;000&#39;000&#39;000&#39;000&#39;000&#39;ALT&#39;000&#39;000&#39;000 enables alternative for the 4th pin
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint32_t mask_with_alt = static_cast&lt;uint32_t&gt;(alternative_value) &lt;&lt; tree_bits_position_in_register;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#b48ead;">const </span><span style="color:#c0c5ce;">uint32_t mask = </span><span style="color:#d08770;">0b111 </span><span style="color:#c0c5ce;">&lt;&lt; tree_bits_position_in_register;
-</span><span style="color:#c0c5ce;">    </span><span style="color:#65737e;">// Clear all bits in our position and apply our mask with alt values
-</span><span style="color:#c0c5ce;">    uint32_t register_value = _gpio[pin / pins_per_register];
-</span><span style="color:#c0c5ce;">    register_value &amp;= ~mask;
-</span><span style="color:#c0c5ce;">    _gpio[pin / pins_per_register] = register_value | mask_with_alt;
-</span><span style="color:#c0c5ce;">}
-</span></pre>
+<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">&#x2F;&#x2F; From ArduPilot - GPIO_RPI
+void set_gpio_mode_alt(int pin, int alternative) {
+    &#x2F;&#x2F; **Moved content from cpp for this example**
+    const uint8_t pins_per_register = 10;
+    &#x2F;&#x2F; Calculates the position of the 3 bit mask in the 32 bits register
+    const uint8_t tree_bits_position_in_register = (pin%pins_per_register)*3;
+    &#x2F;** Creates a mask to enable the alternative function based in the following logic:
+    *
+    * | Alternative Function | 3 bits value |
+    * |:--------------------:|:------------:|
+    * |      Function 0      |     0b100    |
+    * |      Function 1      |     0b101    |
+    * |      Function 2      |     0b110    |
+    * |      Function 3      |     0b111    |
+    * |      Function 4      |     0b011    |
+    * |      Function 5      |     0b010    |
+    *&#x2F;
+    const uint8_t alternative_value =
+        (alternative &lt; 4 ? (alternative + 4) : (alternative == 4 ? 3 : 2));
+    &#x2F;&#x2F; 0b00&#x27;000&#x27;000&#x27;000&#x27;000&#x27;000&#x27;000&#x27;ALT&#x27;000&#x27;000&#x27;000 enables alternative for the 4th pin
+    const uint32_t mask_with_alt = static_cast&lt;uint32_t&gt;(alternative_value) &lt;&lt; tree_bits_position_in_register;
+    const uint32_t mask = 0b111 &lt;&lt; tree_bits_position_in_register;
+    &#x2F;&#x2F; Clear all bits in our position and apply our mask with alt values
+    uint32_t register_value = _gpio[pin &#x2F; pins_per_register];
+    register_value &amp;= ~mask;
+    _gpio[pin &#x2F; pins_per_register] = register_value | mask_with_alt;
+}
+</code></pre>
 <p>Mostly of the lines in this code can be impossible to understand without access or reading the datasheet directly,
 the comments are here to understand what is going on and why, otherwise anyone that'll touch this code will need to do a reverse engineer to understand it.</p>
 </li>

@@ -15,9 +15,9 @@
       <title>Patrick José Pereira</title>
 
       <!-- CSS -->
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;print.css" media="print">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;poole.css">
-      <link rel="stylesheet" href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;hyde.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/print.css" media="print">
+      <link rel="stylesheet" href="https://patrickelectric.work/poole.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/hyde.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
@@ -116,9 +116,8 @@ images. </a></li>
 <p><a href="http://pt.aliexpress.com/item/USB2-0-Digital-DVB-T-SDR-DAB-FM-HDTV-TV-Tuner-Receiver-Stick-HE-RTL2832U-R820T/32357851768.html">Aliexpress link.</a></p>
 <h1 id="libraries-and-programs">Libraries and Programs</h1>
 <p>After some time (6 months, hell yeah Brazil...) to receive the package, I begun to install all the programs and libraries to use the RTL.</p>
-<pre style="background-color:#2b303b;">
-$ sudo apt-get install gnuradio rtl-sdr gqrx-sdr
-</pre>
+<pre><code>$ sudo apt-get install gnuradio rtl-sdr gqrx-sdr
+</code></pre>
 <ul>
 <li>
 <p>gnuradio : GNU Radio is a free software development toolkit that provides signal processing blocks to implement software-defined radios and signal processing systems. It
@@ -131,14 +130,13 @@ commercial environments to support both wireless communications research and rea
 </li>
 </ul>
 <p>`</p>
-<pre style="background-color:#2b303b;">
- * rtl_adsb: a simple ADS-B decoder for RTL2832 based DVB-T receivers
+<pre><code> * rtl_adsb: a simple ADS-B decoder for RTL2832 based DVB-T receivers
  * rtl_eeprom: an EEPROM programming tool for RTL2832 based DVB-T receivers
  * rtl_fm: a narrow band FM demodulator for RTL2832 based DVB-T receivers
- * rtl_sdr: an I/Q recorder for RTL2832 based DVB-T receivers
- * rtl_tcp: an I/Q spectrum server for RTL2832 based DVB-T receivers
+ * rtl_sdr: an I&#x2F;Q recorder for RTL2832 based DVB-T receivers
+ * rtl_tcp: an I&#x2F;Q spectrum server for RTL2832 based DVB-T receivers
  * rtl_test: a benchmark tool for RTL2832 based DVB-T receivers
-</pre>
+</code></pre>
 <p>`</p>
 <ul>
 <li>gqrx-sdr is a RF receive interface that have a displays FFT plot and spectrum waterfall very helpful to detect signals,  the software includes AM, SSB, FM-N, FM-W (mono
@@ -146,9 +144,8 @@ and stereo) demodulators and Special FM mode for NOAA APT.</li>
 </ul>
 <p><img src="/assets/fm_demodulation/gqrx-1024x576.png" alt="gqrx interface." /></p>
 <p>After installed all the software and plugging the receiver on the computer, we can see that have a Realtek chip with the lsusb feedback.</p>
-<pre style="background-color:#2b303b;">
-Bus 001 Device 004: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T
-</pre>
+<pre><code>Bus 001 Device 004: ID 0bda:2838 Realtek Semiconductor Corp. RTL2838 DVB-T
+</code></pre>
 <p>Ok, now with everything done,  we can capture some data ! We can use the rtl-sdr toolkit.</p>
 <pre class="wiki">rtl_sdr capture.bin -s 1.8e6 -f 100.9e6</pre>
 <p>The capture.bin is the file that will have the IQ data, 1.8 MHz is the sample frequency and the frequency that we will look for is 100.9MHz (Rádio Atlântida), the radio
@@ -187,24 +184,23 @@ s_Q(t)</script> <a href="http://www.ni.com/tutorial/4805/en/">here</a>.</p>
 \frac{1}{(2\pi K_f)} \frac{d}{dt}(\sphericalangle (s_I(t)+js_Q(y))</script></p>
 <h1 id="some-code">Some code.</h1>
 <p>Now, with the knowledge of how the FM modulation and demodulation work, we can write a octave code that can show to us how the theory work in the real world.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#65737e;">%read file and convert data
-</span><span style="color:#c0c5ce;">fid = </span><span style="color:#b48ead;">fopen</span><span style="color:#c0c5ce;">(&#39;</span><span style="color:#a3be8c;">./capture2.bin</span><span style="color:#c0c5ce;">&#39;,&#39;</span><span style="color:#a3be8c;">rb</span><span style="color:#c0c5ce;">&#39;);
-y = </span><span style="color:#b48ead;">fread</span><span style="color:#c0c5ce;">(fid,&#39;</span><span style="color:#a3be8c;">uint8=&amp;amp;amp;amp;amp;amp;amp;gt;double</span><span style="color:#c0c5ce;">&#39;);
-y = y-</span><span style="color:#d08770;">127</span><span style="color:#c0c5ce;">;
-</span><span style="color:#65737e;">% transform IQ data to an imaginary number
-</span><span style="color:#c0c5ce;">yi = y(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">:</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">:end)+</span><span style="color:#d08770;">i</span><span style="color:#c0c5ce;">*y(</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">:</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">:end);
+<pre data-lang="matlab" class="language-matlab "><code class="language-matlab" data-lang="matlab">%read file and convert data
+fid = fopen(&#x27;.&#x2F;capture2.bin&#x27;,&#x27;rb&#x27;);
+y = fread(fid,&#x27;uint8=&amp;amp;amp;amp;amp;amp;amp;gt;double&#x27;);
+y = y-127;
+% transform IQ data to an imaginary number
+yi = y(1:2:end)+i*y(2:2:end);
 
-</span><span style="color:#65737e;">% the radio frequency and the sample frequency
-</span><span style="color:#c0c5ce;">freq = </span><span style="color:#d08770;">100.9e6</span><span style="color:#c0c5ce;">;
-fs = </span><span style="color:#d08770;">1.8e6</span><span style="color:#c0c5ce;">;
+% the radio frequency and the sample frequency
+freq = 100.9e6;
+fs = 1.8e6;
 
-</span><span style="color:#65737e;">% some math
-</span><span style="color:#c0c5ce;">yang = </span><span style="color:#b48ead;">angle</span><span style="color:#c0c5ce;">(yi);     </span><span style="color:#65737e;">% take the angle -pi to pi
-</span><span style="color:#c0c5ce;">yrap = </span><span style="color:#b48ead;">unwrap</span><span style="color:#c0c5ce;">(yang);  </span><span style="color:#65737e;">% make the correction to continue the angle after pi and -pi
-</span><span style="color:#c0c5ce;">tdev = </span><span style="color:#b48ead;">diff</span><span style="color:#c0c5ce;">(yrap);    </span><span style="color:#65737e;">% the derivative of theta
-</span><span style="color:#b48ead;">sound</span><span style="color:#c0c5ce;">(tdev,fs)        </span><span style="color:#65737e;">% give us some music
-</span></pre>
+% some math
+yang = angle(yi);     % take the angle -pi to pi
+yrap = unwrap(yang);  % make the correction to continue the angle after pi and -pi
+tdev = diff(yrap);    % the derivative of theta
+sound(tdev,fs)        % give us some music
+</code></pre>
 <p>You can download the capture.bin that I have used and the .m code to octave (open source rules) here:
 <a href="/assets/fm_demodulation/fm_demodulator_mono.zip">fm_demodulator_mono</a>.</p>
 <p><audio class="wp-audio-shortcode" id="audio-120-1" preload="none" style="width: 100%;" controls="controls"><source type="audio/wav"
@@ -238,34 +234,33 @@ class="MathJax_Preview"><img src="http://i0.wp.com/patrickjp.com/wp-content/plug
 type="math/tex">\phi(t)</script>, theoretically making the FFT of <span
 class="MathJax_Preview"><img src="http://i2.wp.com/patrickjp.com/wp-content/plugins/latex/cache/tex_b7893f79356a6305f50f23d9aa9194bb.gif?w=474" alt="\frac{d}{dt}\phi(t)" /></span><script
 type="math/tex">\frac{d}{dt}\phi(t)</script> we can see something like the FM spectrum image.</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#65737e;">% fft
- </span><span style="color:#c0c5ce;">tdfft = </span><span style="color:#b48ead;">fft</span><span style="color:#c0c5ce;">(tdev);
- P2=</span><span style="color:#b48ead;">abs</span><span style="color:#c0c5ce;">(tdfft/ysize);
- P1=P2(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">:ysize/</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">+</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
- P1(</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">:end-</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">)=</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*P1(</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">:end-</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">);
- f=fs*(</span><span style="color:#d08770;">0</span><span style="color:#c0c5ce;">:(ysize/</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">))/ysize;
- </span><span style="color:#65737e;">% plot the fft until 59kHz
- </span><span style="color:#c0c5ce;">freqe=</span><span style="color:#b48ead;">round</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">59e3</span><span style="color:#c0c5ce;">*</span><span style="color:#b48ead;">size</span><span style="color:#c0c5ce;">(f)/fs);
- freqe=freqe(</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">);
- </span><span style="color:#96b5b4;">plot</span><span style="color:#c0c5ce;">(f(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">:freqe),(P1(</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">:freqe)))
- </span><span style="color:#96b5b4;">grid </span><span style="color:#d08770;">on
- </span><span style="color:#96b5b4;">xlabel </span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">freq Hz</span><span style="color:#c0c5ce;">&#39;,</span><span style="color:#96b5b4;">ylabel </span><span style="color:#c0c5ce;">&#39;</span><span style="color:#a3be8c;">dB</span><span style="color:#c0c5ce;">&#39;
- </span><span style="color:#96b5b4;">hold </span><span style="color:#d08770;">on
- </span><span style="color:#96b5b4;">axis</span><span style="color:#c0c5ce;">([</span><span style="color:#d08770;">30 59e3 0 0.02</span><span style="color:#c0c5ce;">])
+<pre data-lang="matlab" class="language-matlab "><code class="language-matlab" data-lang="matlab">% fft
+ tdfft = fft(tdev);
+ P2=abs(tdfft&#x2F;ysize);
+ P1=P2(1:ysize&#x2F;2+1);
+ P1(2:end-1)=2*P1(2:end-1);
+ f=fs*(0:(ysize&#x2F;2))&#x2F;ysize;
+ % plot the fft until 59kHz
+ freqe=round(2*59e3*size(f)&#x2F;fs);
+ freqe=freqe(2);
+ plot(f(1:freqe),(P1(1:freqe)))
+ grid on
+ xlabel &#x27;freq Hz&#x27;,ylabel &#x27;dB&#x27;
+ hold on
+ axis([30 59e3 0 0.02])
 
- Gab1 = [</span><span style="color:#d08770;">30 0</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">30 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">15e3 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">15e3 0</span><span style="color:#c0c5ce;">]; </span><span style="color:#65737e;">% R+L
- </span><span style="color:#96b5b4;">plot</span><span style="color:#c0c5ce;">(Gab1(:,</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">),Gab1(:,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">),&#39;</span><span style="color:#a3be8c;">g</span><span style="color:#c0c5ce;">&#39;);
+ Gab1 = [30 0; 30 0.02; 15e3 0.02; 15e3 0]; % R+L
+ plot(Gab1(:,1),Gab1(:,2),&#x27;g&#x27;);
 
- Gab1 = [</span><span style="color:#d08770;">18.5e3 0</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">18.5e3 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">19.5e3 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">19.5e3 0</span><span style="color:#c0c5ce;">]; </span><span style="color:#65737e;">% carrier
- </span><span style="color:#96b5b4;">plot</span><span style="color:#c0c5ce;">(Gab1(:,</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">),Gab1(:,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">),&#39;</span><span style="color:#a3be8c;">b</span><span style="color:#c0c5ce;">&#39;);
+ Gab1 = [18.5e3 0; 18.5e3 0.02; 19.5e3 0.02; 19.5e3 0]; % carrier
+ plot(Gab1(:,1),Gab1(:,2),&#x27;b&#x27;);
 
- Gab1 = [</span><span style="color:#d08770;">23e3 0</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">23e3 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">53e3 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">53e3 0</span><span style="color:#c0c5ce;">]; </span><span style="color:#65737e;">% R-L
- </span><span style="color:#96b5b4;">plot</span><span style="color:#c0c5ce;">(Gab1(:,</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">),Gab1(:,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">),&#39;</span><span style="color:#a3be8c;">r</span><span style="color:#c0c5ce;">&#39;);
+ Gab1 = [23e3 0; 23e3 0.02; 53e3 0.02; 53e3 0]; % R-L
+ plot(Gab1(:,1),Gab1(:,2),&#x27;r&#x27;);
 
- Gab1 = [</span><span style="color:#d08770;">55.35e3 0</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">55.35e3 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">58.65e3 0.02</span><span style="color:#c0c5ce;">; </span><span style="color:#d08770;">58.65e3 0</span><span style="color:#c0c5ce;">]; </span><span style="color:#65737e;">% RBDS
- </span><span style="color:#96b5b4;">plot</span><span style="color:#c0c5ce;">(Gab1(:,</span><span style="color:#d08770;">1</span><span style="color:#c0c5ce;">),Gab1(:,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">),&#39;</span><span style="color:#a3be8c;">c</span><span style="color:#c0c5ce;">&#39;);
-</span></pre>
+ Gab1 = [55.35e3 0; 55.35e3 0.02; 58.65e3 0.02; 58.65e3 0]; % RBDS
+ plot(Gab1(:,1),Gab1(:,2),&#x27;c&#x27;);
+</code></pre>
 <p>And the result:</p>
 <p><img src="/assets/fm_demodulation/spectrum_FM.png" alt="fm_demo" /></p>
 <p>All good, all good sir !</p>
@@ -276,31 +271,30 @@ type="math/tex">\phi(t)</script> and with a derivative we can have <span class="
 (m_R(t)-m_L(t))cos(4\pi f_c t)+RBDS(t)cos(6\pi f_c t)</script>. Applying a low-pass filter on the L+R, a band-pass filter on the carrier, L-R and RBDS we can have a clear
 signal of each data.</p>
 <p>With the frequencies specifications, the filter was done:</p>
-<pre style="background-color:#2b303b;">
-<span style="color:#65737e;">%R+L
-</span><span style="color:#c0c5ce;">[b,a] = </span><span style="color:#96b5b4;">butter</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">10</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">16e3</span><span style="color:#c0c5ce;">/fs,&#39;</span><span style="color:#a3be8c;">low</span><span style="color:#c0c5ce;">&#39;);
-R_p_L = </span><span style="color:#b48ead;">filter</span><span style="color:#c0c5ce;">(b,a,tdev);
+<pre data-lang="matlab" class="language-matlab "><code class="language-matlab" data-lang="matlab">%R+L
+[b,a] = butter(10,2*16e3&#x2F;fs,&#x27;low&#x27;);
+R_p_L = filter(b,a,tdev);
 hhhh=R_p_L;
 plote
 
-</span><span style="color:#65737e;">%carrier
-</span><span style="color:#c0c5ce;">[b,a] = </span><span style="color:#96b5b4;">butter</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">,[</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">18.5e3</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">19.5e3</span><span style="color:#c0c5ce;">]/fs,&#39;</span><span style="color:#a3be8c;">bandpass</span><span style="color:#c0c5ce;">&#39;);
-carrier = </span><span style="color:#b48ead;">filter</span><span style="color:#c0c5ce;">(b,a,tdev);
+%carrier
+[b,a] = butter(4,[2*18.5e3,2*19.5e3]&#x2F;fs,&#x27;bandpass&#x27;);
+carrier = filter(b,a,tdev);
 hhhh=carrier;
 plote
 
-</span><span style="color:#65737e;">% R-L
-</span><span style="color:#c0c5ce;">[b,a] = </span><span style="color:#96b5b4;">butter</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">,[</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">23e3</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">53e3</span><span style="color:#c0c5ce;">]/fs,&#39;</span><span style="color:#a3be8c;">bandpass</span><span style="color:#c0c5ce;">&#39;);
-R_l_L = </span><span style="color:#b48ead;">filter</span><span style="color:#c0c5ce;">(b,a,tdev);
+% R-L
+[b,a] = butter(4,[2*23e3,2*53e3]&#x2F;fs,&#x27;bandpass&#x27;);
+R_l_L = filter(b,a,tdev);
 hhhh=R_l_L;
 plote
 
-</span><span style="color:#65737e;">%RBDS
-</span><span style="color:#c0c5ce;">[b,a] = </span><span style="color:#96b5b4;">butter</span><span style="color:#c0c5ce;">(</span><span style="color:#d08770;">4</span><span style="color:#c0c5ce;">,[</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">55.35e3</span><span style="color:#c0c5ce;">,</span><span style="color:#d08770;">2</span><span style="color:#c0c5ce;">*</span><span style="color:#d08770;">58.65e3</span><span style="color:#c0c5ce;">]/fs,&#39;</span><span style="color:#a3be8c;">bandpass</span><span style="color:#c0c5ce;">&#39;);
-rbds = </span><span style="color:#b48ead;">filter</span><span style="color:#c0c5ce;">(b,a,tdev);
+%RBDS
+[b,a] = butter(4,[2*55.35e3,2*58.65e3]&#x2F;fs,&#x27;bandpass&#x27;);
+rbds = filter(b,a,tdev);
 hhhh=rbds;
 plote
-</span></pre>
+</code></pre>
 <p>The 'plote' code plot the fft of the signal.</p>
 <p><span class="MathJax_Preview"><img src="http://i0.wp.com/patrickjp.com/wp-content/plugins/latex/cache/tex_26fa20951173011eb56e82a0520beefd.gif?w=474" alt="m_R(t)+m_L(t)" /></span><script type="math/tex">m_R(t)+m_L(t)</script></p>
 <p><a href="/assets/fm_demodulation/rpl.png"><img src="/assets/fm_demodulation/rpl.png?resize=474%2C356" alt="rpl" /></a></p>

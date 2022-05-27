@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Patrick José Pereira</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://patrickelectric.work/print.css" media="print">
+      <link rel="stylesheet" href="https://patrickelectric.work/poole.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/hyde.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      <!-- Math rendering -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+      onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                          <a href="https:&#x2F;&#x2F;patrickelectric.work"><h2>HOME</h2></a>
+                            <div class="avatar"> <img src="https://avatars3.githubusercontent.com/patrickelectric" alt="Patrick José Pereira" itemprop="image"> </div>
+                            <h6>Patrick José Pereira</h6>
+                            
+                            <p class="lead">I am an Electronics Engineer that works with robotic systems, OSS and OSH.</p>
+                            <div class="author__urls-wrapper">
+                              <!-- Place this tag in your head or just before your close body tag. -->
+                              <script async defer src="https://buttons.github.io/buttons.js"></script>
+                              <!-- Place this tag where you want the button to render. -->
+                              <a class="github-button" href="https://github.com/patrickelectric" data-show-count="true" aria-label="Follow @patrickelectric on GitHub">Follow @patrickelectric</a>
+                              <ul class="author__urls social-icons">
+
+                                  <li itemprop="homeLocation" itemscope="" itemtype="http://schema.org/Place">
+                                    <i class="fas fa-map-marker-alt"></i> Brazil
+                                  </li>
+                                  <li>
+                                    <a href="mailto:patrickjp@kde.org">
+                                      <meta itemprop="email" content="patrickjp@kde.org">
+                                      <i class="fas fa-envelope-square"></i> Email
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://github.com/patrickelectric">
+                                      <i class="fab fa-github-square"></i> GitHub
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://www.linkedin.com/in/patrickelectric/">
+                                      <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">How to rock: Flowing with git</h1>
+  <span class="post-date">2020-08-24</span>
+  <h3 class="post-tags">[
+  
+  <a href="/tags/kde">kde</a>
+  
+  <a href="/tags/development">development</a>
+  
+  <a href="/tags/tutorial">tutorial</a>
+  
+  <a href="/tags/how-to-rock">how-to-rock</a>
+  
+  ]</h3>
+  <p>Git is awesome, git rocks, git is like a super advanced car, but if you don't read the manual, you'll never know the features!</p>
+<p>The idea behind this section is to point some important things that I learned in the pass years while reading some great books, such as: <a href="https://isbnsearch.org/isbn/9781783553754">Mastering Git</a> and <a href="https://git-scm.com/book/en/v2">Pro Git(it's free!)</a>.</p>
+<p>Hopefully, after going through this post, you'll be able to improve your understanding about git, and how to flow correctly with its concept.</p>
+<blockquote>
+<p>Note: This is not an introductory post, there is a bunch of great guides in google about it, but it should help you to get the big picture.</p>
+</blockquote>
+<span id="continue-reading"></span><h1 id="useful-tips">Useful tips</h1>
+<p>Git is awesome, git rocks, git is like a super advanced car, but if you don't read the manual, you'll never know the features!</p>
+<p>The idea behind this section is to point some important things that I learned in the pass years while reading some great books, such as: <a href="https://isbnsearch.org/isbn/9781783553754">Mastering Git</a> and <a href="https://git-scm.com/book/en/v2">Pro Git(it's free!)</a>.</p>
+<h2 id="tig">Tig</h2>
+<p>Git is really great, but what matters a great tool if the user interface is not as polished as we desire to be. <strong><code>Tig</code></strong> is one of the greatest tools to be used with Git, is the UI that mostly programmers are missing to visualize and understand what is going on in the git repository. If you didn't know about it, install and use it now.</p>
+<figure>
+  <img src="&#x2F;assets&#x2F;how_to_rock&#x2F;tig-all.png" class="center">
+  <figcaption>
+    tig --all
+  </figcaption>
+</figure>
+<p><code>Tig</code> also allow a bunch of useful arguments, such as <code>log</code>, <code>show</code>, <code>status</code>, <code>reflog</code>, <code>blame</code>, <code>grep</code>, <code>refs</code>, <code>stash</code> and others, we are going to talk about some of these later.</p>
+<h2 id="git-commit-fixup">Git commit --fixup</h2>
+<p>Oh my, you need to fix an old commit on your PR ? That's a great use of <code>fixup</code>.
+You can create a commit that fixes an old commit with <code>git commit -a --fixup 00112233</code>, but who has time to write hashs or copying/pasting it ?</p>
+<p>For that, you can create a helpful git alias such as:</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash"># git fix-old number
+# Will apply a fixup in the n-old commit
+fix-old = &quot;!f() { git commit --fixup=$(git rev-parse HEAD~$(($1-1))); }; f&quot;
+</code></pre>
+<p>With that, you can use <code>fit fix-old 3</code> to fix the <code>HEAD~3</code> commit.</p>
+<h2 id="git-rebase-i-interactive-rebase">Git rebase -i (Interactive rebase)</h2>
+<p>Interactive rebase is a powerful command, and much more powerful and human friend with interactive mode.</p>
+<figure>
+  <img src="&#x2F;assets&#x2F;how_to_rock&#x2F;rebase-i.png" class="center">
+  <figcaption>
+    git rebase -i --autosquash origin&#x2F;master
+  </figcaption>
+</figure>
+<p>Oh well, you can see the <code>autosquash</code> option there, this is something that I do to apply fixups automatically on the correct commits, neat right ?</p>
+<h2 id="git-reflog">Git reflog</h2>
+<p><code>git reflog</code> is one of the most important commands, it provides access to everything that is tracked or was tracked by git, all commands and actions that was done in the entire history of the project can be accessed, it's possible to checkout and see the history of development tree in any moment, before or during a rebase, the history of a branch before a terrible idea in the code, a point between a merge conflict, everything is possible to recover or to start from a previous point, if you have done any git command with tracked files, you'll not loose it.</p>
+<p>For an awesome experience, I recommend to use <code>tig</code> with <code>reflog</code> (<code>tig reflog</code>) to see a user-friendly history of <code>reflog</code>.</p>
+<figure>
+  <img src="&#x2F;assets&#x2F;how_to_rock&#x2F;tig-reflog.png" class="center">
+  <figcaption>
+    checkout, rebase, reset, cherry-pick, the history is all there and you can checkout in any hash!
+  </figcaption>
+</figure><h2 id="git-add-checkout-stash-patch-p">Git add/checkout/stash --patch/-p</h2>
+<figure>
+  <img src="&#x2F;assets&#x2F;how_to_rock&#x2F;add-p.png" class="center">
+  <figcaption>
+    git add -p, add only what you need
+  </figcaption>
+</figure>
+<p>The <code>--patch</code> argument is a great feature, you can use it with <code>add</code>, <code>checkout</code>, <code>stash</code> and others, it allows your to select what you need in your commit,
+it helps to avoid adding unnecessary stuff in your commit and only adding what is needed for an atomic patch.</p>
+<h2 id="git-stash">Git stash</h2>
+<p>Sometimes we want to remove everything that we are working on, a bunch of uncommitted or unstaged code around your project, but at the same time, we are a big afraid to remove and loose all this code. The answer for your problems is git stash, git will get everything that is not staged.</p>
+<p>To visualize what was stashed, you can run <code>git stash show stash@{0} --all</code> where <code>0</code> can be the nth stash. You can also visualize it with <code>tig stash</code>;</p>
+<p>If you want to apply any stashed code, you can do it with <code>git stash apply stash@{0}</code>, again, where <code>0</code> can be the nth stash.</p>
+<h2 id="git-cherry-pick">Git cherry-pick</h2>
+<p>If you want to test some commits or apply in different branches for any reason, <code>git cherry-pick</code> is here for you, with it you can</p>
+<h1 id="knowing-the-basic-how-the-flow-works">Knowing the basic (How the flow works)</h1>
+<blockquote>
+<p>This part was the first section of this post, but since I went really deep about how git works, it's now in the end as a bonus section.</p>
+</blockquote>
+<blockquote>
+<p>An alternative title could be: 'Introduction to Git flow', I hope that you understand what kind of introduction I'm talking about :)</p>
+</blockquote>
+<p>Well, if you thought about 'the flow' as related to branches, I can't blame you. First we need to go to the basics, before branches, before anything else.</p>
+<p>First we need to create the foundation (<code>git init</code>) for our building (our project/source code).</p>
+<p>What init will do ? You may ask, well, it creates a folder with a bunch of cool things inside.</p>
+<pre data-lang="fish" class="language-fish "><code class="language-fish" data-lang="fish"> &#x2F;tmp&#x2F;echo (master): tree -a
+.
+└── .git # Folder where git will store all necessary information to work
+    ├── branches # Deprecated, only exist for compatibility
+    ├── config # Folder for specific configuration files (~&#x2F;.gitconfig friends)
+    ├── description # Used for GitWeb
+    ├── HEAD # A file that has the reference of the current branch (ref&#x2F;heads&#x2F;master)
+    ├── hooks # Git hook files (comes with bunch of free examples by default), soon we&#x27;ll talk more about it
+    │   ├── applypatch-msg.sample
+    │   ├── commit-msg.sample
+    │   ├── fsmonitor-watchman.sample
+    │   ├── post-update.sample
+    │   ├── pre-applypatch.sample
+    │   ├── pre-commit.sample
+    │   ├── pre-merge-commit.sample
+    │   ├── prepare-commit-msg.sample
+    │   ├── pre-push.sample
+    │   ├── pre-rebase.sample
+    │   ├── pre-receive.sample
+    │   └── update.sample
+    ├── index # Store information related to folders, files and submodules (it&#x27;ll be populated after you add the first file)
+    ├── info # Store information related to a gitignore, gitattributes and etc, we&#x27;re not going to talk about it
+    │   └── exclude
+    ├── objects # All our references will be here, soon we are going to see how and what
+    │   ├── info # Bunch of internal things that are stored, not going to talk about it
+    │   └── pack # Store compressed files, not going to talk about it
+    └── refs # All friend references are here, branches, remotes, tags, stags
+        ├── heads # Local branches
+        ├── remotes # Remote repositories (it&#x27;ll be populated after you add the first remote)
+        │   └── origin # Remote name
+        │       └── master # Has the hash of the remote master branch
+        └── tags # Store all tags of your project
+</code></pre>
+<p>I have added some stuff that are not populated from a fresh <code>git init</code> for educational reasons, for more information, check <a href="https://git-scm.com/docs/gitrepository-layout">gitrepository-layout</a>.</p>
+<p>Ok, looks complicated right ? It may, but it's not. If you are not aware, <code>git</code> description is: &quot;the stupid content tracker&quot;,
+I believe that may be a weird thing to describe our magical tool with such words, I prefer to say: &quot;the <em>simple</em> content tracker&quot;, and will explain why.</p>
+<h2 id="create-and-add-a-file">Create and add a file</h2>
+<p>Let's populate our repository and create a simple commit:</p>
+<ol>
+<li>Create a file: <code>touch README.md</code></li>
+<li>Let put something inside to make it more funny.
+<ul>
+<li><code>cat README.md</code></li>
+</ul>
+<pre data-lang="txt" class="language-txt "><code class="language-txt" data-lang="txt">Hello!
+</code></pre>
+<ul>
+<li>Now our working directory is not empty, we have something there! But sadly, not tracked by git, we can change that.</li>
+</ul>
+</li>
+<li>Add this files to be tracked by git, or indexed: <code>git add README.md</code></li>
+<li>Wait a minute, we did something with git right ? Let's see what changed:<pre data-lang="fish" class="language-fish "><code class="language-fish" data-lang="fish">.git
+|   ...
+├── index # It&#x27;s populated now
+├── objects # Wow we have some crazy file and folder inside
+│   ├── 10
+│   │   └── ddd6d257e01349d514541981aeecea6b2e741d
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+</code></pre>
+</li>
+</ol>
+<h2 id="index">Index</h2>
+<p>This file is just a binary glob with a bunch of basic information about the files and paths that git is tracking.</p>
+<p>What is important for us now, index will have the following content:</p>
+<ol>
+<li>A header for git internal usage.</li>
+<li>The number of indexes (hashes) available.</li>
+<li>A list of hashes that contain:
+<ol>
+<li>The filename</li>
+<li>The path</li>
+<li>The time that the file was changed</li>
+<li>Type of the file (can be a folder, or a virtual file and etc)</li>
+<li>The permission of such file (<a href="https://wiki.archlinux.org/index.php/File_permissions_and_attributes_">linux permission</a>)</li>
+<li>File size</li>
+<li>And finally, <strong>our hash (sha1)</strong> [10ddd6d257e01349d514541981aeecea6b2e741d]</li>
+</ol>
+</li>
+</ol>
+<p>Wait, don't you believe me ? Check it here:</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">cat index | hx
+0x000000: 0x44 0x49 0x52 0x43 0x00 0x00 0x00 0x02 0x00 0x00 DIRC......
+0x00000a: 0x00 0x01 0x5f 0x41 0x44 0x35 0x1b 0xd6 0x67 0x47 .._AD5..gG
+0x000014: 0x5f 0x41 0x44 0x35 0x1b 0xd6 0x67 0x47 0x00 0x00 _AD5..gG..
+0x00001e: 0x00 0x2f 0x00 0x09 0xb1 0x41 0x00 0x00 0x81 0xa4 .&#x2F;...A....
+0x000028: 0x00 0x00 0x03 0xe8 0x00 0x00 0x03 0xe8 0x00 0x00 ..........
+0x000032: 0x00 0x07 0x10 0xdd 0xd6 0xd2 0x57 0xe0 0x13 0x49 ......W..I
+0x00003c: 0xd5 0x14 0x54 0x19 0x81 0xae 0xec 0xea 0x6b 0x2e ..T.....k.
+0x000046: 0x74 0x1d 0x00 0x09 0x52 0x45 0x41 0x44 0x4d 0x45 t...README
+0x000050: 0x2e 0x6d 0x64 0x00 0x87 0x87 0x7d 0xde 0xf5 0x59 .md...}..Y
+0x00005a: 0x22 0x0a 0x7d 0x9c 0x48 0xce 0xde 0x29 0x94 0x60 &quot;.}.H..).`
+0x000064: 0x17 0x2c 0xf3 0xcc                               .,..
+   bytes: 104
+</code></pre>
+<p>Check <code>0x000032</code> until <code>0x000046</code>, you'll see our sha1 value <strong>10ddd6d257e01349d514541981aeecea6b2e741d</strong> (<em>0x10 0xdd 0xd6 0xd2</em>) and after that our file <strong>README.md</strong>.</p>
+<p>If you want to learn how it works and what is inside, check <a href="https://git-scm.com/docs/index-format">here</a> for more information,
+and <a href="https://mincong.io/2018/04/28/git-index/">here</a> for an awesome adventure.</p>
+<h2 id="objects">Objects</h2>
+<p>Ok, now that we know that <em>index</em> is pointing to this hash, let's check the objects folder.
+As I said before, <strong>objects</strong> folder will store all the references that exist, it should be our yellow pages. First, let's understand how to read it.
+There is a folder called <strong>10</strong>, and after that a file that has the name of <strong>ddd6d257e01349d514541981aeecea6b2e741d</strong>, if you put both together you are going to end up with our hash that we found in the <em>index</em> file.</p>
+<p>Just for our curiosity, this hash is calculated based in the following format <code>{TYPE} {SIZE}{NULL_CHAR}{CONTENT}</code>, the type will tell git if the hash points to a tree or a blob, the tree can have multiple blobs (like a folder), and a blob is a file. In our case, the string that defines this hash is the following:</p>
+<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import hashlib
+hashlib.sha1(b&#x27;blob 7\0Hello!\n&#x27;).hexdigest()
+&#x27;10ddd6d257e01349d514541981aeecea6b2e741d&#x27;
+</code></pre>
+<p>For more information, <a href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects">check Git Internals Git Objects</a>, it's a great friday night reading.</p>
+<p>Ok! Now we are ready to commit!</p>
+<p>Hey, wait, what is inside of this files object files ?
+Oh my, ok, for now, this is where the git magic happens, it's a binary object that contains information about the diff, don't bother about it, but if you are really willing to know, <a href="https://github.com/gitster/git/blob/master/Documentation/technical/pack-format.txt">check it here</a> (Please open an issue if you know a better and friendly reference).</p>
+<p>Back to the commit!</p>
+<h2 id="commit">Commit</h2>
+<ol>
+<li><code>git commit -sm &quot;First commit&quot;</code></li>
+</ol>
+<pre data-lang="fish" class="language-fish "><code class="language-fish" data-lang="fish">.git
+|   ...
+├── index # It&#x27;s populated now
+├── objects # Wow we have some crazy file and folder inside
+│   ├── 08
+│   │   └── f87015745258743015340c5466fe69c94f7587
+│   ├── 10
+│   │   └── ddd6d257e01349d514541981aeecea6b2e741d
+│   ├── 1d
+│   │   └── 12099363e995c9fc3e1d2cc68b74b8e10c361a
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+</code></pre>
+<p>Ok, we have finished our first commit and now we have two more objects, let's check what is inside of each one:</p>
+<pre data-lang="bash" class="language-bash "><code class="language-bash" data-lang="bash">$ git cat-file -p 1d12099363e995c9fc3e1d2cc68b74b8e10c361a
+tree 08f87015745258743015340c5466fe69c94f7587
+author Patrick José Pereira &lt;myemail&gt; 1598117804 -0300
+committer Patrick José Pereira &lt;myemail&gt; 1598117804 -0300
+
+First commit
+
+$ git cat-file -p 08f87015745258743015340c5466fe69c94f7587
+100644 blob 10ddd6d257e01349d514541981aeecea6b2e741d    README.md
+
+$ git cat-file -p 10ddd6d257e01349d514541981aeecea6b2e741d
+Hello!
+</code></pre>
+<p>As you can see, we have a commit object: <strong>1d12099363e995c9fc3e1d2cc68b74b8e10c361a</strong>, that points to the tree <strong>08f87015745258743015340c5466fe69c94f7587</strong>,
+this tree has a single file on it, our old friendly <strong>README.md</strong>, and this same tree says that this blob has the hash <strong>10ddd6d257e01349d514541981aeecea6b2e741d</strong>, and this hash contains the content of <strong>README.md</strong>. Simple Right ?!</p>
+<p>As I said, a tree can contain multiple blobs, or more trees, like in the following example:</p>
+<figure>
+  <img src="&#x2F;assets&#x2F;how_to_rock&#x2F;git&#x2F;data-model-2.png" class="center">
+  <figcaption>
+    &quot;Git Internals Git Objects&quot; from Git SCM is licensed under CC BY 3.0
+  </figcaption>
+</figure>
+<p>And after some more commits, we end up with multiple commits, that each commit has a tree, and each tree points to more trees or more blobs!</p>
+<figure>
+  <img src="&#x2F;assets&#x2F;how_to_rock&#x2F;git&#x2F;data-model-3.png" class="center">
+  <figcaption>
+    &quot;Git Internals Git Objects&quot; from Git SCM is licensed under CC BY 3.0
+  </figcaption>
+</figure><h2 id="wrap-up-git-commit-logic-and-git-internals">Wrap up git commit logic and git internals</h2>
+<p>Git, as a <em>simple content tracker</em>, uses a simple logic to manage all the files, as you saw, git works with the filesystem as a dictionary, where the filenames define the key and the content of such files are the content of this dictionary key, you can think about it as a content-addressable filesystem.</p>
+<p>Since we have finished talking about git manages our commits, files and everything else, let us finish this deep introductory part with how the commit and the object creation works.</p>
+<figure>
+  <img src="&#x2F;assets&#x2F;how_to_rock&#x2F;git&#x2F;reset-workflow.png" class="center">
+  <figcaption>
+    &quot;Reset workflow&quot; from Git SCM is licensed under CC BY 3.0
+  </figcaption>
+</figure>
+<p>The previous is a good simple example of how a commit works, first we have a untracked file in our working directory, we stage this file (<code>git add</code>) and after that we commit this file (<code>git commit</code>) the commit does update the <em>HEAD</em> (the hash where we are right now). And doing a checkout to a different hash (or <em>HEAD</em>) will result in a change of the working directory to match what was commited.</p>
+<h1 id="cool-extensions-to-have">Cool extensions to have:</h1>
+<ul>
+<li><a href="https://github.com/dandavison/delta">delta</a>: A syntax-highlighting pager for git, diff, and grep output</li>
+<li><a href="https://github.com/tummychow/git-absorb">git-absorb</a>: <code>git commit --fixup</code>, but automatic</li>
+</ul>
+<h1 id="references">References</h1>
+<p>Check the official Git SCM <a href="https://git-scm.com/">website</a> and <a href="https://github.com/git/git-scm.com">repository</a> for images and guidance.'</p>
+
+</div>
+
+<footer>
+  <p style="text-align: center;">If it was helpful, consider giving a start:</p>
+  <!-- Place this tag where you want the button to render. -->
+  <div style="text-align: center;">
+    <a class="github-button" href="https://github.com/patrickelectric/patrickelectric.github.io" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star patrickelectric/patrickelectric.github.io on GitHub">Star</a>
+  </div>
+</footer>
+
+
+        </div>
+
+    </body>
+
+</html>
