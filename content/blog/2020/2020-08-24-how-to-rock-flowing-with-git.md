@@ -10,17 +10,9 @@ header = "/assets/how_to_rock/banner-flowing-with-git.jpg"
 
 Git is awesome, git rocks, git is like a super advanced car, but if you don't read the manual, you'll never know the features!
 
-The idea behind this section is to point some important things that I learned in the pass years while reading some great books, such as: [Mastering Git](https://isbnsearch.org/isbn/9781783553754) and [Pro Git(it's free!)](https://git-scm.com/book/en/v2).
-
-Hopefully, after going through this post, you'll be able to improve your understanding about git, and how to flow correctly with its concept.
-
-> Note: This is not an introductory post, there is a bunch of great guides in google about it, but it should help you to get the big picture.
-
 <!-- more -->
 
 # Useful tips
-
-Git is awesome, git rocks, git is like a super advanced car, but if you don't read the manual, you'll never know the features!
 
 The idea behind this section is to point some important things that I learned in the pass years while reading some great books, such as: [Mastering Git](https://isbnsearch.org/isbn/9781783553754) and [Pro Git(it's free!)](https://git-scm.com/book/en/v2).
 
