@@ -162,21 +162,21 @@ Making the USB driver to select the correct kernel module to deal with it.</li>
 <p>(The GPIO in both SPI and I²C are D* Pins in [Back (1)] and CS* in [Front (4)]).</p>
 <p>Ok, to check the I²C, you need to make sure that your <strong>i2c-dev</strong> module is loaded, you can search it in <code>/lib/modules </code> with <code>find . | grep i2c-dev </code> and load it with <code>sudo modprobe i2c-dev</code>, this will allow the modules to show the I²C devices under <code>/dev</code>.</p>
 <p>The <strong>gschorcht/i2c-ch341-usb</strong> driver will returns in <code>dmesg</code>:</p>
-<pre><code>[314374.047570] usb 1-1.1.1: new full-speed USB device number 109 using xhci_hcd
-[314374.138693] usb 1-1.1.1: New USB device found, idVendor=1a86, idProduct=5512, bcdDevice= 3.04
-[314374.138702] usb 1-1.1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
-[314374.148039] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio0 gpio=0 irq=0
-[314374.148049] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio1 gpio=1 irq=1
-[314374.148055] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio2 gpio=2 irq=2
-[314374.148061] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio3 gpio=3 irq=3
-[314374.148068] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio4 gpio=4 irq=4 (hwirq)
-[314374.148074] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio5 gpio=5 irq=5
-[314374.148080] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio6 gpio=6 irq=6
-[314374.148086] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio7 gpio=7 irq=7
-[314374.148349] i2c-ch341-usb 1-1.1.1:1.0: ch341_i2c_probe: created i2c device &#x2F;dev&#x2F;i2c-8
-[314374.148354] i2c-ch341-usb 1-1.1.1:1.0: ch341_i2c_set_speed: Change i2c bus speed to 100 kbps
-[314374.149365] i2c-ch341-usb 1-1.1.1:1.0: ch341_usb_probe: connected
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[314374.047570] usb 1-1.1.1: new full-speed USB device number 109 using xhci_hcd
+</span><span>[314374.138693] usb 1-1.1.1: New USB device found, idVendor=1a86, idProduct=5512, bcdDevice= 3.04
+</span><span>[314374.138702] usb 1-1.1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+</span><span>[314374.148039] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio0 gpio=0 irq=0
+</span><span>[314374.148049] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio1 gpio=1 irq=1
+</span><span>[314374.148055] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio2 gpio=2 irq=2
+</span><span>[314374.148061] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output gpio3 gpio=3 irq=3
+</span><span>[314374.148068] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio4 gpio=4 irq=4 (hwirq)
+</span><span>[314374.148074] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio5 gpio=5 irq=5
+</span><span>[314374.148080] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio6 gpio=6 irq=6
+</span><span>[314374.148086] i2c-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio7 gpio=7 irq=7
+</span><span>[314374.148349] i2c-ch341-usb 1-1.1.1:1.0: ch341_i2c_probe: created i2c device /dev/i2c-8
+</span><span>[314374.148354] i2c-ch341-usb 1-1.1.1:1.0: ch341_i2c_set_speed: Change i2c bus speed to 100 kbps
+</span><span>[314374.149365] i2c-ch341-usb 1-1.1.1:1.0: ch341_usb_probe: connected
+</span></code></pre>
 <p>Showing our 8 pins plus the <code>i2c-8</code> device running at 100khz.</p>
 <p>I was able to do a simple test with <code>i2cdetect 8</code>. (You can get it from i2c-tools).</p>
 <p><img src="/assets/ch341a_dongle/i2cdetect.png" alt="image" /></p>
@@ -188,37 +188,37 @@ Making the USB driver to select the correct kernel module to deal with it.</li>
 <p>You can download my gpio test <a href="/assets/ch341a_dongle/gpio.logicdata">raw .logicdata</a> or a <a href="/assets/ch341a_dongle/gpio.csv">csv</a>.</p>
 <h2 id="spi">SPI</h2>
 <p>For the spi device, you need also to load the device module called <strong>spidev</strong>, <code>sudo modprove spidev</code>. Now with the driver loaded, you should just compile and load the spi module.</p>
-<pre><code>[315818.960403] usb 1-1.1.1: USB disconnect, device number 117
-[315819.771286] usbcore: registered new interface driver spi-ch341-usb
-[315824.287292] usb 1-1.1.1: new full-speed USB device number 118 using xhci_hcd
-[315824.381352] usb 1-1.1.1: New USB device found, idVendor=1a86, idProduct=5512, bcdDevice= 3.04
-[315824.381358] usb 1-1.1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
-[315824.391008] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs0 SPI slave with cs=0
-[315824.391013] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs1 SPI slave with cs=1
-[315824.391016] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs2 SPI slave with cs=2
-[315824.391020] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio4 gpio=0 irq=0 (hwirq)
-[315824.391023] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio5 gpio=1 irq=1
-[315824.391028] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI master connected to SPI bus 0
-[315824.391307] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device &#x2F;dev&#x2F;spidev0.0 created
-[315824.391645] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device &#x2F;dev&#x2F;spidev0.1 created
-[315824.391981] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device &#x2F;dev&#x2F;spidev0.2 created
-[315824.392423] spi-ch341-usb 1-1.1.1:1.0: ch341_usb_probe: connected
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[315818.960403] usb 1-1.1.1: USB disconnect, device number 117
+</span><span>[315819.771286] usbcore: registered new interface driver spi-ch341-usb
+</span><span>[315824.287292] usb 1-1.1.1: new full-speed USB device number 118 using xhci_hcd
+</span><span>[315824.381352] usb 1-1.1.1: New USB device found, idVendor=1a86, idProduct=5512, bcdDevice= 3.04
+</span><span>[315824.381358] usb 1-1.1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+</span><span>[315824.391008] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs0 SPI slave with cs=0
+</span><span>[315824.391013] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs1 SPI slave with cs=1
+</span><span>[315824.391016] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: output cs2 SPI slave with cs=2
+</span><span>[315824.391020] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio4 gpio=0 irq=0 (hwirq)
+</span><span>[315824.391023] spi-ch341-usb 1-1.1.1:1.0: ch341_cfg_probe: input  gpio5 gpio=1 irq=1
+</span><span>[315824.391028] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI master connected to SPI bus 0
+</span><span>[315824.391307] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device /dev/spidev0.0 created
+</span><span>[315824.391645] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device /dev/spidev0.1 created
+</span><span>[315824.391981] spi-ch341-usb 1-1.1.1:1.0: ch341_spi_probe: SPI device /dev/spidev0.2 created
+</span><span>[315824.392423] spi-ch341-usb 1-1.1.1:1.0: ch341_usb_probe: connected
+</span></code></pre>
 <p>The SPI was running with 1.5MHz, the tests was done with python-spidev.</p>
-<pre data-lang="python" class="language-python "><code class="language-python" data-lang="python">import spidev
-spi = spidev.SpiDev()
-spi.open(0, 0)
-to_send = []
-for i in range(30):
-	to_send += [i]
-spi.xfer(to_send)
-</code></pre>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>spidev
+</span><span>spi = spidev.</span><span style="color:#bf616a;">SpiDev</span><span>()
+</span><span>spi.</span><span style="color:#bf616a;">open</span><span>(</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0</span><span>)
+</span><span>to_send = []
+</span><span style="color:#b48ead;">for </span><span>i </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">30</span><span>):
+</span><span>	to_send += [i]
+</span><span>spi.</span><span style="color:#bf616a;">xfer</span><span>(to_send)
+</span></code></pre>
 <p>More than 30 bytes will give:</p>
-<pre><code>Traceback (most recent call last):
-  File &quot;test.py&quot;, line 7, in &lt;module&gt;
-    spi.xfer(to_send)
-TimeoutError: [Errno 110] Connection timed out
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Traceback (most recent call last):
+</span><span>  File &quot;test.py&quot;, line 7, in &lt;module&gt;
+</span><span>    spi.xfer(to_send)
+</span><span>TimeoutError: [Errno 110] Connection timed out
+</span></code></pre>
 <p>I'm not sure why.</p>
 <p><img src="/assets/ch341a_dongle/spi1.png" alt="image" /></p>
 <p><img src="/assets/ch341a_dongle/spi2.png" alt="image" /></p>

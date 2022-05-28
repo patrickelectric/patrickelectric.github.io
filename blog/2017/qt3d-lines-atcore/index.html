@@ -111,82 +111,82 @@
 <p><img src="/assets/QT3DLines/dragon.png" alt="dragon" /></p>
 <h3 id="mesh">Mesh</h3>
 <p>It's done with a C++ code, where a 4D vector is used to perform the buffer population, the 4D is because a 3D printer have 4 dimensions in a actuation space, (X, Y, Z and E) where E is the extruder that move the filament to perform the extrusion.</p>
-<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">LineMeshGeometry::LineMeshGeometry(QList&lt;QVector4D&gt; vertices, Qt3DCore::QNode *parent) :
-    Qt3DRender::QGeometry(parent)
-    , _positionAttribute(new Qt3DRender::QAttribute(this))
-    , _vertexBuffer(new Qt3DRender::QBuffer(Qt3DRender::QBuffer::VertexBuffer, this))
-{
-    QByteArray vertexBufferData;
-    vertexBufferData.resize(vertices.size() * 3 * sizeof(float));
-    float *rawVertexArray = reinterpret_cast&lt;float *&gt;(vertexBufferData.data());
-    int idx = 0;
-    for (const auto &amp;v : vertices) {
-        rawVertexArray[idx++] = v.x();
-        rawVertexArray[idx++] = v.y();
-        rawVertexArray[idx++] = v.z();
-        _vertices.append(v.toVector3D());
-    }
-
-    _vertexBuffer-&gt;setData(vertexBufferData);
-
-    _positionAttribute-&gt;setAttributeType(Qt3DRender::QAttribute::VertexAttribute);
-    _positionAttribute-&gt;setBuffer(_vertexBuffer);
-    _positionAttribute-&gt;setDataType(Qt3DRender::QAttribute::Float);
-    _positionAttribute-&gt;setDataSize(3);
-    _positionAttribute-&gt;setName(Qt3DRender::QAttribute::defaultPositionAttributeName());
-
-    addAttribute(_positionAttribute);
-}
-
-int LineMeshGeometry::vertexCount()
-{
-    return _vertices.size();
-}
-</code></pre>
+<pre data-lang="cpp" style="background-color:#2b303b;color:#c0c5ce;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span>LineMeshGeometry::</span><span style="color:#8fa1b3;">LineMeshGeometry</span><span>(QList&lt;QVector4D&gt; </span><span style="color:#bf616a;">vertices</span><span>, Qt3DCore::QNode *</span><span style="color:#bf616a;">parent</span><span>) :
+</span><span>    Qt3DRender::</span><span style="color:#8fa1b3;">QGeometry</span><span>(</span><span style="color:#bf616a;">parent</span><span>)
+</span><span>    , </span><span style="color:#bf616a;">_positionAttribute</span><span>(</span><span style="color:#b48ead;">new </span><span>Qt3DRender::</span><span style="color:#bf616a;">QAttribute</span><span>(</span><span style="color:#bf616a;">this</span><span>))
+</span><span>    , </span><span style="color:#bf616a;">_vertexBuffer</span><span>(</span><span style="color:#b48ead;">new </span><span>Qt3DRender::</span><span style="color:#bf616a;">QBuffer</span><span>(Qt3DRender::QBuffer::VertexBuffer, </span><span style="color:#bf616a;">this</span><span>))
+</span><span>{
+</span><span>    QByteArray vertexBufferData;
+</span><span>    vertexBufferData.</span><span style="color:#bf616a;">resize</span><span>(vertices.</span><span style="color:#bf616a;">size</span><span>() * </span><span style="color:#d08770;">3 </span><span>* sizeof(</span><span style="color:#b48ead;">float</span><span>));
+</span><span>    </span><span style="color:#b48ead;">float </span><span>*rawVertexArray = reinterpret_cast&lt;</span><span style="color:#b48ead;">float </span><span>*&gt;(vertexBufferData.</span><span style="color:#bf616a;">data</span><span>());
+</span><span>    </span><span style="color:#b48ead;">int</span><span> idx = </span><span style="color:#d08770;">0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">for </span><span>(</span><span style="color:#b48ead;">const auto </span><span>&amp;v : vertices) {
+</span><span>        rawVertexArray[idx++] = v.</span><span style="color:#bf616a;">x</span><span>();
+</span><span>        rawVertexArray[idx++] = v.</span><span style="color:#bf616a;">y</span><span>();
+</span><span>        rawVertexArray[idx++] = v.</span><span style="color:#bf616a;">z</span><span>();
+</span><span>        _vertices.</span><span style="color:#bf616a;">append</span><span>(v.</span><span style="color:#bf616a;">toVector3D</span><span>());
+</span><span>    }
+</span><span>
+</span><span>    _vertexBuffer-&gt;</span><span style="color:#bf616a;">setData</span><span>(vertexBufferData);
+</span><span>
+</span><span>    _positionAttribute-&gt;</span><span style="color:#bf616a;">setAttributeType</span><span>(Qt3DRender::QAttribute::VertexAttribute);
+</span><span>    _positionAttribute-&gt;</span><span style="color:#bf616a;">setBuffer</span><span>(_vertexBuffer);
+</span><span>    _positionAttribute-&gt;</span><span style="color:#bf616a;">setDataType</span><span>(Qt3DRender::QAttribute::Float);
+</span><span>    _positionAttribute-&gt;</span><span style="color:#bf616a;">setDataSize</span><span>(</span><span style="color:#d08770;">3</span><span>);
+</span><span>    _positionAttribute-&gt;</span><span style="color:#bf616a;">setName</span><span>(Qt3DRender::QAttribute::</span><span style="color:#bf616a;">defaultPositionAttributeName</span><span>());
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">addAttribute</span><span>(_positionAttribute);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">int </span><span>LineMeshGeometry::</span><span style="color:#8fa1b3;">vertexCount</span><span>()
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">return</span><span> _vertices.</span><span style="color:#bf616a;">size</span><span>();
+</span><span>}
+</span></code></pre>
 <p>With this done, it's possible to easy populate it with a simple class.</p>
-<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">LineMesh::LineMesh(Qt3DCore::QNode *parent) :
-    Qt3DRender::QGeometryRenderer(parent)
-    , _lineMeshGeo(nullptr)
-{
-    setInstanceCount(1);
-    setIndexOffset(0);
-    setFirstInstance(0);
-    &#x2F;&#x2F; This will allow the line visualization
-    setPrimitiveType(Qt3DRender::QGeometryRenderer::LineStrip);
-
-    &#x2F;&#x2F; This will be visualized in qml
-    qRegisterMetaType&lt;QList&lt;QVector4D&gt; &gt;(&quot;QList&lt;QVector4D&gt;&quot;);
-    auto gcode = new GcodeTo3D();
-    connect(gcode, &amp;GcodeTo3D::posFinished, this, &amp;LineMesh::posUpdate);
-}
-
-void LineMesh::posUpdate(QList&lt;QVector4D&gt; pos)
-{
-    _vertices = pos;
-    _lineMeshGeo = new LineMeshGeometry(_vertices, this);
-    setVertexCount(_lineMeshGeo-&gt;vertexCount());
-    setGeometry(_lineMeshGeo);
-    emit finished();
-}
-</code></pre>
+<pre data-lang="cpp" style="background-color:#2b303b;color:#c0c5ce;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span>LineMesh::</span><span style="color:#8fa1b3;">LineMesh</span><span>(Qt3DCore::QNode *</span><span style="color:#bf616a;">parent</span><span>) :
+</span><span>    Qt3DRender::</span><span style="color:#8fa1b3;">QGeometryRenderer</span><span>(</span><span style="color:#bf616a;">parent</span><span>)
+</span><span>    , </span><span style="color:#bf616a;">_lineMeshGeo</span><span>(</span><span style="color:#d08770;">nullptr</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">setInstanceCount</span><span>(</span><span style="color:#d08770;">1</span><span>);
+</span><span>    </span><span style="color:#bf616a;">setIndexOffset</span><span>(</span><span style="color:#d08770;">0</span><span>);
+</span><span>    </span><span style="color:#bf616a;">setFirstInstance</span><span>(</span><span style="color:#d08770;">0</span><span>);
+</span><span>    </span><span style="color:#65737e;">// This will allow the line visualization
+</span><span>    </span><span style="color:#bf616a;">setPrimitiveType</span><span>(Qt3DRender::QGeometryRenderer::LineStrip);
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// This will be visualized in qml
+</span><span>    </span><span style="color:#bf616a;">qRegisterMetaType</span><span>&lt;QList&lt;QVector4D&gt; &gt;(&quot;</span><span style="color:#a3be8c;">QList&lt;QVector4D&gt;</span><span>&quot;);
+</span><span>    </span><span style="color:#b48ead;">auto</span><span> gcode = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">GcodeTo3D</span><span>();
+</span><span>    </span><span style="color:#bf616a;">connect</span><span>(gcode, &amp;GcodeTo3D::posFinished, </span><span style="color:#bf616a;">this</span><span>, &amp;LineMesh::posUpdate);
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">void </span><span>LineMesh::</span><span style="color:#8fa1b3;">posUpdate</span><span>(QList&lt;QVector4D&gt; </span><span style="color:#bf616a;">pos</span><span>)
+</span><span>{
+</span><span>    _vertices = pos;
+</span><span>    _lineMeshGeo = </span><span style="color:#b48ead;">new </span><span style="color:#bf616a;">LineMeshGeometry</span><span>(_vertices, </span><span style="color:#bf616a;">this</span><span>);
+</span><span>    </span><span style="color:#bf616a;">setVertexCount</span><span>(_lineMeshGeo-&gt;</span><span style="color:#bf616a;">vertexCount</span><span>());
+</span><span>    </span><span style="color:#bf616a;">setGeometry</span><span>(_lineMeshGeo);
+</span><span>    emit </span><span style="color:#bf616a;">finished</span><span>();
+</span><span>}
+</span></code></pre>
 <h3 id="material-and-entity">Material and Entity</h3>
 <p>The material used in the first GIF was <a href="https://doc.qt.io/qt-5/qml-qt3d-extras-phongmaterial.html">PhongMaterial</a>, this is simple done with:</p>
-<pre data-lang="qml" class="language-qml "><code class="language-qml" data-lang="qml">PhongMaterial {
-  id: lineMaterial
-  ambient: &quot;darkGreen&quot;
-}
-</code></pre>
+<pre data-lang="qml" style="background-color:#2b303b;color:#c0c5ce;" class="language-qml "><code class="language-qml" data-lang="qml"><span>PhongMaterial {
+</span><span>  id: lineMaterial
+</span><span>  ambient: &quot;darkGreen&quot;
+</span><span>}
+</span></code></pre>
 <p>And in the end, the creation of an Entity.</p>
-<pre data-lang="qml" class="language-qml "><code class="language-qml" data-lang="qml">LineMesh {
-  id: lineMesh
-  enabled: true
-}
-</code></pre>
-<pre data-lang="qml" class="language-qml "><code class="language-qml" data-lang="qml">Entity {
-  id: lineEntity
-  components: [ lineMesh, lineMaterial ]
-}
-</code></pre>
+<pre data-lang="qml" style="background-color:#2b303b;color:#c0c5ce;" class="language-qml "><code class="language-qml" data-lang="qml"><span>LineMesh {
+</span><span>  id: lineMesh
+</span><span>  enabled: true
+</span><span>}
+</span></code></pre>
+<pre data-lang="qml" style="background-color:#2b303b;color:#c0c5ce;" class="language-qml "><code class="language-qml" data-lang="qml"><span>Entity {
+</span><span>  id: lineEntity
+</span><span>  components: [ lineMesh, lineMaterial ]
+</span><span>}
+</span></code></pre>
 <p>In the next week we plan to finish our simple 3D viwer and add it in AtCore test GUI.\
 For more info about <a href="https://github.com/kde/atcore">AtCore and Atelier click here !</a></p>
 <p><img src="/assets/QT3DLines/cube2.png" alt="Cube 2" /></p>

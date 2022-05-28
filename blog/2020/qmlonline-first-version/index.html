@@ -124,46 +124,46 @@ The initial version was entirely made with QML, without HTML components, the edi
 <p>From the beginning, I had an initial singleton class called <strong>Util</strong> that was conceived to be some kind of helper class for the QML code. This same class was used to create the interface between the JS and the webassembly via emscripten.</p>
 <p>In general, two functions were created, <code>std::string Util::codeEMS() const</code> that returns the code that is being used in the QML to render the user component, and <code>void Util::setCodeEMS(const std::string&amp; code)</code> that sets the code that should be rendered.
 To access both functions and the class, <a href="https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html">EMSCRIPTEN_BINDINGS</a> were used.</p>
-<pre data-lang="cpp" class="language-cpp "><code class="language-cpp" data-lang="cpp">#include &lt;emscripten&#x2F;bind.h&gt;
-
-EMSCRIPTEN_BINDINGS(util) {
-    emscripten::class_&lt;Util&gt;(&quot;Util&quot;)
-        .function(&quot;code&quot;, &amp;Util::codeEMS)
-        .function(&quot;setCode&quot;, &amp;Util::setCodeEMS);
-    emscripten::function(&quot;self&quot;, &amp;Util::self, emscripten::allow_raw_pointers());
-}
-</code></pre>
+<pre data-lang="cpp" style="background-color:#2b303b;color:#c0c5ce;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">emscripten/bind.h</span><span>&gt;
+</span><span>
+</span><span style="color:#bf616a;">EMSCRIPTEN_BINDINGS</span><span>(util) {
+</span><span>    emscripten::</span><span style="color:#bf616a;">class_</span><span>&lt;Util&gt;(&quot;</span><span style="color:#a3be8c;">Util</span><span>&quot;)
+</span><span>        .</span><span style="color:#bf616a;">function</span><span>(&quot;</span><span style="color:#a3be8c;">code</span><span>&quot;, &amp;Util::codeEMS)
+</span><span>        .</span><span style="color:#bf616a;">function</span><span>(&quot;</span><span style="color:#a3be8c;">setCode</span><span>&quot;, &amp;Util::setCodeEMS);
+</span><span>    emscripten::</span><span style="color:#bf616a;">function</span><span>(&quot;</span><span style="color:#a3be8c;">self</span><span>&quot;, &amp;Util::self, emscripten::</span><span style="color:#bf616a;">allow_raw_pointers</span><span>());
+</span><span>}
+</span></code></pre>
 <p>That's probably the most important piece of code to do the integration between the C++ and JS.</p>
 <p>And for the QML, well, you can check all QML here:</p>
-<pre data-lang="js" class="language-js "><code class="language-js" data-lang="js">...
-import Util 1.0
-
-ApplicationWindow {
-    id: window
-    title: &quot;qmlonline&quot;
-    visible: true
-
-    Connections {
-        target: Util
-        onCodeChanged: userParentItem.create(Util.code)
-    }
-
-    Item {
-        id: userParentItem
-        anchors.fill: parent
-        property var userItem: null
-
-        function create(textComponent) {
-            if(userItem) {
-                userItem.destroy()
-            }
-            userItem = Qt.createQmlObject(textComponent, userParentItem, &quot;userItem&quot;)
-        }
-
-        Component.onCompleted: userParentItem.create(Util.code)
-    }
-}
-</code></pre>
+<pre data-lang="js" style="background-color:#2b303b;color:#c0c5ce;" class="language-js "><code class="language-js" data-lang="js"><span>...
+</span><span style="color:#b48ead;">import </span><span style="color:#bf616a;">Util</span><span> 1.0
+</span><span>
+</span><span style="color:#bf616a;">ApplicationWindow </span><span>{
+</span><span>    </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#bf616a;">window
+</span><span>    </span><span style="color:#bf616a;">title</span><span>: &quot;</span><span style="color:#bf616a;">qmlonline</span><span>&quot;
+</span><span>    </span><span style="color:#bf616a;">visible</span><span>: </span><span style="color:#bf616a;">true
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">Connections</span><span> {
+</span><span>        </span><span style="color:#bf616a;">target</span><span>: </span><span style="color:#bf616a;">Util
+</span><span>        </span><span style="color:#bf616a;">onCodeChanged</span><span>: </span><span style="color:#bf616a;">userParentItem</span><span>.</span><span style="color:#bf616a;">create</span><span>(</span><span style="color:#bf616a;">Util</span><span>.</span><span style="color:#bf616a;">code</span><span>)
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">Item </span><span>{
+</span><span>        </span><span style="color:#bf616a;">id</span><span>: </span><span style="color:#bf616a;">userParentItem
+</span><span>        </span><span style="color:#bf616a;">anchors</span><span>.</span><span style="color:#bf616a;">fill</span><span>: </span><span style="color:#bf616a;">parent
+</span><span>        </span><span style="color:#bf616a;">property var userItem</span><span>: </span><span style="color:#bf616a;">null
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">function create</span><span>(</span><span style="color:#bf616a;">textComponent</span><span>) {
+</span><span>            </span><span style="color:#bf616a;">if</span><span>(</span><span style="color:#bf616a;">userItem</span><span>) {
+</span><span>                </span><span style="color:#bf616a;">userItem</span><span>.</span><span style="color:#bf616a;">destroy</span><span>()
+</span><span>            }
+</span><span>            </span><span style="color:#bf616a;">userItem</span><span> = </span><span style="color:#bf616a;">Qt</span><span>.</span><span style="color:#bf616a;">createQmlObject</span><span>(</span><span style="color:#bf616a;">textComponent</span><span>, </span><span style="color:#bf616a;">userParentItem</span><span>, &quot;</span><span style="color:#a3be8c;">userItem</span><span>&quot;)
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#bf616a;">Component</span><span>.</span><span style="color:#bf616a;">onCompleted</span><span>: </span><span style="color:#bf616a;">userParentItem</span><span>.</span><span style="color:#bf616a;">create</span><span>(</span><span style="color:#bf616a;">Util</span><span>.</span><span style="color:#bf616a;">code</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
 <p>Oh, <a href="https://github.com/patrickelectric/qmlonline/blob/71342f68f5f99dcf9c2b69051b63ea2e83010ca8/src/util.cpp">you can check the source code here</a>.</p>
 <p>To build the project, I changed my approach a couple of times.
 For the first test version, I did my development based in the official documents for <a href="https://doc.qt.io/qt-5/wasm.html">Qt webassembly</a>. But, compiling Qt for each machine that I use was a bit of a pain, so I started to use a docker available from this <a href="https://www.qt.io/blog/2019/03/05/using-docker-test-qt-webassembly">Qt blog post</a>.

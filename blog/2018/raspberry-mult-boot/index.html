@@ -126,10 +126,10 @@
 </li>
 <li>
 <p>Now, with everything ready, we should update the partuuid values of <code>/etc/fstab</code> and <code>/boot/cmdline.txt</code>. (<code>sudo blkid</code>)</p>
-<pre><code>&#x2F;dev&#x2F;mmcblk0p1: LABEL=&quot;boot&quot; UUID=&quot;3725-1C05&quot; TYPE=&quot;vfat&quot; PARTUUID=&quot;0155ef5b-01&quot;
-&#x2F;dev&#x2F;mmcblk0p2: LABEL=&quot;rootfs&quot; UUID=&quot;fd695ef5-f047-44bd-b159-2a78c53af20a&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-02&quot;
-&#x2F;dev&#x2F;mmcblk0p3: LABEL=&quot;rootfs2&quot; UUID=&quot;3da53eaa-4044-4554-8052-0f8c225f7b8c&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-03&quot;
-</code></pre>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/dev/mmcblk0p1: LABEL=&quot;boot&quot; UUID=&quot;3725-1C05&quot; TYPE=&quot;vfat&quot; PARTUUID=&quot;0155ef5b-01&quot;
+</span><span>/dev/mmcblk0p2: LABEL=&quot;rootfs&quot; UUID=&quot;fd695ef5-f047-44bd-b159-2a78c53af20a&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-02&quot;
+</span><span>/dev/mmcblk0p3: LABEL=&quot;rootfs2&quot; UUID=&quot;3da53eaa-4044-4554-8052-0f8c225f7b8c&quot; TYPE=&quot;ext4&quot; PARTUUID=&quot;0155ef5b-03&quot;
+</span></code></pre>
 </li>
 <li>
 <p>With all partitions mounted, update:</p>
