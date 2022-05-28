@@ -87,7 +87,8 @@ If you want to apply any stashed code, you can do it with `git stash apply stash
 
 ## Git cherry-pick
 
-If you want to test some commits or apply in different branches for any reason, `git cherry-pick` is here for you, with it you can
+If you want to test some commits or apply in different branches for any reason, `git cherry-pick` is here for you, with it you can just copy a commit or a range of commits to apply over a specific branch.
+
 
 # Knowing the basic (How the flow works)
 
