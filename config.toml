@@ -19,6 +19,10 @@ taxonomies = [
     {name = "tags", rss = true}, # each tag will have its own RSS feed
 ]
 
+[markdown]
+highlight_code = true
+render_emoji = true
+
 [extra]
 # Put all your custom variables here
 header = ""
