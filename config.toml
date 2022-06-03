@@ -26,3 +26,8 @@ render_emoji = true
 [extra]
 # Put all your custom variables here
 header = ""
+
+utterances = "patrickelectric/patrickelectric.github.io"
+utterances_label = "Comments"
+utterances_theme = "github-light"
+utterances_issue_term = "pathname"
