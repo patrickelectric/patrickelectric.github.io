@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+      <title>Patrick José Pereira</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://patrickelectric.work/print.css" media="print">
+      <link rel="stylesheet" href="https://patrickelectric.work/poole.css">
+      <link rel="stylesheet" href="https://patrickelectric.work/hyde.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+      <!-- Math rendering -->
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+      onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
+
+      
+
+      
+      
+    </head>
+
+    <body class=" ">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+        
+            <div class="sidebar">
+                <div class="container sidebar-sticky">
+                    <div class="sidebar-about">
+                        
+                          <a href="https:&#x2F;&#x2F;patrickelectric.work"><h2>HOME</h2></a>
+                            <div class="avatar"> <img src="https://avatars3.githubusercontent.com/patrickelectric" alt="Patrick José Pereira" itemprop="image"> </div>
+                            <h6>Patrick José Pereira</h6>
+                            
+                            <p class="lead">I am an Electronics Engineer that works with robotic systems, OSS and OSH.</p>
+                            <div class="author__urls-wrapper">
+                              <!-- Place this tag in your head or just before your close body tag. -->
+                              <script async defer src="https://buttons.github.io/buttons.js"></script>
+                              <!-- Place this tag where you want the button to render. -->
+                              <a class="github-button" href="https://github.com/patrickelectric" data-show-count="true" aria-label="Follow @patrickelectric on GitHub">Follow @patrickelectric</a>
+                              <ul class="author__urls social-icons">
+
+                                  <li itemprop="homeLocation" itemscope="" itemtype="http://schema.org/Place">
+                                    <i class="fas fa-map-marker-alt"></i> Brazil
+                                  </li>
+                                  <li>
+                                    <a href="mailto:patrickjp@kde.org">
+                                      <meta itemprop="email" content="patrickjp@kde.org">
+                                      <i class="fas fa-envelope-square"></i> Email
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://github.com/patrickelectric">
+                                      <i class="fab fa-github-square"></i> GitHub
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="https://www.linkedin.com/in/patrickelectric/">
+                                      <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            
+                        
+                    </div>
+
+                    <ul class="sidebar-nav">
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div class="content container">
+            
+<div class="post">
+  <h1 class="post-title">How to rock: Doing the right thing</h1>
+  <span class="post-date">2020-08-31</span>
+  <h3 class="post-tags">[
+  
+  <a href="/tags/how-to-rock">how-to-rock</a>
+  
+  <a href="/tags/kde">kde</a>
+  
+  <a href="/tags/development">development</a>
+  
+  <a href="/tags/tutorial">tutorial</a>
+  
+  ]</h3>
+  <p>After a couple of years collaborating with open source/free software projects, I started to help newcomers to contribute and push the development practices further. This post will try to itemize the most important items that can used for software collaboration.
+Before starting, be sure to follow my <a href="/tags/how-to-rock">previous posts</a>, this post complements what already exists.</p>
+<span id="continue-reading"></span>
+<p>Now, I'm going to throw some good practices of code development and contribution, and during this post I'll explain why such practices can be archived without much effort:</p>
+<ul>
+<li>
+<p><strong>Avoid creating multiple PRs for the same work</strong>, update the ones that are still open.</p>
+<ul>
+<li>E.g: You created a Pull Request called &quot;Feature: add button&quot;, some modifications will be necessary after the review process, and for that you'll need to update the same branch over creating new ones. That's necessary to help the project maintainers to see previous comments and your development history, avoid repository noise and unnecessary PRs in the project history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Create atomic and self-contained commits</strong>, avoid doing multiple things in the same commit.</p>
+<ul>
+<li>E.g: You have created a commit to fix the serial communication class, and inside the same commit you are doing 3 different things, removing trailing spaces, fixing a pointer validation check and a typo in the documentation of a totally different class. This can appear to be silly and bureaucratic, but there are good reasons to break this simple commit and at least 3 different commits, one for the pointer check, a second one for the typo and a third one for the trailing space.
+<ul>
+<li>It makes your work more clear when the maintainer does the review per commit</li>
+<li>Makes it easier for developers to cherry-pick your work avoiding conflicts</li>
+<li>Makes it easier to fix conflicts when doing rebases over the master branch</li>
+<li>
+<ul>
+<li>Helps developers to read the project history</li>
+<li>Developers usually track lines history to understand the changes behind a functionality, it's common to search with <code>git grep</code> history from commits or lines changes in specific commits to understand the code, function, class or a small feature.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Create atomic and self-sustained PRs</strong>, avoid doing multiple things in the same PR, like different features. They may appear simple with small pieces of code/functionality but they can escalate quickly after a review process, and if both features are somehow related or dependently, it's recommended to break it in multiple PRs with code to maintain compatibility with current code base. A huge PR can drag developer and maintainer in a rabbit hole, making the PR to be not merged, keeping it simple is the best way to merge it and get the sweet serotonin boost.</p>
+<ul>
+<li>E.g: You have applied a PR for software notifications, and somehow you also added a URL fetch functionality to grab new software versions, etc. After the first review, the maintainer asks to create a more abstracted way to fetch api and to deal with network requirements, this will start to convolute the PR, moving the initial idea of the notification feature to an entire network REST API architecture. With that, it's better to break the PR in two, one that only provides the notification software and interface feature and a second PR that is used for the REST API.</li>
+</ul>
+</li>
+<li>
+<p><strong>Do your own review</strong>, the final and probably most important tip of all. Doing you own review will train your mind and eyes to detect poor code standards or bad practices, it'll also make your PR be merged easily and faster, since you'll be able to catch problems before the reviewer feedback. Some reviewers may think that reviewing your own PR is a must, since we are talking about open source projects and free software, you should understand that the people that are reviewing your code are not obligated to do so, the majority are collaborating and donating their own time to help the development and maintenance of such projects, doing your own review is also sign of empathy about the project and maintainer time.</p>
+</li>
+</ul>
+
+</div>
+
+<footer>
+  <p style="text-align: center;">If it was helpful, consider giving a start:</p>
+  <!-- Place this tag where you want the button to render. -->
+  <div style="text-align: center;">
+    <a class="github-button" href="https://github.com/patrickelectric/patrickelectric.github.io" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star patrickelectric/patrickelectric.github.io on GitHub">Star</a>
+  </div>
+</footer>
+
+
+  
+  <script
+    src="https://utteranc.es/client.js"
+    repo="patrickelectric&#x2F;patrickelectric.github.io"
+    issue-term="pathname"
+    label="Comments"
+    theme="github-light"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+
+
+
+        </div>
+
+    </body>
+
+</html>
