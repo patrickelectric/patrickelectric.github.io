@@ -18,6 +18,8 @@ The idea behind this section is to point some important things that I learned in
 
 ## Tig
 
+> What's the use of having access to everything, if you can't visualize it.
+
 Git is really great, but what matters a great tool if the user interface is not as polished as we desire to be. **`Tig`** is one of the greatest tools to be used with Git, is the UI that mostly programmers are missing to visualize and understand what is going on in the git repository. If you didn't know about it, install and use it now.
 
 {% img(url="/assets/how_to_rock/tig-all.png") %}
