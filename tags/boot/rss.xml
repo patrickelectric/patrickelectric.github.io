@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Patrick José Pereira - boot</title>
+        <link>https://patrickelectric.work</link>
+        <description>I am an Electronics Engineer that works with robotic systems, OSS and OSH.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://patrickelectric.work/tags/boot/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 19 Aug 2018 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Raspberry Pi with multiboot (multiple rootfs)</title>
+            <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
+            <link>https://patrickelectric.work/blog/2018/raspberry-mult-boot/</link>
+            <guid>https://patrickelectric.work/blog/2018/raspberry-mult-boot/</guid>
+            <description>&lt;p&gt;One question that I receive (from my friends, myself and people that install archlinux at 3am) appears every time. &lt;em&gt;How to create a multiboot architecture inside a sdcard for the Raspberry Pi ?&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;After a boring day doing some unrelated stuff out of home, and with 1h free to do something before sleep and eating (heating my frozen lasagna), why not solving that &lt;del&gt;secular&lt;&#x2F;del&gt; question that follow me ?&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;I took some time to think about it: &lt;a href=&quot;https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;index.php&#x2F;Category:Boot_loaders&quot;&gt;maybe doing something related to the archlinux boot section&lt;&#x2F;a&gt;, or with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;raspberrypi&#x2F;noobs&quot;&gt;noobs&lt;&#x2F;a&gt;, and maybe with &lt;a href=&quot;https:&#x2F;&#x2F;www.berryterminal.com&#x2F;doku.php&#x2F;berryboot&quot;&gt;BerryBoot&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;With 1h-ish free I did remove all non-trivial ways.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;archlinux: The script will use all the sdcard, changing the scripts will take time.&lt;&#x2F;li&gt;
+&lt;li&gt;noobs: It does not appears to be the correct tool, some investigation shows that.&lt;&#x2F;li&gt;
+&lt;li&gt;BerryBoot: Appears to be the way to go, but it&#x27;ll take time also to configure everything.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;doing-the-hard-stuff-with-no-sweat&quot;&gt;Doing the hard stuff with no sweat&lt;&#x2F;h1&gt;
+&lt;p&gt;So, the idea now is to break everything and try something new. &lt;strong&gt;Use Raspbian image, create a second rootfs partition, change the rootfs in &#x2F;boot&lt;&#x2F;strong&gt;, sounds simple, easy and fast !&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.raspberrypi.org&#x2F;downloads&#x2F;raspbian&#x2F;&quot;&gt;Download Raspbian&lt;&#x2F;a&gt; (I did everything with Raspbian stretch lite).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Burn the sdcard with Etcher (I like dd, but Etcher is so simple!).&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Use gparted to create a second partition with the same configuration of the &#x2F;rootfs one ! (rootfs2).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;raspberry_multiboot&#x2F;gparted.png&quot; alt=&quot;LaKademy2017&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Make a copy of our old &lt;em&gt;rootfs&lt;&#x2F;em&gt;. &lt;code&gt;sudo cp &#x2F;mount_point_of_rootfs&#x2F;* &#x2F;mount_point_of_rootfs2&#x2F;* -r&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Now, with everything ready, we should update the partuuid values of &lt;code&gt;&#x2F;etc&#x2F;fstab&lt;&#x2F;code&gt; and &lt;code&gt;&#x2F;boot&#x2F;cmdline.txt&lt;&#x2F;code&gt;. (&lt;code&gt;sudo blkid&lt;&#x2F;code&gt;)&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&#x2F;dev&#x2F;mmcblk0p1: LABEL=&amp;quot;boot&amp;quot; UUID=&amp;quot;3725-1C05&amp;quot; TYPE=&amp;quot;vfat&amp;quot; PARTUUID=&amp;quot;0155ef5b-01&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;dev&#x2F;mmcblk0p2: LABEL=&amp;quot;rootfs&amp;quot; UUID=&amp;quot;fd695ef5-f047-44bd-b159-2a78c53af20a&amp;quot; TYPE=&amp;quot;ext4&amp;quot; PARTUUID=&amp;quot;0155ef5b-02&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;dev&#x2F;mmcblk0p3: LABEL=&amp;quot;rootfs2&amp;quot; UUID=&amp;quot;3da53eaa-4044-4554-8052-0f8c225f7b8c&amp;quot; TYPE=&amp;quot;ext4&amp;quot; PARTUUID=&amp;quot;0155ef5b-03&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;With all partitions mounted, update:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;boot&#x2F;cmdline.txt&lt;&#x2F;code&gt;: partuuid of &lt;code&gt;&#x2F;rootfs&lt;&#x2F;code&gt; to 0155ef5b-&lt;strong&gt;02&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;rootfs&#x2F;etc&#x2F;fstab&lt;&#x2F;code&gt;: partuuid of &lt;code&gt;&#x2F;boot&lt;&#x2F;code&gt; to 0155ef5b-&lt;strong&gt;01&lt;&#x2F;strong&gt; and &lt;code&gt;&#x2F;&lt;&#x2F;code&gt; to 0155ef5b-&lt;strong&gt;02&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;rootfs2&#x2F;etc&#x2F;fstab&lt;&#x2F;code&gt;: partuuid of &lt;code&gt;&#x2F;boot&lt;&#x2F;code&gt; to 0155ef5b-&lt;strong&gt;01&lt;&#x2F;strong&gt; and &lt;code&gt;&#x2F;&lt;&#x2F;code&gt; to 0155ef5b-&lt;strong&gt;03&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;To change which rootfs you want to boot, just need to change the suffix of the partuuid in &lt;code&gt;&#x2F;boot&#x2F;cmdline.txt&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The &lt;strong&gt;01&lt;&#x2F;strong&gt; suffix is the boot partition (&lt;code&gt;&#x2F;boot&lt;&#x2F;code&gt;), &lt;strong&gt;02&lt;&#x2F;strong&gt; is our &amp;quot;recovery&amp;quot; partition with 700MB free (&lt;code&gt;&#x2F;rootfs&lt;&#x2F;code&gt;), and our last and probably the &amp;quot;main&amp;quot; partition with 13GB free is the one with &lt;strong&gt;03&lt;&#x2F;strong&gt; suffix (&lt;code&gt;&#x2F;rootfs2&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;This may not work with different kernels because of the initramfs.&lt;&#x2F;li&gt;
+&lt;li&gt;If you want to improve this article, please send a &lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;patrickelectric&#x2F;patrickelectric.github.io&quot;&gt;PR in my github&lt;&#x2F;a&gt; !&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+    </channel>
+</rss>

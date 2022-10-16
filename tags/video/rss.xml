@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Patrick José Pereira - video</title>
+        <link>https://patrickelectric.work</link>
+        <description>I am an Electronics Engineer that works with robotic systems, OSS and OSH.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://patrickelectric.work/tags/video/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 05 Aug 2018 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>Streaming with gstreamer</title>
+            <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+            <link>https://patrickelectric.work/blog/2018/streaming-with-gstreamer/</link>
+            <guid>https://patrickelectric.work/blog/2018/streaming-with-gstreamer/</guid>
+            <description>&lt;p&gt;Gtreamer is a great tool for everything that need to deal with video transmission, some things you can do with it:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a subtitle while the video is streaming&lt;&#x2F;li&gt;
+&lt;li&gt;Get video from file, udp, or v4l and store or transmit it&lt;&#x2F;li&gt;
+&lt;li&gt;Get two webcam videos, mix both together in the the same stream (Creating a stereo image)&lt;&#x2F;li&gt;
+&lt;li&gt;A RTSP server&lt;&#x2F;li&gt;
+&lt;li&gt;And etc..&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;gstreamer&#x2F;stereo.gif&quot; alt=&quot;stereo&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;testing-1-2-4-testing&quot;&gt;Testing 1 2 4, Testing !&lt;&#x2F;h1&gt;
+&lt;p&gt;This pipeline will create a H264 video test source, encode it, and send via udp, creating the video with &lt;code&gt;videotestsrc&lt;&#x2F;code&gt;, selecting the video input in &lt;code&gt;video&#x2F;&lt;&#x2F;code&gt;, encoding the video to transmit in &lt;code&gt;x264enc&lt;&#x2F;code&gt; and &lt;code&gt;rtph264pay&lt;&#x2F;code&gt;, and transmitting it with &lt;code&gt;udpsink&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 -v videotestsrc ! video&#x2F;x-raw,width=800,height=600,codec=h264,type=video ! videoscale ! videoconvert \
+&lt;&#x2F;span&gt;&lt;span&gt;! x264enc tune=zerolatency ! rtph264pay ! udpsink host=127.0.0.1 port=5600
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;gstreamer&#x2F;testsrc-stream.png&quot; alt=&quot;testsrc&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This one will get the video via udp with &lt;code&gt;udpsrc&lt;&#x2F;code&gt;, &lt;code&gt;rtpjitterbuffer&lt;&#x2F;code&gt; will create a buffer and remove any duplicate packets (removing unnecessary processing), &lt;code&gt;rtph264depay&lt;&#x2F;code&gt; will remove any unnecessary data in the packet and return only the stream, &lt;code&gt;avdec_h264&lt;&#x2F;code&gt; is the H264 decoder by &lt;a href=&quot;https:&#x2F;&#x2F;www.libav.org&#x2F;&quot;&gt;libav&lt;&#x2F;a&gt;, and in the end we shows the output in fpsdisplaysink.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 -vc udpsrc port=5600 close-socket=false multicast-iface=false auto-multicast=true \
+&lt;&#x2F;span&gt;&lt;span&gt;! application&#x2F;x-rtp, payload=96 ! rtpjitterbuffer ! rtph264depay ! avdec_h264 \
+&lt;&#x2F;span&gt;&lt;span&gt;! fpsdisplaysink  sync=false async=false --verbose
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;gstreamer&#x2F;testudpsrc-stream.png&quot; alt=&quot;udpsrc&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;gstreamer&#x2F;gst-launch.bmp&quot; alt=&quot;fpssink&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;get-the-video-from-a-real-device&quot;&gt;Get the video from a real device&lt;&#x2F;h1&gt;
+&lt;p&gt;Ok, now, to get the output from your webcam, it&#x27;s necessary to talk see what kind of resolution and encode the hardware can provide us.&lt;&#x2F;p&gt;
+&lt;p&gt;This can be done by running:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;v4l2-ctl --list-formats-ext
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Or, if you want to get from a specif device:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;v4l2-ctl --list-formats-ext --device=0
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In my webcam, it returns:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;ioctl: VIDIOC_ENUM_FMT
+&lt;&#x2F;span&gt;&lt;span&gt;	Index       : 0
+&lt;&#x2F;span&gt;&lt;span&gt;	Type        : Video Capture
+&lt;&#x2F;span&gt;&lt;span&gt;	Pixel Format: &amp;#39;MJPG&amp;#39; (compressed)
+&lt;&#x2F;span&gt;&lt;span&gt;	Name        : Motion-JPEG
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 1280x720
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 848x480
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 960x540
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 1280x720
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	Index       : 1
+&lt;&#x2F;span&gt;&lt;span&gt;	Type        : Video Capture
+&lt;&#x2F;span&gt;&lt;span&gt;	Pixel Format: &amp;#39;YUYV&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;	Name        : YUYV 4:2:2
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 640x480
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 160x120
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 320x180
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 320x240
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 424x240
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 640x360
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 640x480
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.033s (30.000 fps)
+&lt;&#x2F;span&gt;&lt;span&gt;		Size: Discrete 1280x720
+&lt;&#x2F;span&gt;&lt;span&gt;			Interval: Discrete 0.100s (10.000 fps)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Ok, nice ! Now, this information is pretty important for &lt;del&gt;me&lt;&#x2F;del&gt; us, the &lt;code&gt;video&#x2F;&lt;&#x2F;code&gt; width and height need to be compatible with the ones in this output, and doing so we can create our pipeline !&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 -v v4l2src device=&#x2F;dev&#x2F;video0 ! video&#x2F;x-raw,width=1280,height=720,type=video \
+&lt;&#x2F;span&gt;&lt;span&gt;! videoscale ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=127.0.0.1 port=5600 --verbose
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;gstreamer&#x2F;v4lsrc-stream.png&quot; alt=&quot;udpsrc&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The receive done in &lt;strong&gt;Testing&lt;&#x2F;strong&gt; will show the webcam video.&lt;&#x2F;p&gt;
+&lt;p&gt;But how gstreamer know which encode we want to use ?
+To discover this info, we can enable the debug level, with:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;export GST_DEBUG=&amp;quot;*:5&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;From &lt;a href=&quot;https:&#x2F;&#x2F;developer.ridgerun.com&#x2F;wiki&#x2F;index.php&#x2F;GStreamer_Debugging&quot;&gt;developer.ridgerun&lt;&#x2F;a&gt;, you can find this table that shows what each level mean:&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Debug level&lt;&#x2F;th&gt;&lt;th&gt;Type of message&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;0&lt;&#x2F;td&gt;&lt;td&gt;none&lt;&#x2F;td&gt;&lt;td&gt;No debug information is output.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;ERROR&lt;&#x2F;td&gt;&lt;td&gt;Logs all fatal errors. These are errors that do not allow the core or elements to perform the requested action. The application can still recover if programmed to handle the conditions that triggered the error.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;2&lt;&#x2F;td&gt;&lt;td&gt;WARNING&lt;&#x2F;td&gt;&lt;td&gt;Logs all warnings. Typically these are non-fatal, but user-visible problems are expected to happen.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;INFO&lt;&#x2F;td&gt;&lt;td&gt;Logs all informational messages. These are typically used for events in the system that only happen once, or are important and rare enough to be logged at this level.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;DEBUG&lt;&#x2F;td&gt;&lt;td&gt;Logs all debug messages. These are general debug messages for events that happen only a limited number of times during an object&#x27;s lifetime; these include setup, teardown, change of parameters, ...&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;5&lt;&#x2F;td&gt;&lt;td&gt;LOG&lt;&#x2F;td&gt;&lt;td&gt;Logs all log messages. These are messages for events that happen repeatedly during an object&#x27;s lifetime; these include streaming and steady-state conditions.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;9&lt;&#x2F;td&gt;&lt;td&gt;bufferdump&lt;&#x2F;td&gt;&lt;td&gt;Hex dump of buffer contents.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;p&gt;Running:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 v4l2src device=&#x2F;dev&#x2F;video0 ! videoconvert ! autovideosink
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Will open our device and show the output for us, it&#x27;s possible to see in debug level 4 all available video and image formats !&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;0:00:00.102958865 16444 0x5646d1572140 INFO        GST_ELEMENT_PADS gstelement.c:917:gst_element_get_static_pad: no such pad &amp;#39;sink&amp;#39; in element &amp;quot;v4l2src0&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.103172072 16444 0x5646d1572140 INFO                    v4l2 gstv4l2object.c:1196:gst_v4l2_object_fill_format_list:&amp;lt;v4l2src0:src&amp;gt; got 2 format(s):
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.103214415 16444 0x5646d1572140 INFO                    v4l2 gstv4l2object.c:1202:gst_v4l2_object_fill_format_list:&amp;lt;v4l2src0:src&amp;gt;   YUYV
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.103243944 16444 0x5646d1572140 INFO                    v4l2 gstv4l2object.c:1202:gst_v4l2_object_fill_format_list:&amp;lt;v4l2src0:src&amp;gt;   MJPG
+&lt;&#x2F;span&gt;&lt;span&gt;Setting pipeline to PLAYING ...
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.103625400 16444 0x5646d1572140 INFO                    v4l2 gstv4l2object.c:4136:gst_v4l2_object_probe_caps:&amp;lt;v4l2src0:src&amp;gt; probed caps:
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)10&#x2F;1;
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 };
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 };
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)640, height=(int)360, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1;
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)424, height=(int)240, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1;
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)320, height=(int)240, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1;
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)320, height=(int)180, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1;
+&lt;&#x2F;span&gt;&lt;span&gt;video&#x2F;x-raw, format=(string)YUY2, width=(int)160, height=(int)120, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1;
+&lt;&#x2F;span&gt;&lt;span&gt;image&#x2F;jpeg, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 };
+&lt;&#x2F;span&gt;&lt;span&gt;image&#x2F;jpeg, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 };
+&lt;&#x2F;span&gt;&lt;span&gt;image&#x2F;jpeg, width=(int)960, height=(int)540, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1;
+&lt;&#x2F;span&gt;&lt;span&gt;image&#x2F;jpeg, width=(int)848, height=(int)480, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And, when running our &lt;code&gt;v4l2src&lt;&#x2F;code&gt; pipeline:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;0:00:00.036525158 18676 0x55cdad7e4e00 INFO            GST_PIPELINE gstparse.c:337:gst_parse_launch_full: parsing pipeline description &amp;#39;v4l2src device=&#x2F;dev&#x2F;video0 ! video&#x2F;x-raw,width=1280,height=720,type=video ! videoscale ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=127.0.0.1 port=5600 &amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.043026669 18676 0x55cdad7e4e00 INFO            GST_PIPELINE grammar.y:652:gst_parse_perform_link: linking some pad of GstV4l2Src named v4l2src0 to some pad of GstVideoScale named videoscale0 (0&#x2F;0) with caps &amp;quot;video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.168796760 18676 0x55cdada61c50 INFO                    v4l2 gstv4l2object.c:4136:gst_v4l2_object_probe_caps:&amp;lt;v4l2src0:src&amp;gt; probed caps: video&#x2F;x-raw, format=(string)YUY2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)10&#x2F;1; video&#x2F;x-raw, format=(string)YUY2, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 }; video&#x2F;x-raw, format=(string)YUY2, width=(int)640, height=(int)480, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 }; video&#x2F;x-raw, format=(string)YUY2, width=(int)640, height=(int)360, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1; video&#x2F;x-raw, format=(string)YUY2, width=(int)424, height=(int)240, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1; video&#x2F;x-raw, format=(string)YUY2, width=(int)320, height=(int)240, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1; video&#x2F;x-raw, format=(string)YUY2, width=(int)320, height=(int)180, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1; video&#x2F;x-raw, format=(string)YUY2, width=(int)160, height=(int)120, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1; image&#x2F;jpeg, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 }; image&#x2F;jpeg, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction){ 30&#x2F;1, 30&#x2F;1 }; image&#x2F;jpeg, width=(int)960, height=(int)540, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1; image&#x2F;jpeg, width=(int)848, height=(int)480, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)30&#x2F;1
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.192946256 18676 0x55cdada61c50 INFO               GST_EVENT gstevent.c:814:gst_event_new_caps: creating caps event video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstV4l2Src:v4l2src0.GstPad:src: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.193154229 18676 0x55cdada61c50 INFO               GST_EVENT gstevent.c:814:gst_event_new_caps: creating caps event video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstCapsFilter:capsfilter0.GstPad:src: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.193861576 18676 0x55cdada61c50 INFO               GST_EVENT gstevent.c:814:gst_event_new_caps: creating caps event video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstVideoScale:videoscale0.GstPad:src: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.194599343 18676 0x55cdada61c50 INFO               GST_EVENT gstevent.c:814:gst_event_new_caps: creating caps event video&#x2F;x-raw, width=(int)1280, height=(int)720, framerate=(fraction)10&#x2F;1, format=(string)Y42B, type=(string)video, pixel-aspect-ratio=(fraction)1&#x2F;1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstVideoConvert:videoconvert0.GstPad:src: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, framerate=(fraction)10&#x2F;1, format=(string)Y42B, type=(string)video, pixel-aspect-ratio=(fraction)1&#x2F;1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstX264Enc:x264enc0.GstPad:sink: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, framerate=(fraction)10&#x2F;1, format=(string)Y42B, type=(string)video, pixel-aspect-ratio=(fraction)1&#x2F;1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstVideoConvert:videoconvert0.GstPad:sink: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstVideoScale:videoscale0.GstPad:sink: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstCapsFilter:capsfilter0.GstPad:sink: caps = video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)10&#x2F;1, format=(string)YUY2, pixel-aspect-ratio=(fraction)1&#x2F;1, colorimetry=(string)2:4:7:1, interlace-mode=(string)progressive
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.614072982 18676 0x55cdada61c50 INFO               GST_EVENT gstevent.c:814:gst_event_new_caps: creating caps event video&#x2F;x-h264, codec_data=(buffer)017a001fffe1001d677a001fbcb200a00b7602d4040405000003000100000300148f18324801000568ebccb22c, stream-format=(string)avc, alignment=(string)au, level=(string)3.1, profile=(string)high-4:2:2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)10&#x2F;1, interlace-mode=(string)progressive, colorimetry=(string)bt709, chroma-site=(string)mpeg2
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstX264Enc:x264enc0.GstPad:src: caps = video&#x2F;x-h264, codec_data=(buffer)017a001fffe1001d677a001fbcb200a00b7602d4040405000003000100000300148f18324801000568ebccb22c, stream-format=(string)avc, alignment=(string)au, level=(string)3.1, profile=(string)high-4:2:2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)10&#x2F;1, interlace-mode=(string)progressive, colorimetry=(string)bt709, chroma-site=(string)mpeg2
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;GstRtpH264Pay:rtph264pay0.GstPad:sink: caps = video&#x2F;x-h264, codec_data=(buffer)017a001fffe1001d677a001fbcb200a00b7602d4040405000003000100000300148f18324801000568ebccb22c, stream-format=(string)avc, alignment=(string)au, level=(string)3.1, profile=(string)high-4:2:2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)10&#x2F;1, interlace-mode=(string)progressive, colorimetry=(string)bt709, chroma-site=(string)mpeg2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;And as we can see here:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;017a001fffe1001d677a001fbcb200a00b7602d4040405000003000100000300148f18324801000568ebccb22c, stream-format=(string)avc, alignment=(string)au, level=(string)3.1, profile=(string)high-4:2:2, width=(int)1280, height=(int)720, pixel-aspect-ratio=(fraction)1&#x2F;1, framerate=(fraction)10&#x2F;1, interlace-mode=(string)progressive, colorimetry=(string)bt709, chroma-site=(string)mpeg2
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Gstreamer appears to be using our YUV webcam output (that is 4:2:2) to stream, and using a fps of 10 !&lt;&#x2F;p&gt;
+&lt;p&gt;Checking the &lt;code&gt;udpsrc&lt;&#x2F;code&gt; pipeline, we can check the same thing !&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;0:00:02.181566030 19432 0x55be0166ead0 INFO               GST_EVENT gstevent.c:814:gst_event_new_caps: creating caps event video&#x2F;x-raw, format=(string)Y42B, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:&#x2F;right-view-first&#x2F;left-flipped&#x2F;left-flopped&#x2F;right-flipped&#x2F;right-flopped&#x2F;half-aspect&#x2F;mixed-mono, pixel-aspect-ratio=(fraction)1&#x2F;1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)10&#x2F;1
+&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;GstPipeline:pipeline0&#x2F;avdec_h264:avdec_h264-0.GstPad:src: caps = video&#x2F;x-raw, format=(string)Y42B, width=(int)1280, height=(int)720, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:&#x2F;right-view-first&#x2F;left-flipped&#x2F;left-flopped&#x2F;right-flipped&#x2F;right-flopped&#x2F;half-aspect&#x2F;mixed-mono, pixel-aspect-ratio=(fraction)1&#x2F;1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)10&#x2F;1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Pretty interesting right ?! Gstreamer did all the dirty job for us.
+Now you can play with it, like changing the fps to 30 !&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 -v v4l2src device=&#x2F;dev&#x2F;video0 ! video&#x2F;x-raw,width=1280,height=720,type=video,framerate=30 ! videoscale ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=127.0.0.1 port=5600 --verbose 2&amp;gt;&amp;amp;1 | grep video&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.011889942 20140 0x55783db05e00 INFO            GST_PIPELINE gstparse.c:337:gst_parse_launch_full: parsing pipeline description &amp;#39;v4l2src device=&#x2F;dev&#x2F;video0 ! video&#x2F;x-raw,width=1280,height=720,type=video,framerate=30 ! videoscale ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=127.0.0.1 port=5600 &amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.016560183 20140 0x55783db05e00 INFO            GST_PIPELINE grammar.y:652:gst_parse_perform_link: linking some pad of GstV4l2Src named v4l2src0 to some pad of GstVideoScale named videoscale0 (0&#x2F;0) with caps &amp;quot;video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(int)30&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;0:00:00.018836082 20140 0x55783db05e00 ERROR           GST_PIPELINE grammar.y:730:gst_parse_perform_link: could not link v4l2src0 to videoscale0, neither element can handle caps video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(int)30
+&lt;&#x2F;span&gt;&lt;span&gt;WARNING: erroneous pipeline: could not link v4l2src0 to videoscale0, neither element can handle caps video&#x2F;x-raw, width=(int)1280, height=(int)720, type=(string)video, framerate=(int)30
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Oh, but wait, YUV can&#x27;t handle this FPS, so we should move to MJPG.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 -v v4l2src device=&#x2F;dev&#x2F;video0 ! image&#x2F;jpeg,width=1280,height=720,type=video,framerate=30&#x2F;1 ! videoscale ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=127.0.0.1 port=5600 --verbose
+&lt;&#x2F;span&gt;&lt;span&gt;WARNING: erroneous pipeline: could not link v4l2src0 to videoscale0, videoscale0 can&amp;#39;t handle caps image&#x2F;jpeg, width=(int)1280, height=(int)720, type=(string)video, framerate=(fraction)30&#x2F;1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Effing pipeline ! Oh wait, jpeg is a encode format, to do anything with it (like videoscale), we should decode it first.&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 -v v4l2src device=&#x2F;dev&#x2F;video0 ! image&#x2F;jpeg,width=1280,height=720,type=video,framerate=30&#x2F;1 ! jpegdec ! videoscale ! videoconvert ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=127.0.0.1 port=5600 --verbose
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Nice, now we can check the &lt;code&gt;udpsrc&lt;&#x2F;code&gt; pipeline output:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;videodecoder gstvideodecoder.c:3718:gst_video_decoder_negotiate_pool:&amp;lt;avdec_h264-0&amp;gt; ALLOCATION (1) params: allocation query: 0x7f4e00008680, GstQueryAllocation, caps=(GstCaps)&amp;quot;video&#x2F;x-raw\,\ format\=\(string\)I420\,\ width\=\(int\)1280\,\ height\=\(int\)720\,\ interlace-mode\=\(string\)progressive\,\ multiview-mode\=\(string\)mono\,\ multiview-flags\=\(GstVideoMultiviewFlagsSet\)0:ffffffff:&#x2F;right-view-first&#x2F;left-flipped&#x2F;left-flopped&#x2F;right-flipped&#x2F;right-flopped&#x2F;half-aspect&#x2F;mixed-mono\,\ pixel-aspect-ratio\=\(fraction\)1&#x2F;1\,\ chroma-site\=\(string\)mpeg2\,\ colorimetry\=\(string\)1:4:5:1\,\ framerate\=\(fraction\)30&#x2F;1&amp;quot;, need-pool=(boolean)true, pool=(GArray)NULL, meta=(GArray)NULL, allocator=(GArray)NULL;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Awesome ! 30 FPS !&lt;&#x2F;p&gt;
+&lt;p&gt;And that is it, I&#x27;m writing this for my future me. Yes, gstreamer is hard, but maybe this step-by-step guide of &lt;em&gt;tunning&lt;&#x2F;em&gt; a gstreamer pipeline can help !&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;bonus&quot;&gt;Bonus !&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;gstreamer&#x2F;simpsonsbonus.jpg&quot; alt=&quot;bonus&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is my stereo camera pipeline:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;gst-launch-1.0 videomixer name=m sink_1::xpos=320 ! videoconvert ! x264enc tune=zerolatency ! rtph264pay \
+&lt;&#x2F;span&gt;&lt;span&gt;! udpsink host=127.0.0.1 port=5600 \
+&lt;&#x2F;span&gt;&lt;span&gt;v4l2src device=&#x2F;dev&#x2F;video14 ! image&#x2F;jpeg, width=320, height=240 ! jpegdec ! queue ! videoconvert \
+&lt;&#x2F;span&gt;&lt;span&gt;! m. v4l2src device=&#x2F;dev&#x2F;video2 ! image&#x2F;jpeg, width=320, height=240 ! jpegdec ! queue ! videoconvert ! m.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is an example code in C++ that gets udp video from gstreamer and show it with OpenCV.&lt;&#x2F;p&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;patrickelectric&#x2F;5dca1cb7cef4ffa7fbb6fb70dd9f9edc.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;p&gt;And same example, but with python !&lt;&#x2F;p&gt;
+&lt;script src=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;patrickelectric&#x2F;443645bb0fd6e71b34c504d20d475d5a.js&quot;&gt;&lt;&#x2F;script&gt;
+</description>
+        </item>
+    </channel>
+</rss>
