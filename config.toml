@@ -13,10 +13,16 @@ highlight_code = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# Enable RSS
+generate_feed = true
+
+# Set name for RSS file
+feed_filename = "rss.xml"
+
 theme = "hyde"
 
 taxonomies = [
-    {name = "tags", rss = true}, # each tag will have its own RSS feed
+    { name = "tags", feed = true }, # each tag will have its own RSS feed
 ]
 
 [markdown]
