@@ -12,7 +12,7 @@ These objects can be of almost any shape or geometry, and are produced from a [3
 
 After this Wikipedia preview we can start work !
 
-1.  Files for the laser cut - [graber_lasercut](http://patrickjp.com/wp-content/uploads/2015/12/graber_lasercut.zip)
+1.  Files for the laser cut - [graber_lasercut](https://www.thingiverse.com/thing:2396556/files)
 2.  [Bill of Materials](http://reprap.org/wiki/Graber_i3)
 3.  Where and what buy:
     *   RAMPS (electronic, China) - [Big screen](http://pt.aliexpress.com/item/3d-printer-kit-3d-12864-screen-ramps-1-4-4988-2560r-3/32212102721.html) - [Small screen](http://pt.aliexpress.com/item/1pcs-Mega-2560-R3-1pcs-RAMPS-1-4-Controller-5pcs-A4988-Stepper-Driver-Module-RAMPS-1/1609182953.html?spm=2114.02020208.3.139.hc309d&ws_ab_test=searchweb201556_1_79_78_77_80,searchweb201644_0,searchweb201560_2)
