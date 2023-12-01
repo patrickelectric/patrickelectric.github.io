@@ -245,6 +245,7 @@ This is the first post of a series that I'm planning to do. Hope that some of th
 - [CppCon 2018: Kate Gregory “What Do We Mean When We Say Nothing At All?”](https://www.youtube.com/watch?v=kYVxGyido9g)
 - [CppCon 2017: Lars Knoll “Qt as a C++ Framework: History, Present State and Future”](https://www.youtube.com/watch?v=YWiAUUblD34)
 - [CppCon 2017: Kate Gregory “10 Core Guidelines You Need to Start Using Now”](https://www.youtube.com/watch?v=XkDEzfpdcSg)
+- [Cppcon 2017: Walter E. Brown “Whitespace ≤ Comments ＜＜ Code”](https://www.youtube.com/watch?v=NLebZ3XT92E)
 - [API Design Principles - TQtC](https://wiki.qt.io/API_Design_Principles)
 - [Designing Qt-Style C++ APIs - Matthias Ettrich](https://doc.qt.io/archives/qq/qq13-apis.html)
 - [The Little Manual of API Design - Jasmin Blanchette](https://people.mpi-inf.mpg.de/~jblanche/api-design.pdf)
