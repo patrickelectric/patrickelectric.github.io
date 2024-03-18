@@ -22,16 +22,14 @@ This was a somewhat lengthy resource that I've been working on for weeks, and it
 
 Well, the most important thing to know is: Diet.
 
-Exercises will help you maintain muscles, better cardiac and respiratory condition. But they are not the main point when loosing weight, diet is.
-That's mostly pointed by Muzy, Barakat, Balestrin and much others, where a caloric deficit is required. 
+Exercises will help you maintain muscles, better cardiac and respiratory condition. But they are not the main point when losing weight, diet is. This is mostly pointed out by Muzy, Barakat, Balestrin, and many others, where a caloric deficit is required.
 
-Jessie Inchauspé advocates for usage of modern glucose tactics to decrease the amount of energy used or stored by your cells when glucose is available on the system though insulin.
-Insulin is a hormone produced by your pancreas that helps regulate blood sugar (glucose) levels. When you eat, especially carbohydrates, your blood sugar rises, triggering the release of insulin. Insulin helps your cells absorb this glucose for energy or store it for later use (fat). You can help your body to use the energy available on the cells drinking water and being hydrated. That's one of the reasons that people use creatine.
+Jessie Inchauspé advocates for the usage of modern glucose tactics to decrease the amount of energy used or stored by your cells when glucose is available in the system through insulin. Insulin is a hormone produced by your pancreas that helps regulate blood sugar (glucose) levels. When you eat, especially carbohydrates, your blood sugar rises, triggering the release of insulin. Insulin helps your cells absorb this glucose for energy or store it for later use (fat). You can help your body use the energy available in the cells by drinking water and staying hydrated. That's one of the reasons people use creatine.
 
-Jessie, provide 10 rules to help people to have a better glucose control:
+Jessie provides 10 rules to help people have better glucose control:
 
   1. **Eat in Order**: Consume your food in a specific order to flatten glucose curves: start with vegetables, then protein and fats, and finish with starches (carbohydrates) and sugars.
-     * You can also take advantage of this mechanism by doing combinations. If you are eating pasta, try to add minced meat. If you are eating protein, try to add a salad. 
+     * You can also take advantage of this mechanism by doing combinations. If you are eating pasta, try to add minced meat. If you are eating protein, try to add a salad.
   2. **Vinegar Power**: Add a tablespoon or two of vinegar (like apple cider vinegar) to meals or have it as a drink before eating to help reduce glucose spikes (20min).
   3. **Post-Meal Walks**: Exercise, take a walk after meals to help your body use the glucose from the food you've eaten.
   4. **Protein with Everything**: Include a source of protein in each meal and snack to slow down the absorption of carbohydrates. The best thing to eat in the morning are salt foods with high protein.
@@ -48,11 +46,11 @@ While doing diet, it's also important to do exercises to avoid loosing muscles.
 
 # Loosing fat
 
-While doing exercises, an important key to have in mind is to keep your heartbeat rate under the "fat burn zone", that is between 50 to 70% of your maximum rate. Some sources in the internet point that you can initially use "220 - your age" to have an idea of your maximum rate. So.. for me, (220 - 32)*(0.5, 0.7) = [94 and 131], that's the rate that I should keep my heartbeat to force my body to burn fat. If you go over this zone, getting in the dangerous zone, joking.. the cardio zone, your body should starting burning muscles over fat, since it's fast and easier. When running and doing exercises, it sometimes takes around 20min+ to your body to starting burning fat while in exercise, you should feel more energy and the exercise feels easier, and in that point you should control yourself to keep your heartbeat still inside the zone.
+While doing exercises, it's important to keep in mind the "fat burn zone," which is between 50 to 70% of your maximum heart rate. Some sources on the internet suggest using "220 - your age" to estimate your maximum rate. So, for me, (220 - 32) * (0.5 to 0.7) = [94 to 131]; that's the rate at which I should keep my heartbeat to encourage my body to burn fat. Going over this zone, humorously called the cardio zone, might lead your body to start burning muscles over fat since it's quicker and easier. When running and exercising, it sometimes takes around 20min+ for your body to start burning fat; you should feel more energetic, and the exercise feels easier. At that point, you should control yourself to keep your heartbeat within the zone.
 
-Muzy points that cardio exercises is a practice that results its best after a long time, 9 months or close to one year, before that your body will do the adaptation phase. It sure helps to loose weight, but that includes muscle mass. I would recommend to avoid that but there is no consent about this information.
+Muzy notes that cardio exercises yield the best results after a long time, around 9 months to a year, as your body undergoes an adaptation phase. It certainly helps with weight loss, but that includes muscle mass. I would recommend avoiding this, but there is no consensus on this information.
 
-An important point, if you are starting now, it may worth to get some weight though muscle mass, focusing in an hypertrophy training to gain more muscle, increasing your metabolism and energy consumption. And after that, start doing diet and cardio exercises.
+An important point, if you are just starting, it might be worthwhile to gain some weight through muscle mass by focusing on hypertrophy training to increase muscle, thereby boosting your metabolism and energy consumption. After that, you can start dieting and cardio exercises.
 
 # Gaining muscle
 
