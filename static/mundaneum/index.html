@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Must lost post-its</title>
+    <style>
+        body {
+            background-color: #333333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #search {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #postit-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .post-it {
+            background-color: #f9f489;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        #loading {
+            color: #fff;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading...</div>
+    <input type="text" id="search" placeholder="Search post-its..." style="display:none;">
+    <div id="postit-container" style="display:none;"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('post-its.md')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load the markdown file');
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    const posts = marked.lexer(text).filter(item => item.type === 'paragraph').map(item => item.text);
+                    initializePosts(posts);
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('search').style.display = 'block';
+                    document.getElementById('postit-container').style.display = 'grid';
+                })
+                .catch(error => {
+                    document.getElementById('loading').textContent = error.message;
+                });
+
+            function initializePosts(posts) {
+                const fuse = new Fuse(posts, {
+                    includeScore: true,
+                    includeMatches: true,
+                    findAllMatches: true,
+                    shouldSort: true,
+                    threshold: 0.4,
+                    ignoreLocation: true,
+                    minMatchCharLength: 2,
+                    fieldNormWeight: 0.01,
+                });
+                const searchInput = document.getElementById('search');
+                const container = document.getElementById('postit-container');
+
+                searchInput.addEventListener('input', function() {
+                    const results = searchInput.value ? fuse.search(searchInput.value) : posts.map(post => ({ item: post }));
+                    console.log(results)
+                    displayPosts(results.map(result => result.item));
+                });
+
+                displayPosts(posts); // display all posts initially
+
+                function displayPosts(posts) {
+                    container.innerHTML = posts.map(post => `<div class="post-it">${post.replace(/\n/g, '<br>')}</div>`).join('');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
