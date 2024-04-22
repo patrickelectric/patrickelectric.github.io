@@ -42,6 +42,11 @@
             font-size: 20px;
             margin-top: 20px;
         }
+
+        .highlight {
+            background-color: yellow;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -53,7 +58,7 @@
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('post-its.md')
+            fetch('/mundaneum/post-its.md')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to load the markdown file');
@@ -75,26 +80,40 @@
                 const fuse = new Fuse(posts, {
                     includeScore: true,
                     includeMatches: true,
-                    findAllMatches: true,
+                    findAllMatches: false,
                     shouldSort: true,
-                    threshold: 0.4,
+                    threshold: 0.3,
                     ignoreLocation: true,
-                    minMatchCharLength: 2,
-                    fieldNormWeight: 0.01,
                 });
                 const searchInput = document.getElementById('search');
                 const container = document.getElementById('postit-container');
 
                 searchInput.addEventListener('input', function() {
                     const results = searchInput.value ? fuse.search(searchInput.value) : posts.map(post => ({ item: post }));
-                    console.log(results)
-                    displayPosts(results.map(result => result.item));
+                    displayPostsSearch(results);
                 });
 
-                displayPosts(posts); // display all posts initially
 
+                displayPosts(posts); // display all posts initially
                 function displayPosts(posts) {
                     container.innerHTML = posts.map(post => `<div class="post-it">${post.replace(/\n/g, '<br>')}</div>`).join('');
+                }
+
+                function displayPostsSearch(results) {
+                    container.innerHTML = results.map(result => {
+                        let highlightedText = result.item;
+                        if (result.matches && result.matches.length > 0) {
+                            // Find the largest match
+                            const largestMatch = result.matches[0].indices.reduce((largest, current) => {
+                                return (current[1] - current[0] > largest[1] - largest[0]) ? current : largest;
+                            }, [0, 0]);
+                            // Highlight the largest match
+                            highlightedText = `${highlightedText.substring(0, largestMatch[0])}` +
+                                              `<span class="highlight">${highlightedText.substring(largestMatch[0], largestMatch[1] + 1)}</span>` +
+                                              `${highlightedText.substring(largestMatch[1] + 1)}`;
+                        }
+                        return `<div class="post-it">${highlightedText.replace(/\n/g, '<br>')}</div>`;
+                    }).join('');
                 }
             }
         });
