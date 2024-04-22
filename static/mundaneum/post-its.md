@@ -1,3 +1,46 @@
+The sum of human knowing is beyond any one man; any thousand men. With the destruction of our social fabric, science will be broken into a million pieces... The bits of lore, meaningless, will not be passed on. They will be lost through the generations. But, if we now prepare a giant summary of all knowledge, it will never be lost. Coming generations will build on it, and will not have to rediscover it for themselves. One millennium will do the work of thirty thousand.
+Foundation, By Isaac Asimov
+
+People get confused, companies get confused. When they start getting bigger, they want to replicate their initial success.. A lot of them think ‘well, somehow there's some magic in the process of how that success was created’. So, they start to try to institutionalize process across the company.. Before very long, people get very confused that the process is the content. That's ultimately the downfall of IBM… They have the best process people in the world, they just forgot about the content. That's what happened a little bit at Apple too… We had a lot of people who were great at management process. They just didn't have a clue as to the content… That's what makes great products. It's not process, it's content.
+The Lost Interview, Steve Jobs
+
+IBM had always been able to control the adoption of new standards.. It would encourage the adoption of new versions of its operating systems by releasing hardware that required the new software or vice versa. That kind of strategy might have worked well for mainframes, but it was a disaster in the fast-moving personal-computer market. IBM could still command somewhat higher prices for equivalent performance, but the
+world had discovered that lots of companies made compatible hardware, and that if IBM couldn't deliver the right value, someone else would…
+The Road Ahead, Bill gates
+
+-First smartphone release- I've been reading articles on this phone for a month now.. And they've all been free. It's great, right? No, it's not! Giving information away runs counter to everything I understand about successful business practices… The World Wide Web is like a broken water main, but instead of water, it's spewing information every which way. I don't understand. Is it a come-on or what ? It's kind of like the Fryeburg Fair, where the first game is usually free. And we're still on the first game…
+I don't think this is a come-on. I think it's a gateway drug. I've already noticed that my Google search responses are on the side of financial information. It knows what I want. What's gonna happen when they close the water main? No more freebies. Oh, and false information becomes common and accepted as true… And what happens when they start using this to spread more nonsense than is already out there?
+Mr. Harrigan’s Phone, Netflix / Stephen King
+
+On corporate balance sheets, the assets of a corporation are its factories, equipment, patents and brand name. Workers aren’t considered assets. They appear as costs. In fact, payrolls are typically two-thirds of a corporation’s total costs. Which is why companies often cut payrolls to increase profits. The reason for this is corporations have traditionally been viewed as production systems. Assets are things that corporations own, which turn inputs – labor, raw materials and components – into marketable products.
+Reduce the costs of these inputs, and – presto – each product generates more profit. Or that’s been the traditional view. Yet today, increasingly, corporations aren’t just production systems. They’re systems for directing the know-how, know-what, know-where and know-why of the people who work within them.
+A large and growing part of the value of a corporation now lies in the heads of its workers – heads that know how to innovate, know what needs improvement, know where the company’s strengths and vulnerabilities are found, and know why the corporation succeeds (or doesn’t).
+These are becoming the key assets of today’s corporations – human assets that can’t be owned, as are factories, equipment, patents and brands. They must be motivated.
+Robert Reich, The guardian
+
+Behavioral inertia is the tendency to keep doing what you’re already doing. Status quo bias. It can be a frustrating bias if you desire change, but its origin isn’t a flaw. If an organism has managed to survive long enough to reproduce and provide and care for its offspring, … , was sufficient for its genes to spread. That’s all it takes to persist.. Behavioral inertia can help slow down the accumulation of unintended consequences and the loss of ideas that work, but it can also slow down innovation and adaptation.
+If the environmental impacts of our society were more immediate and un-ignorable, it wouldn’t be so tempting to apply this inertial brake. But emissions are invisible and their consequences aren’t immediate or local. They impact future people and people far away.
+The Future Of Reasoning - Michael Stevens
+
+There's a tension between theory and engineering that I've been thinking a lot about. I tweeted something like 'good execution is more important than a good idea, but one helps the other'... What I mean is: a good idea is a must, but in my experience good ideas are in abundance, good execution on the other hand is rare. I think some mix of good timing, good ideas and good execution is essential, getting that mix right is tough … I'm starting to believe it's more art than science.
+Lex Fridman
+
+It's not the writing of the program, it's the whole lifespan. It's not how fast you wrote it, or how fast it runs, but how it can bend and adapt as situations change … Engineering is made of tradeoffs, in the past was to create the least resource possible program, after that to use the least amount of energy possible ... Our appliances and everything (nowadays) are all built around energy efficiency, sometimes at the expense of robustness or higher costs. There's interesting things where energy or electricity could become much cheaper in a future world and that could change our engineering trade-offs for the way we build certain things, where you could throw away efficiency and actually get more benefits that actually matter.
+John Carmack, Lex Fridman Podcast
+
+Polish as you go. Don't depend on polish happening later. Always maintain constantly shippable code … As soon as you see a bug, you fix it. Do not continue on. If you don't fix your bugs your new code will be built on a buggy codebase and ensure an unstable foundation.
+John Romero, Jason Scott interview
+
+Don’t worry simply about ‘right’ or ‘wrong’, since the decision is probably a lot more complicated than that. Look at decision-making as optimizing between trade-offs to achieve a given objective. In other words, you’ll almost always have to give up something to get something.. It is important to realize that past decisions may have made perfect sense at the time, but if the situation has changed (whether because of innovation or the environment), the trade-off needs to be re-evaluated.
+Joseph George, Forbis
+
+Things are packages of emphasis, some things are emphasized in a product, some things are not done as well in a product, some things are chosen not to be done at all in a product.. We're just people running this company, we're trying to make great products for people, and so we have at least the courage of our convictions to say: we don't think this is part of what makes a great product, we're gonna leave it out, some people are gonna not like that..
+Steve Jobs, D8 Conference
+
+Well, just as a function of inertia, people want to use the same tools and methods that they are familiar with. That's what they'll do by default, and then that will lead to an outcome of things that can be made with those tools and methods, but is unlikely to be the platonic ideal of the perfect product. Is good to think of things in both directions. So like: what can we build with the tools that we have? But also, what does the theoretical perfect product look like ? That theoretical perfect product is going to be a moving target, because as you learn more, the definition of that perfect product will change, because you don't actually know what the perfect product is, but you can successfully approximate.
+What tools, methods, materials, whatever do we need to create in order to do what we want ?
+Lex Fridman Show, Elon Musk
+
 Platonic ideal product is a moving target, as your learn more the definition of this product will change, because your don't know what is perfect, but you'll be closer to it.
 Inspired by Elon Musk interview
 
@@ -66,6 +109,3 @@ No Idea
 
 Servers are cheap, engineers are expensive
 The primeagen
-
-So they start to try to institutionalize process across the company. Before long, people get confused that the process is the content. That's ultimately the downfall of IBM. IBM has the best process people in the world. They just forgot about the content. That's a little bit of what happened at Apple too. We had people who were great at management process. They just didn't have a clue as to the content... That was makes treat products, is the content, not the process.
-Steve Jobs
