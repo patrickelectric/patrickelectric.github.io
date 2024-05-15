@@ -109,3 +109,9 @@ No Idea
 
 Servers are cheap, engineers are expensive
 The primeagen
+
+Quem escuta, esuqece. Quem estuda, sabe. Quem vê, entende. Quem faz, aprende.
+Paulo Muzy
+
+When a dish breaks, we should not see it as a problem. but as an Opportunity. The philosophy behind Kintsugi is that brooken objects are not inherently worthless and that their brokenness can be soon as part of their history and beauty.
+By me
