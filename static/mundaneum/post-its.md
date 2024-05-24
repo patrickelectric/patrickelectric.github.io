@@ -115,3 +115,6 @@ Paulo Muzy
 
 When a dish breaks, we should not see it as a problem. but as an Opportunity. The philosophy behind Kintsugi is that brooken objects are not inherently worthless and that their brokenness can be soon as part of their history and beauty.
 By me
+
+"Esses caras que escrevem complicado são os caras que mais tem fama de inteligente. Mas na realidade, quando o autor deixa o leitor dar significado as suas palavras, ele é o imbecil. Porque significa que ele não conseguiu explicar direito oque ele está falando."
+- Arthur Schopenhauer, A arte de escrever
