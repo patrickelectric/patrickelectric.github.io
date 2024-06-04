@@ -118,3 +118,15 @@ By me
 
 "Esses caras que escrevem complicado são os caras que mais tem fama de inteligente. Mas na realidade, quando o autor deixa o leitor dar significado as suas palavras, ele é o imbecil. Porque significa que ele não conseguiu explicar direito oque ele está falando."
 - Arthur Schopenhauer, A arte de escrever
+
+The consumir didn't want Jimi Hendrix, but they got him. And it changed the world. And the consumir didn't want Sgt. Pepper's, but they got it. And they didn't want Sex Pistols. But they got it. F* the customer. The customer doesn't know what he wants. You f* cking give it to him. And he likes it. And now there's an attitude in the music business where it's like, well, let's keep the consumer happy. Because that's what makes the music business go around. Let's put it this way. If a fashion house is a record label, right, right. Like Dior or all those big fashion houses. Do you think fashion would stay the same if they asked the consumer what they wanted to wear next summer? Why? Fashion always moves forward and we all look different and have different haircuts and we all different because fashion doesn't focus group it to its customers. Customers are idiots. 99% of them are idiots, you know. Not my customers. They're brilliant. You're brilliant, and I respect you. But the customers of other bands, idiots.
+- Noel Gallagher
+
+Innovators don't follow trends. They create them.
+- Noel Gallagher
+
+Marketing não é uma guerra de produto, mas sim de percepção
+- No Idea
+
+Nem sempre é o outro que criou espectativas. Se você cria toda uma imagem de propósito, fas promessas, acordos... é normal que as pessoas esperem algo de você, quando você mesmo se coloca nesse lugar. Esperar coerência de alguem não é criar expectativas.
+- Quadrinhos de la vita
