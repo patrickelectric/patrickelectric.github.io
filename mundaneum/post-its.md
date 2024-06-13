@@ -129,4 +129,7 @@ Marketing não é uma guerra de produto, mas sim de percepção
 - No Idea
 
 Nem sempre é o outro que criou espectativas. Se você cria toda uma imagem de propósito, fas promessas, acordos... é normal que as pessoas esperem algo de você, quando você mesmo se coloca nesse lugar. Esperar coerência de alguem não é criar expectativas.
+
+Age is no guarantee of efficiency and youth is no guarantee of innovation.
+- Skyfall
 - Quadrinhos de la vita
