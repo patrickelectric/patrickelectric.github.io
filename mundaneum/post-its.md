@@ -136,3 +136,6 @@ Age is no guarantee of efficiency and youth is no guarantee of innovation.
 
 Some may say that if you have an open mind, sometimes someone can trow trash on it.
 - Farzad
+
+Flappy bird did more than some AAA studios, do you think that the AAA studios did not try as hard as Flappy bird ? Doubt, doubt, doubt... And that's the sad part. Effort exerted is not a linear application of your reward. You could apply more effort than anybody else in some other field, building houses or something else, and you could actually move faster like then yeah, you'll be directly rewarded for your work, but it's different than programming.
+- ThePrime
