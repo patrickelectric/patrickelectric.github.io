@@ -197,3 +197,6 @@ What brings you peace ? Robot: Science, I was built with it, and it is built on 
 What brings you peace ? Dragon: I'm sitting on it (gold), wealth allows to insulate yourself from the violence your wealth relies on.
 What brings you peace ? Monkey: In this world ? Nothing, peace is the powerful telling those they've kicked to the ground for getting up is an act of War. Peace is not peaceful when the status quo is violence. 
 - The forest jar
+
+The process should be regulated towards the final goal.
+By Me
