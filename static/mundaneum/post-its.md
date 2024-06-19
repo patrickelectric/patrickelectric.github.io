@@ -200,3 +200,6 @@ What brings you peace ? Monkey: In this world ? Nothing, peace is the powerful t
 
 The process should be regulated towards the final goal.
 By Me
+
+Time travelers are such hypocrites, always worrying how changing the past can affect the presente, but never concerned about how changing the present will affect the future.
+The forest jar
