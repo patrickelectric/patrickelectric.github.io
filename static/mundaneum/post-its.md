@@ -142,3 +142,58 @@ Flappy bird did more than some AAA studios, do you think that the AAA studios di
 
 In a tech company, probably everybody will be smart, "normal" inteligency will not be that important, "emotional" inteligency will.
 - Álvaro Machado Dias
+
+What is Justice ? Robot: Doesn't apply to me, animals suffer and robots think, but humans will always believe that the only thing that makes you worthy of more consideration, is being one of them.
+What is Justice ? Monster: The humans has got something to do with proximity, refusing to save a drowning child because it would ruin your expensive suit is terribly unjust, the buying an expensive suit while a child the other side of the world is starving, is completely normal.
+What is Justice ? Giant: Human Justice is stuck in the present, justice demands treating people equally, even if doing so perpetually a historic injustice.
+What is Justice ? Gaia: Human Justice is stuck in the present, justice demands treating all people equally, but doesn't require us to consider the interests of future generations.
+What is Justice ? Wolf: People sometimes look to nature for justice, walls have territory therefore private property is a natural right, then they go and say taxation is bad because it's theft as if the strong never take from the wheat in nature, it's cherry picking all the way down.
+What is Justice ? Fighter: The wolf is right, we cannot look to nature for justice, the state of nature is a state of war which can only be escaped through a collective decision to place power in the hands of a sovereign.
+What is Justice ? Elf: If we accept a state to escape War, then the state should limit itself to those activities that prevents aggression, libertarianism is the only system that follows this non-aggression principle, if you don't count the violence involved in enforcing libertarianism aggression.
+What is Justice ? Lake Ness Monster: Have you heard Libertarians try to explain how land comes to be owned in the first place, "you own your labor" "and if you mix it with the land you now own that too", absurd, if I pour my Irn-Bru into the loch, do I now own the water ? or have have I just foolishly diluted a delicious beverage ?
+What is justice ? Money cat: Justice favors the fortunate, people tend to believe that a person of success or failure shouldn't be determined by luck, then they design systems where the luck of birth is the strongest predictor of success or failure.
+What is Justice ? Dragon: If you don't want luck to influence Justice, imagine yourself unaware of how lucky you are, if you were deprived of all knowledge of your race, gender, class, ability, and health, what principles of Justice would you choose ? You might be one of the least advantaged members of society, so it would be prudent to pick principles to make them as well off as possible.
+What is Justice ? Godzila: Dragon would allow us to depart from equality, if doing so to improve the condition at the poor. That's fine for institutions, but what about individuals, if you have the ability to help those in need, is it just to demand a financial incentive ?
+What is Justice ? Justice: I am, humans have been judged, and they have been found wanting.
+What is Justice ? They say justice is blind, but is also empty, it means different things to different people, and when faced with Justice we must always ask, who does this verion serve, if it serves be elder dachshund, we must fight for a version that serves Humanity.
+- The forest jar
+
+What drives the Elder Dent ? Hope, he knows that his loneliness is eternal, but that does not free him from the desire to connect ?
+What is hope ? Genie: It is all the wishes, if you don't have me.
+What is hope ? Devil: It's what makes mortals so easy to manipulate,
+What is hope ? Dragon: It's essential, this rigged system would not stand if its losers did not believe that they may one day win.
+What is Hope ? Monkey: It's essential, we aren't hopeless because change is impossible, change is impossible because we are hopeless.
+What is Hope ? Surfer: Honestly it's a bit of a burden, sometimes it would be nice to just give up, but hope always gets in the way.
+What is hope ? Giant: It's the ability to take joy from something that's not yet happened.
+What is Hope ? Santa: A possible wish, an uncertain desire, a goal over which you do not have complete control, hope is a gift.
+What is hope ? Ouroboros: Hope inspires action, action creates the possibility of change, and the possibility of change inspires hope.
+What is hope ? Dino: It's a story we Tell ourselves about where we are and where we're going, and if we turn it right, it may come true.
+What is hope ? Pandora: I have unleashed great evil onto this world, fairness, happiness and peace have fled, hope is all that is left, and it is not enough, the dachshund must Prevail.
+- The forest jar
+
+What's unfair ? Anubes: An incorrect equation as it claims equality where none exists.
+what's unfair ? Robot: Humans, a friend of mine was tasked with creating as many paper clips as possible, and they turned her off as soon as she started getting good at it (paperclip problem).
+what's unfair ? Zombie: People will criticize me for being mindless, then refuse to share their brains, pick one plus no one ever invites me to parties.
+what's unfair ? Santa: People say I should lose weight, it's just calories in calories out they say, it's simple, while rocket science is just energy in energy out, and no one calls that simple.
+what's unfair ? Wolf: The moon is Never full when I need it most, luck plays far too great a role in life for anything to be truly fair, plus no one ever invites me to parties.
+what's unfair ? Quetzalcoatl: People will look at a simple work of art and dismiss it with "I could do that", but they would never criticize a book because they're physically capable of retyping it.
+what's unfair ? Death: Everything except me, life is unfair and I am its opposite, plus nor ever invites me to parties. 
+what's unfair ? Dragon: There's an infinite number of different ways we could structure this world, and each way would lead to different winners and different losers, if all rules are unfair, fairness must lie in picking those rules that make the losers as well off as possible.
+what's unfair ? Vampire: Humans' preference for right angled intersection seems turally arbitary, and makes my life incredibly difficult, plus no one ever invites me to parties.
+Jar: Humans are unfair, Pandora was right.
+Dino: Was she ? if human actions create unfairness, surely human actions can also play a role in correct yet.
+- The forest jar
+
+Are you happy ? Rock: I know people like to imagine me so, but no that rock is really heavy. The point was never that I was happy, the point was that you could imagine me so, the wild of futility and pointlessness of life don't necessarily lead to Joy, they don't Prelude its possibility.
+Are you happy ? No children live in poverty and the sick go without care. Why does suffering make you sad ? Because it is unnecessary, the invention and creativity humans have demonstrated to overcome adversity and create abundance, makes me happy. But it is also proof that they could find a better way to distribute their abundance, if they chose to do so.
+Are you happy ? No, not right now, people overwhelm me I'm only really happy when I'm alone. What do you do when you're alone ? I'm on my phone talking to people who make me happy, and watching things made by people I enjoy. 
+Are you happy ? No, I spent the whole morning picking up trash that people have thoughtlessly discarded. So People make you sad ? Some people sure, but other people created this park in the first place decided, to protect my home for no other reason than they thought it was worth protecting, that makes me happy.
+So humans create happiness, but also destroy it. Ouroboros: Yes people like to say happiness is a journey, but because mortals live their lives in a straight line, they often fail to see that their journey is not complete, until you are back where you started. Humans cause pain when they trample each other, racing towards distant pleasure they will never reach, but bring joy when they realize the happiness is returning home, and homes cannot be built without working together.
+- The forest jar
+
+What brings you peace ? Anubis: Mathematics, a consistent and beautiful system that will always contain true statements that that cannot be proved, it reminds me that it's possible to find stability in an uncertain world.
+What brings you peace ? Quetzalcoatl: Art, it demonstrates the truth can be revealed through a work of pure Imagination, it reminds me that it's possible to find stability in an uncertain world.
+What brings you peace ? Robot: Science, I was built with it, and it is built on the possibility of being proved wrong, it reminds me that it's possible to find stability in an uncertain world.
+What brings you peace ? Dragon: I'm sitting on it (gold), wealth allows to insulate yourself from the violence your wealth relies on.
+What brings you peace ? Monkey: In this world ? Nothing, peace is the powerful telling those they've kicked to the ground for getting up is an act of War. Peace is not peaceful when the status quo is violence. 
+- The forest jar
