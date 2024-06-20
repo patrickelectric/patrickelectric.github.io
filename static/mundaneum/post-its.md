@@ -203,3 +203,6 @@ By Me
 
 Time travelers are such hypocrites, always worrying how changing the past can affect the presente, but never concerned about how changing the present will affect the future. (Yes this post is hyperbole. Our ability to influence the future is limited by our ignorance of present conditions. I guess the lesson is to stay educated and informed, so that your actions can be more deliberate and meaningful!)
 The forest jar
+
+What surprises you ? The way in which humans will create a system then use the consequences of that system as the system's justification. 
+The forest jar 
