@@ -206,3 +206,6 @@ The forest jar
 
 What surprises you ? The way in which humans will create a system then use the consequences of that system as the system's justification. 
 The forest jar 
+
+The artist has to live in rebellion, because creativeity is the greatest rebellion that exist, if you want to create, if you need to rid of all conditionings.
+Bhagwan Osho
