@@ -209,3 +209,6 @@ The forest jar
 
 The artist has to live in rebellion, because creativeity is the greatest rebellion that exist, if you want to create, if you need to rid of all conditionings.
 Bhagwan Osho
+
+We can't plan everything that we are going to do without knowing that things may happen, we need to combine planning with facts, combining with adversities, we need to plan ahead while combining it with a series of factors that are absolutely impossible to control. The ones that plan without knowing it, they are the naive believers with a cartesian rationality, who think they can mathematically chart the destinies of man from an artificial dimension.
+Inspired by Dr. Dennys Xavier
