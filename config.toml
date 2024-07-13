@@ -10,10 +10,10 @@ compile_sass = true
 build_search_index = true
 
 # Enable RSS
-generate_feed = true
+generate_feeds = true
 
 # Set name for RSS file
-feed_filename = "rss.xml"
+feed_filenames = "rss.xml"
 
 theme = "hyde"
 
