@@ -13,7 +13,7 @@ build_search_index = true
 generate_feeds = true
 
 # Set name for RSS file
-feed_filenames = "rss.xml"
+feed_filenames = ["rss.xml"]
 
 theme = "hyde"
 
