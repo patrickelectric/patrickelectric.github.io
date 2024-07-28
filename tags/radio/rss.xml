@@ -34,7 +34,7 @@ images. &lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;p&gt;gnuradio : GNU Radio is a free software development toolkit that provides signal processing blocks to implement software-defined radios and signal processing systems. It
 can be used with external RF hardware to create software-defined radios, or without hardware in a simulation-like environment. It is widely used in hobbyist, academic, and
 commercial environments to support both wireless communications research and real-world radio systems. (ty wikipedia).&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;fm_demodulation&#x2F;gnuradio-1024x576.png&quot; alt=&quot;gnuradio interface. (like simulink but isn&#x27;t java)&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;fm_demodulation&#x2F;gnuradio-1024x576.png&quot; alt=&quot;gnuradio interface. (like simulink but isn&amp;#39;t java)&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;rtl-sdr have:&lt;&#x2F;p&gt;

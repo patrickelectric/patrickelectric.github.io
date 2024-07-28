@@ -58,7 +58,7 @@
 &lt;p&gt;To change which rootfs you want to boot, just need to change the suffix of the partuuid in &lt;code&gt;&#x2F;boot&#x2F;cmdline.txt&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;p&gt;The &lt;strong&gt;01&lt;&#x2F;strong&gt; suffix is the boot partition (&lt;code&gt;&#x2F;boot&lt;&#x2F;code&gt;), &lt;strong&gt;02&lt;&#x2F;strong&gt; is our &amp;quot;recovery&amp;quot; partition with 700MB free (&lt;code&gt;&#x2F;rootfs&lt;&#x2F;code&gt;), and our last and probably the &amp;quot;main&amp;quot; partition with 13GB free is the one with &lt;strong&gt;03&lt;&#x2F;strong&gt; suffix (&lt;code&gt;&#x2F;rootfs2&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;01&lt;&#x2F;strong&gt; suffix is the boot partition (&lt;code&gt;&#x2F;boot&lt;&#x2F;code&gt;), &lt;strong&gt;02&lt;&#x2F;strong&gt; is our &quot;recovery&quot; partition with 700MB free (&lt;code&gt;&#x2F;rootfs&lt;&#x2F;code&gt;), and our last and probably the &quot;main&quot; partition with 13GB free is the one with &lt;strong&gt;03&lt;&#x2F;strong&gt; suffix (&lt;code&gt;&#x2F;rootfs2&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;notes&quot;&gt;Notes&lt;&#x2F;h2&gt;
 &lt;ul&gt;
 &lt;li&gt;This may not work with different kernels because of the initramfs.&lt;&#x2F;li&gt;

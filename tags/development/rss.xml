@@ -21,7 +21,7 @@ Before starting, be sure to follow my &lt;a href=&quot;&#x2F;tags&#x2F;how-to-ro
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Avoid creating multiple PRs for the same work&lt;&#x2F;strong&gt;, update the ones that are still open.&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;E.g: You created a Pull Request called &amp;quot;Feature: add button&amp;quot;, some modifications will be necessary after the review process, and for that you&#x27;ll need to update the same branch over creating new ones. That&#x27;s necessary to help the project maintainers to see previous comments and your development history, avoid repository noise and unnecessary PRs in the project history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.&lt;&#x2F;li&gt;
+&lt;li&gt;E.g: You created a Pull Request called &quot;Feature: add button&quot;, some modifications will be necessary after the review process, and for that you&#x27;ll need to update the same branch over creating new ones. That&#x27;s necessary to help the project maintainers to see previous comments and your development history, avoid repository noise and unnecessary PRs in the project history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
@@ -159,8 +159,8 @@ it helps to avoid adding unnecessary stuff in your commit and only adding what i
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;└── &lt;&#x2F;span&gt;&lt;span&gt;tags &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Store all tags of your project
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;I have added some stuff that are not populated from a fresh &lt;code&gt;git init&lt;&#x2F;code&gt; for educational reasons, for more information, check &lt;a href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;docs&#x2F;gitrepository-layout&quot;&gt;gitrepository-layout&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Ok, looks complicated right ? It may, but it&#x27;s not. If you are not aware, &lt;code&gt;git&lt;&#x2F;code&gt; description is: &amp;quot;the stupid content tracker&amp;quot;,
-I believe that may be a weird thing to describe our magical tool with such words, I prefer to say: &amp;quot;the &lt;em&gt;simple&lt;&#x2F;em&gt; content tracker&amp;quot;, and will explain why.&lt;&#x2F;p&gt;
+&lt;p&gt;Ok, looks complicated right ? It may, but it&#x27;s not. If you are not aware, &lt;code&gt;git&lt;&#x2F;code&gt; description is: &quot;the stupid content tracker&quot;,
+I believe that may be a weird thing to describe our magical tool with such words, I prefer to say: &quot;the &lt;em&gt;simple&lt;&#x2F;em&gt; content tracker&quot;, and will explain why.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;create-and-add-a-file&quot;&gt;Create and add a file&lt;&#x2F;h2&gt;
 &lt;p&gt;Let&#x27;s populate our repository and create a simple commit:&lt;&#x2F;p&gt;
 &lt;ol&gt;
@@ -242,7 +242,7 @@ Oh my, ok, for now, this is where the git magic happens, it&#x27;s a binary obje
 &lt;p&gt;Back to the commit!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;commit&quot;&gt;Commit&lt;&#x2F;h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;git commit -sm &amp;quot;First commit&amp;quot;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;git commit -sm &quot;First commit&quot;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;.git
 &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;...
@@ -485,7 +485,7 @@ over this: $$hypotenuse^2 = catheti_1^2 + catheti_2^2$$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;        }
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;There is a good video about this subject by &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=NLebZ3XT92E&quot;&gt;Walter E. Brown in cppcon 2017, &amp;quot;Whitespace ≤ Comments ＜＜ Code&amp;quot;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;There is a good video about this subject by &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=NLebZ3XT92E&quot;&gt;Walter E. Brown in cppcon 2017, &quot;Whitespace ≤ Comments ＜＜ Code&quot;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;And to finish, you should not avoid comments, you should understand when comments are necessary, like this:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;cpp&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-cpp &quot;&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; From ArduPilot - GPIO_RPI
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;void &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;set_gpio_mode_alt&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pin&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;int &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;alternative&lt;&#x2F;span&gt;&lt;span&gt;) {
@@ -524,7 +524,7 @@ the comments are here to understand what is going on and why, otherwise anyone t
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Avoid creating multiple Pull Requests (PRs)&lt;&#x2F;strong&gt;, update the ones that are still open.&lt;&#x2F;p&gt;
 &lt;ul&gt;
-&lt;li&gt;E.g: You created a Pull Request called &amp;quot;Add button feature&amp;quot;, some modifications will be necessary after the review process, and for that you&#x27;ll need to update the same branch over creating new ones. That&#x27;s necessary to help the project maintainers to see previous comments and the development history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.&lt;&#x2F;li&gt;
+&lt;li&gt;E.g: You created a Pull Request called &quot;Add button feature&quot;, some modifications will be necessary after the review process, and for that you&#x27;ll need to update the same branch over creating new ones. That&#x27;s necessary to help the project maintainers to see previous comments and the development history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
