@@ -216,5 +216,8 @@ Inspired by Dr. Dennys Xavier
 The most common error of a smart engineer is to optimize a thing that should not exist... Well everyone's been trained in high school and college that you've gotto answer the questions. It's convergence logic. So, you can't tell the Professor: "your question is dumb", or you'll get a bad grade. You have to answer the question so, everyone's basically without knowing it, they got like mental straight jacket on. They'll work on optimizing the thing that should simply not exist. First, make your requirements less dumb your. Requirements are definitely dumb, it does not matter who gave them to you, it'sparticularly dangerous if a smart persongave you the requirements, because you might not question them enough. No matter who you are, everyone's wrong some of the time. Then, try very hard to delete the part or process. This is actually very important, if you're not occasionally adding things back in, you are not as leading enough. The bias tends to be very strongly towards: "let's add this part of process step, in case we need it". But you can basically make in case arguments for so many things. Only the third stepis simplify or optimize. The third step. Not the first step. Finally you get to step four, which is accelerate cycle time, if you're moving too slowly, go faster.B ut don't go faster until you have worked on the other three things first. And then the final step is automate. Now, I have personally made the mistake of going backwards on all five steps. Multiple times. I automated, accelerated, simplified and then deleted.
 Elon Musk
 
+What's death if not the lost of memory.
+Elon Musk
+
 If the penalty for a crime is only the fine, the law exist only for the poor.
 Final Fantasy Tatics
