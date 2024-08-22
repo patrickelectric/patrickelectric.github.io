@@ -226,3 +226,7 @@ Final Fantasy Tatics
 
 Comparison is the thief of joy
 Theodore Roosevelt
+
+Without money, creativity is just a lost chance.
+
+Pedro Cogu
