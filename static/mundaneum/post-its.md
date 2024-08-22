@@ -1,3 +1,5 @@
+Memento Mori
+
 The sum of human knowing is beyond any one man; any thousand men. With the destruction of our social fabric, science will be broken into a million pieces... The bits of lore, meaningless, will not be passed on. They will be lost through the generations. But, if we now prepare a giant summary of all knowledge, it will never be lost. Coming generations will build on it, and will not have to rediscover it for themselves. One millennium will do the work of thirty thousand.
 Foundation, By Isaac Asimov
 
@@ -221,3 +223,6 @@ Elon Musk
 
 If the penalty for a crime is only the fine, the law exist only for the poor.
 Final Fantasy Tatics
+
+Comparison is the thief of joy
+Theodore Roosevelt
