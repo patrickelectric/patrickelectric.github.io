@@ -228,5 +228,7 @@ Comparison is the thief of joy
 Theodore Roosevelt
 
 Without money, creativity is just a lost chance.
-
 Pedro Cogu
+
+There are two types of people in an organization. In one end you have the mercenaries, that are here just for the money or for a position fix their psychological position. And in the other you have the patriots, the true believers, the ones that believe in their hearts in the organization.
+The Walking dead
