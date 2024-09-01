@@ -232,3 +232,6 @@ Pedro Cogu
 
 There are two types of people in an organization. In one end you have the mercenaries, that are here just for the money or for a position fix their psychological position. And in the other you have the patriots, the true believers, the ones that believe in their hearts in the organization.
 The Walking dead
+
+Understand Lacan's idea: Fantasies must be unreal. Because the moment, the second you get what you want… you no longer want it, you cannot want it anymore. To continue existing, desire must keep objects eternally absent. You don’t want 'something'; you want the fantasy of that 'something'. Desire supports wild fantasies. This was Pascal’s idea when he said we are truly happy when we daydream about future happiness. Hence the saying: 'The best part of the party is waiting for it.' Or: 'Be careful what you wish for.' Not because you might get what you want, but because you might not want it anymore after you get it. So, Lacan’s lesson is: Living by desires does not bring happiness. The true meaning of being human is the struggle to live by ideas and ideals, and not to measure life by what you’ve obtained in terms of desires, but by moments of integrity, compassion, rationality, and even self-sacrifice. Because, in the end, the only way to measure the meaning of our lives is by valuing the lives of others.
+The life of David Gale
