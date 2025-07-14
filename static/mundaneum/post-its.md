@@ -247,3 +247,6 @@ The Forest Jar
 
 If something can syntactically be entered incorrectly, it eventually will be.
 John Carmack
+
+Leadership is not about being in charge. It is about taking care of those in your charge.
+Simon Sinek
