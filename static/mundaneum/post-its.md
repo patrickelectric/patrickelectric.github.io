@@ -253,3 +253,6 @@ Loki - Sandman
 
 Leadership is not about being in charge. It is about taking care of those in your charge.
 Simon Sinek
+
+Things need not have happened to be true. Tales and dreams are the shadow-truths that will endure when more facts are dust and ashes and fogot.
+Sandman
