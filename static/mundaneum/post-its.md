@@ -256,3 +256,6 @@ Simon Sinek
 
 Things need not have happened to be true. Tales and dreams are the shadow-truths that will endure when more facts are dust and ashes and fogot.
 Sandman
+
+It’s important to draw wisdom from many different places; if we draw from only one, things become rigid and tiresome. Understanding others, other elements, and other nations helps us become whole.
+Iroh - Avatar
