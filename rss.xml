@@ -7,7 +7,184 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://patrickelectric.work/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Mon, 11 Mar 2024 10:55:39 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 03 Dec 2025 12:45:51 +0000</lastBuildDate>
+        <item>
+            <title>The Ultimate Guide to Creating Better AI Prompts</title>
+            <pubDate>Wed, 03 Dec 2025 12:45:51 +0000</pubDate>
+            <link>https://patrickelectric.work/blog/2025/ultimate-guide-to-creating-better-ai-prompts/</link>
+            <guid>https://patrickelectric.work/blog/2025/ultimate-guide-to-creating-better-ai-prompts/</guid>
+            <description>&lt;p&gt;After a couple of nights fighting with LLMs, I noticed that most &quot;bad outputs&quot; were actually &lt;strong&gt;my&lt;&#x2F;strong&gt; lack of clarity.
+This post is a brain dump so you can avoid my detours and ship prompts that behave.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
+&lt;p&gt;TLDR: personas + context + structure beat &quot;hey, write this for me&quot; every single time.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;the-core-principle&quot;&gt;The core principle&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;strong&gt;AI prompting is programming with words, not asking questions.&lt;&#x2F;strong&gt; You&#x27;re not chatting, you are instructing a probabilistic completion engine. Treat prompts like mini specs: inputs, constraints, outputs.&lt;&#x2F;p&gt;
+&lt;p&gt;If you can&#x27;t explain what you want to yourself, the model will improvise (is this a feature or a bug ? ¯\_(ツ)_&#x2F;¯). All prompting problems are thinking problems. Write the gist in your notebook, then paste it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;essential-techniques&quot;&gt;Essential techniques&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Use personas&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Tell the AI who it is and who it&#x27;s talking to. This helps cut the noise.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Provide context (ABC: Always Be Contexting)&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Include all relevant facts, even the obvious ones.&lt;&#x2F;li&gt;
+&lt;li&gt;Give explicit permission for the AI to say &quot;I don&#x27;t know&quot;, this reduces hallucinations.&lt;&#x2F;li&gt;
+&lt;li&gt;Remember: any missing context, the AI will fill in with guesses.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Define output requirements&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Specify the format, tone, and any other constraints for the response.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Use few-shot examples&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Show 2–3 written samples in the style or format you want. The more concrete, the better.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;advanced-techniques&quot;&gt;Advanced techniques&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Chain of Thought (COT)&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Ask the model to show its reasoning steps before writing the final answer.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tree of Thought (TOT)&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Request multiple solution options, then ask for a synthesis or best-of.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Battle of the bots (adversarial validation)&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Set up competing personas and add a &quot;critic&quot; to help validate or improve outputs.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=pwWBcsxEoLk&quot;&gt;The Ultimate Guide to AI Prompting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;what-should-you-do-now&quot;&gt;What should you do now ?&lt;&#x2F;h1&gt;
+&lt;p&gt;Maybe using AI to create the prompt for you is the best thing to do :)&lt;&#x2F;p&gt;
+&lt;p&gt;For that, use the following text as an instruction for llms to write the prompt for you:&lt;&#x2F;p&gt;
+&lt;p&gt;(Think of it as a blog inside of a blog)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;md&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-md &quot;&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;# The Ultimate Guide to Creating Better AI Prompts
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## The Core Principle
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**AI prompting is programming with words, not asking questions.**&lt;&#x2F;span&gt;&lt;span&gt; You&amp;#39;re not having a conversation—you&amp;#39;re instructing a prediction engine that completes patterns based on probability.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## The Meta-Skill: Clarity of Thought
+&lt;&#x2F;span&gt;&lt;span&gt;Before you write a single prompt, &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**think clearly about what you want**&lt;&#x2F;span&gt;&lt;span&gt;. If you can&amp;#39;t explain it clearly to yourself, you can&amp;#39;t prompt it. All prompting problems are actually thinking problems.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Essential Techniques
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;### 1. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Use Personas**
+&lt;&#x2F;span&gt;&lt;span&gt;Tell the AI who it should be to narrow its focus and improve responses.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Example:**&lt;&#x2F;span&gt;&lt;span&gt; &amp;quot;You&amp;#39;re a senior site reliability engineer for CloudFlare. You&amp;#39;re writing to both customers and engineers.&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Why it works:**&lt;&#x2F;span&gt;&lt;span&gt; Gives the AI a specific perspective and expertise to draw from instead of generic knowledge.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;### 2. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Provide Context (Most Important)**
+&lt;&#x2F;span&gt;&lt;span&gt;Give the AI ALL the details it needs. Never assume it knows something—more context = fewer hallucinations.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Key principle:**&lt;&#x2F;span&gt;&lt;span&gt; ABC = Always Be Contexting
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Include all relevant facts
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Be specific and detailed
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Don&amp;#39;t hold back information
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Give it permission to say &amp;quot;I don&amp;#39;t know&amp;quot; if it lacks information
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Pro tip:**&lt;&#x2F;span&gt;&lt;span&gt; Whatever context you don&amp;#39;t provide, the AI will fill in with guesses.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;### 3. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Define Output Requirements**
+&lt;&#x2F;span&gt;&lt;span&gt;Tell the AI exactly how you want the result to look.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Specify:**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Format (bulleted list, under 200 words, etc.)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Tone (professional, casual, anxious, etc.)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Structure (timeline, sections, headers)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Style constraints (no corporate fluff, radically transparent)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;### 4. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Use Few-Shot Examples**
+&lt;&#x2F;span&gt;&lt;span&gt;Show the AI what you want instead of just describing it. Provide 2-3 examples of the exact output style you&amp;#39;re looking for.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Why it works:**&lt;&#x2F;span&gt;&lt;span&gt; Removes guesswork—you&amp;#39;re teaching by example rather than description.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Advanced Techniques
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;### &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Chain of Thought (COT)**
+&lt;&#x2F;span&gt;&lt;span&gt;Ask the AI to think step-by-step before answering.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Example:**&lt;&#x2F;span&gt;&lt;span&gt; &amp;quot;Before writing this email, think through it step by step...&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Modern shortcut:**&lt;&#x2F;span&gt;&lt;span&gt; Use &amp;quot;Extended Thinking&amp;quot; or &amp;quot;Reasoning&amp;quot; mode built into most AI platforms.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;### &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Tree of Thought (TOT)**
+&lt;&#x2F;span&gt;&lt;span&gt;Have the AI explore multiple approaches simultaneously, then synthesize the best path.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Example:**&lt;&#x2F;span&gt;&lt;span&gt; &amp;quot;Brainstorm three distinct approaches: [A], [B], [C]. Evaluate each, then synthesize them.&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;### &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Battle of the Bots (Adversarial Validation)**
+&lt;&#x2F;span&gt;&lt;span&gt;Create competing personas that critique each other.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Example:**&lt;&#x2F;span&gt;&lt;span&gt; &amp;quot;Generate a 3-round competition with [persona 1], [persona 2], and [critic]. Have them debate and collaborate on the final output.&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Why it works:**&lt;&#x2F;span&gt;&lt;span&gt; AI is better at critiquing than original creation.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Common Mistakes to Avoid
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;1. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Being vague**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; - AI fills gaps with guesses
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Skipping context**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; - Leads to hallucinations
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;3. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Assuming knowledge**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; - AI doesn&amp;#39;t remember everything
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;4. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Not defining output**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; - Gets generic results
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;5. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Messy thinking**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; - Creates messy prompts
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## The Process
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;1. &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Think first, prompt second**
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;2. Write down exactly what you want before prompting
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;3. Ask yourself: &amp;quot;Could a human do this with the information I&amp;#39;ve provided?&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;4. If yes → the AI probably can too
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;5. If no → add more context and clarity
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Quick Wins
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Enable web search**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; when you need current information
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Save successful prompts**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; in a library for reuse
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Use prompt enhancers**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; to improve your raw prompts
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#ebcb8b;&quot;&gt;**Treat bad outputs as skill issues**&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; - the problem is usually your clarity, not the AI
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#4f5b66;color:#c0c5ce;&quot;&gt;---
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Remember
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;The AI can only be as clear as you are. When frustrated with results, don&amp;#39;t blame the AI—look in the mirror. It&amp;#39;s a skill issue. Get clearer about what you want, and the AI will get clearer in its responses.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</description>
+        </item>
         <item>
             <title>Harder, Better, Faster, Stronger</title>
             <pubDate>Mon, 11 Mar 2024 10:55:39 +0000</pubDate>

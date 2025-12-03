@@ -247,3 +247,18 @@ The Forest Jar
 
 If something can syntactically be entered incorrectly, it eventually will be.
 John Carmack
+
+What do you give the god who has everything ? What does Dream dream about ?
+Loki - Sandman
+
+Leadership is not about being in charge. It is about taking care of those in your charge.
+Simon Sinek
+
+Things need not have happened to be true. Tales and dreams are the shadow-truths that will endure when more facts are dust and ashes and fogot.
+Sandman
+
+It’s important to draw wisdom from many different places; if we draw from only one, things become rigid and tiresome. Understanding others, other elements, and other nations helps us become whole.
+Iroh - Avatar
+
+"A noção de Inteligência Artificial Geral é tão absurda quanto a noção de um 'Veículo Artificial Geral'... O veículo certo depende do contexto. Usei um Airbus A350 para voar até o Quênia, uso um carro para ir à universidade todos os dias, vou a pé até a cafeteria... Não existe nenhum veículo que possa fazer tudo isso."
+Neil Lawrence - professor de aprendizado de máquina na Universidade de Cambridge
