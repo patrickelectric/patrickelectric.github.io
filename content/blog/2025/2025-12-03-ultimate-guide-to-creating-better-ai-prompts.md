@@ -1,5 +1,5 @@
 +++
-title = 'The Ultimate Guide to Creating Better AI Prompts'
+title = 'How to rock: The Ultimate Guide to Creating Better AI Prompts'
 date = 2025-12-03T12:45:51Z
 draft = false
 [taxonomies]
