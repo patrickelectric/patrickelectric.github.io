@@ -22,9 +22,9 @@ TLDR: personas + context + structure beat "hey, write this for me" every single 
 If you can't explain what you want to yourself, the model will improvise (is this a feature or a bug ? ¯\\\_(ツ)_/¯). All prompting problems are thinking problems. Write the gist in your notebook, then paste it.
 
 ## Essential techniques
-- **Use personas**
+- **Use personas** ([ref](https://en.wikipedia.org/wiki/Persona_(psychology)))
     - Tell the AI who it is and who it's talking to. This helps cut the noise.
-- **Provide context (ABC: Always Be Contexting)**
+- **Provide context (ABC: Always Be Contexting)** ([ref](https://medium.com/@unstitution21/why-context-is-everything-a1db99b28671))
     - Include all relevant facts, even the obvious ones.
     - Give explicit permission for the AI to say "I don't know", this reduces hallucinations.
     - Remember: any missing context, the AI will fill in with guesses.
@@ -34,17 +34,18 @@ If you can't explain what you want to yourself, the model will improvise (is thi
     - Show 2–3 written samples in the style or format you want. The more concrete, the better.
 
 ## Advanced techniques
-- **Chain of Thought (COT)**
+- **Chain of Thought (COT)** ([ref](https://arxiv.org/pdf/2201.11903))
     - Ask the model to show its reasoning steps before writing the final answer.
-- **Tree of Thought (TOT)**
+- **Tree of Thought (TOT)** ([ref](https://arxiv.org/pdf/2305.08291))
     - Request multiple solution options, then ask for a synthesis or best-of.
-- **Battle of the bots (adversarial validation)**
+- **Battle of the bots (adversarial validation)** ([ref:D3](https://arxiv.org/pdf/2410.04663), [ref](https://www.mdpi.com/2076-3417/15/7/3676))
     - Set up competing personas and add a "critic" to help validate or improve outputs.
 
 
 # References
 
 - [The Ultimate Guide to AI Prompting](https://www.youtube.com/watch?v=pwWBcsxEoLk)
+- [Prompt Engineering Guide](https://www.promptingguide.ai/)
 
 
 # What should you do now ?
