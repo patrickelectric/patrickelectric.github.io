@@ -22,12 +22,12 @@ This post is a brain dump so you can avoid my detours and ship prompts that beha
 &lt;p&gt;If you can&#x27;t explain what you want to yourself, the model will improvise (is this a feature or a bug ? ¯\_(ツ)_&#x2F;¯). All prompting problems are thinking problems. Write the gist in your notebook, then paste it.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;essential-techniques&quot;&gt;Essential techniques&lt;&#x2F;h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Use personas&lt;&#x2F;strong&gt;
+&lt;li&gt;&lt;strong&gt;Use personas&lt;&#x2F;strong&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Persona_(psychology)&quot;&gt;ref&lt;&#x2F;a&gt;)
 &lt;ul&gt;
 &lt;li&gt;Tell the AI who it is and who it&#x27;s talking to. This helps cut the noise.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Provide context (ABC: Always Be Contexting)&lt;&#x2F;strong&gt;
+&lt;li&gt;&lt;strong&gt;Provide context (ABC: Always Be Contexting)&lt;&#x2F;strong&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@unstitution21&#x2F;why-context-is-everything-a1db99b28671&quot;&gt;ref&lt;&#x2F;a&gt;)
 &lt;ul&gt;
 &lt;li&gt;Include all relevant facts, even the obvious ones.&lt;&#x2F;li&gt;
 &lt;li&gt;Give explicit permission for the AI to say &quot;I don&#x27;t know&quot;, this reduces hallucinations.&lt;&#x2F;li&gt;
@@ -47,17 +47,17 @@ This post is a brain dump so you can avoid my detours and ship prompts that beha
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;advanced-techniques&quot;&gt;Advanced techniques&lt;&#x2F;h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Chain of Thought (COT)&lt;&#x2F;strong&gt;
+&lt;li&gt;&lt;strong&gt;Chain of Thought (COT)&lt;&#x2F;strong&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2201.11903&quot;&gt;ref&lt;&#x2F;a&gt;)
 &lt;ul&gt;
 &lt;li&gt;Ask the model to show its reasoning steps before writing the final answer.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Tree of Thought (TOT)&lt;&#x2F;strong&gt;
+&lt;li&gt;&lt;strong&gt;Tree of Thought (TOT)&lt;&#x2F;strong&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2305.08291&quot;&gt;ref&lt;&#x2F;a&gt;)
 &lt;ul&gt;
 &lt;li&gt;Request multiple solution options, then ask for a synthesis or best-of.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Battle of the bots (adversarial validation)&lt;&#x2F;strong&gt;
+&lt;li&gt;&lt;strong&gt;Battle of the bots (adversarial validation)&lt;&#x2F;strong&gt; (&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2410.04663&quot;&gt;ref:D3&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.mdpi.com&#x2F;2076-3417&#x2F;15&#x2F;7&#x2F;3676&quot;&gt;ref&lt;&#x2F;a&gt;)
 &lt;ul&gt;
 &lt;li&gt;Set up competing personas and add a &quot;critic&quot; to help validate or improve outputs.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -66,6 +66,7 @@ This post is a brain dump so you can avoid my detours and ship prompts that beha
 &lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=pwWBcsxEoLk&quot;&gt;The Ultimate Guide to AI Prompting&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.promptingguide.ai&#x2F;&quot;&gt;Prompt Engineering Guide&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h1 id=&quot;what-should-you-do-now&quot;&gt;What should you do now ?&lt;&#x2F;h1&gt;
 &lt;p&gt;Maybe using AI to create the prompt for you is the best thing to do :)&lt;&#x2F;p&gt;
