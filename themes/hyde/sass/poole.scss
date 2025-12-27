@@ -181,6 +181,36 @@ pre code {
   margin-bottom: 0;
 }
 
+/* Copy button for code blocks */
+pre {
+  position: relative;
+}
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  color: #666;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+pre:hover .copy-button {
+  opacity: 1;
+}
+.copy-button:hover {
+  background-color: #d0d0d0;
+  color: #333;
+}
+.copy-button.copied {
+  background-color: #4caf50;
+  color: white;
+}
+
 /* figcaption */
 
 figure figcaption {
