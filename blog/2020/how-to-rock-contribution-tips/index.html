@@ -176,6 +176,29 @@ Before starting, be sure to follow my <a href="/tags/how-to-rock">previous posts
 
         </div>
 
+        <!-- Copy button for code blocks -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('pre').forEach(function(pre) {
+                const button = document.createElement('button');
+                button.className = 'copy-button';
+                button.textContent = 'Copy';
+                button.addEventListener('click', function() {
+                    const code = pre.querySelector('code') || pre;
+                    const text = code.textContent;
+                    navigator.clipboard.writeText(text).then(function() {
+                        button.textContent = 'Copied!';
+                        button.classList.add('copied');
+                        setTimeout(function() {
+                            button.textContent = 'Copy';
+                            button.classList.remove('copied');
+                        }, 2000);
+                    });
+                });
+                pre.appendChild(button);
+            });
+        });
+        </script>
     </body>
 
 </html>
