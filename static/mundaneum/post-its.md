@@ -268,3 +268,7 @@ Everything we hear is an opinion, not a fact. Everything we see is a perspective
 
 If you are distressed by anything external, the pain is not due to the thing itself, but to your estimate of it; and this you have the power to revoke at any moment.
 - Marcus Aurelius
+
+Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+― Antoine de Saint-Exupéry, Airman's Odyssey
+
