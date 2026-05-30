@@ -272,3 +272,5 @@ If you are distressed by anything external, the pain is not due to the thing its
 Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 ― Antoine de Saint-Exupéry, Airman's Odyssey
 
+The formulation of a (complex) problem is the problem.
+- Rittel and Webber (1973)
