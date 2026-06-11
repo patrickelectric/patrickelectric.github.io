@@ -274,3 +274,6 @@ Perfection is achieved, not when there is nothing more to add, but when there is
 
 The formulation of a (complex) problem is the problem.
 - Rittel and Webber (1973)
+
+
+A masterpiece is never born from mediocrity, but from deviation.
