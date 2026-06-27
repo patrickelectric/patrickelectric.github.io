@@ -22,6 +22,7 @@ taxonomies = [
 ]
 
 [markdown]
+highlight_code = true
 render_emoji = true
 
 [extra]
