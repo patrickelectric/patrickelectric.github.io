@@ -262,3 +262,18 @@ Iroh - Avatar
 
 "A noção de Inteligência Artificial Geral é tão absurda quanto a noção de um 'Veículo Artificial Geral'... O veículo certo depende do contexto. Usei um Airbus A350 para voar até o Quênia, uso um carro para ir à universidade todos os dias, vou a pé até a cafeteria... Não existe nenhum veículo que possa fazer tudo isso."
 Neil Lawrence - professor de aprendizado de máquina na Universidade de Cambridge
+
+Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.
+- Marcus Aurelius
+
+If you are distressed by anything external, the pain is not due to the thing itself, but to your estimate of it; and this you have the power to revoke at any moment.
+- Marcus Aurelius
+
+Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
+― Antoine de Saint-Exupéry, Airman's Odyssey
+
+The formulation of a (complex) problem is the problem.
+- Rittel and Webber (1973)
+
+
+A masterpiece is never born from mediocrity, but from deviation.

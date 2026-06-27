@@ -95,84 +95,18 @@
 
         <div class="content container">
             
-<div class="post">
-  <h1 class="post-title">How to rock: Doing the right thing</h1>
-  <span class="post-date">2020-08-31</span>
-  <h3 class="post-tags">[
-  
-  <a href="/tags/how-to-rock">how-to-rock</a>
-  
-  <a href="/tags/kde">kde</a>
-  
-  <a href="/tags/development">development</a>
-  
-  <a href="/tags/tutorial">tutorial</a>
-  
-  ]</h3>
-  <p>After a couple of years collaborating with open source/free software projects, I started to help newcomers to contribute and push the development practices further. This post will try to itemize the most important items that can used for software collaboration.
-Before starting, be sure to follow my <a href="/tags/how-to-rock">previous posts</a>, this post complements what already exists.</p>
-<span id="continue-reading"></span>
-<p>Now, I'm going to throw some good practices of code development and contribution, and during this post I'll explain why such practices can be archived without much effort:</p>
-<ul>
-<li>
-<p><strong>Avoid creating multiple PRs for the same work</strong>, update the ones that are still open.</p>
-<ul>
-<li>E.g: You created a Pull Request called "Feature: add button", some modifications will be necessary after the review process, and for that you'll need to update the same branch over creating new ones. That's necessary to help the project maintainers to see previous comments and your development history, avoid repository noise and unnecessary PRs in the project history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.</li>
-</ul>
-</li>
-<li>
-<p><strong>Create atomic and self-contained commits</strong>, avoid doing multiple things in the same commit.</p>
-<ul>
-<li>E.g: You have created a commit to fix the serial communication class, and inside the same commit you are doing 3 different things, removing trailing spaces, fixing a pointer validation check and a typo in the documentation of a totally different class. This can appear to be silly and bureaucratic, but there are good reasons to break this simple commit and at least 3 different commits, one for the pointer check, a second one for the typo and a third one for the trailing space.
-<ul>
-<li>It makes your work more clear when the maintainer does the review per commit</li>
-<li>Makes it easier for developers to cherry-pick your work avoiding conflicts</li>
-<li>Makes it easier to fix conflicts when doing rebases over the master branch</li>
-<li>
-<ul>
-<li>Helps developers to read the project history</li>
-<li>Developers usually track lines history to understand the changes behind a functionality, it's common to search with <code>git grep</code> history from commits or lines changes in specific commits to understand the code, function, class or a small feature.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Create atomic and self-sustained PRs</strong>, avoid doing multiple things in the same PR, like different features. They may appear simple with small pieces of code/functionality but they can escalate quickly after a review process, and if both features are somehow related or dependently, it's recommended to break it in multiple PRs with code to maintain compatibility with current code base. A huge PR can drag developer and maintainer in a rabbit hole, making the PR to be not merged, keeping it simple is the best way to merge it and get the sweet serotonin boost.</p>
-<ul>
-<li>E.g: You have applied a PR for software notifications, and somehow you also added a URL fetch functionality to grab new software versions, etc. After the first review, the maintainer asks to create a more abstracted way to fetch api and to deal with network requirements, this will start to convolute the PR, moving the initial idea of the notification feature to an entire network REST API architecture. With that, it's better to break the PR in two, one that only provides the notification software and interface feature and a second PR that is used for the REST API.</li>
-</ul>
-</li>
-<li>
-<p><strong>Do your own review</strong>, the final and probably most important tip of all. Doing you own review will train your mind and eyes to detect poor code standards or bad practices, it'll also make your PR be merged easily and faster, since you'll be able to catch problems before the reviewer feedback. Some reviewers may think that reviewing your own PR is a must, since we are talking about open source projects and free software, you should understand that the people that are reviewing your code are not obligated to do so, the majority are collaborating and donating their own time to help the development and maintenance of such projects, doing your own review is also sign of empathy about the project and maintainer time.</p>
-</li>
-</ul>
-
-</div>
-
-<footer>
-  <p style="text-align: center;">If it was helpful, consider giving a star ⭐:</p>
-  <!-- Place this tag where you want the button to render. -->
-  <div style="text-align: center;">
-    <a class="github-button" href="https://github.com/patrickelectric/patrickelectric.github.io" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star patrickelectric/patrickelectric.github.io on GitHub">Star</a>
-  </div>
-</footer>
-
-
-  
-  <script
-    src="https://utteranc.es/client.js"
-    repo="patrickelectric&#x2F;patrickelectric.github.io"
-    issue-term="pathname"
-    label="Comments"
-    theme="github-light"
-    crossorigin="anonymous"
-    async
-  ></script>
-  
-
-
+    <div class="taxonomy">
+        
+        <h2>how-to-manage <a href="https://patrickelectric.work/tags/how-to-manage/rss.xml"> RSS </a> </h2>
+        
+            <div class="taxonomy__item">
+                <span class="taxonomy__item__time">2026-05-25</span>
+                <span class="taxonomy__item__title">
+                    <a href="https:&#x2F;&#x2F;patrickelectric.work&#x2F;blog&#x2F;2026&#x2F;how-to-manage-the-problem&#x2F;">How to Manage: Understanding the problem</a>
+                </span>
+            </div>
+        
+    </div>
 
         </div>
 

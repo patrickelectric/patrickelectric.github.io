@@ -75,10 +75,6 @@
         <loc>https://patrickelectric.work/blog/2020/</loc>
     </url>
     <url>
-        <loc>https://patrickelectric.work/blog/2020/how-to-rock-contribution-tips/</loc>
-        <lastmod>2020-08-31T13:55:39Z</lastmod>
-    </url>
-    <url>
         <loc>https://patrickelectric.work/blog/2020/how-to-rock-first-tips/</loc>
         <lastmod>2020-08-08T08:28:00Z</lastmod>
     </url>
@@ -115,6 +111,10 @@
     <url>
         <loc>https://patrickelectric.work/blog/2025/ultimate-guide-to-creating-better-ai-prompts/</loc>
         <lastmod>2025-12-03T12:45:51Z</lastmod>
+    </url>
+    <url>
+        <loc>https://patrickelectric.work/blog/2026/how-to-manage-the-problem/</loc>
+        <lastmod>2026-05-25T10:00:00Z</lastmod>
     </url>
     <url>
         <loc>https://patrickelectric.work/tags/</loc>
@@ -195,6 +195,9 @@
         <loc>https://patrickelectric.work/tags/health/</loc>
     </url>
     <url>
+        <loc>https://patrickelectric.work/tags/how-to-manage/</loc>
+    </url>
+    <url>
         <loc>https://patrickelectric.work/tags/how-to-rock/</loc>
     </url>
     <url>
@@ -229,6 +232,12 @@
     </url>
     <url>
         <loc>https://patrickelectric.work/tags/printer/</loc>
+    </url>
+    <url>
+        <loc>https://patrickelectric.work/tags/problem/</loc>
+    </url>
+    <url>
+        <loc>https://patrickelectric.work/tags/product/</loc>
     </url>
     <url>
         <loc>https://patrickelectric.work/tags/qml/</loc>

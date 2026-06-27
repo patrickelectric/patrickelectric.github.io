@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Patrick José Pereira - how-to-manage</title>
+        <link>https://patrickelectric.work</link>
+        <description>I am an Electronics Engineer that works with robotic systems, OSS and OSH.</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://patrickelectric.work/tags/how-to-manage/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Mon, 25 May 2026 10:00:00 +0000</lastBuildDate>
+        <item>
+            <title>How to Manage: Understanding the problem</title>
+            <pubDate>Mon, 25 May 2026 10:00:00 +0000</pubDate>
+            <link>https://patrickelectric.work/blog/2026/how-to-manage-the-problem/</link>
+            <guid>https://patrickelectric.work/blog/2026/how-to-manage-the-problem/</guid>
+            <description>&lt;p&gt;This is the first post about &lt;a href=&quot;https:&#x2F;&#x2F;patrickelectric.work&#x2F;tags&#x2F;how-to-manage&#x2F;&quot;&gt;how-to-manage series&lt;&#x2F;a&gt;, a future collection that hopefully will help managers in different areas. This one in particular is the base for decision making to truly understand the problem (and the problem of understanding the problem). Highly based on &lt;em&gt;Microfoundations Of Strategic Problem Formulation by Markus Baer, Kurt T. Dirks, and Jackson A. Nickerson&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h1 id=&quot;before-dealing-with-the-problem&quot;&gt;Before dealing with the problem&lt;&#x2F;h1&gt;
+&lt;p&gt;Ok, you have a &lt;em&gt;problem&lt;&#x2F;em&gt;, that can also be an opportunity or a crisis, something that you need to deal with or needs to be solved. The first thing that you need to do is to formulate it (or characterize), put some time and think carefully about it. The important point is: how you approach and solve the problem will be determined by how you formulate it&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#pff&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;figure class=&quot;quote&quot;&gt;
+&lt;blockquote class=&quot;quote-body&quot;&gt;
+&lt;p&gt;A problem well stated is a problem half solved.&lt;&#x2F;p&gt;
+
+&lt;footer class=&quot;quote-attribution&quot;&gt;
+&amp;mdash; Charles Franklin Kettering
+&lt;&#x2F;footer&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;figure&gt;
+&lt;figure class=&quot;quote&quot;&gt;
+&lt;blockquote class=&quot;quote-body&quot;&gt;
+&lt;p&gt;The formulation of a problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill. To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.&lt;&#x2F;p&gt;
+
+&lt;footer class=&quot;quote-attribution&quot;&gt;
+&amp;mdash; The Evolution of Physics - Albert Einstein and Leopold Infeld
+&lt;&#x2F;footer&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Putting ideas together and developing all the details of a particular problem can be nontrivial, and this is also a problem. One that we are going to formulate. Think of it as the problem formulation of the problem formulation.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: We are not going to talk about solution generation! This may be done in a future article.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h1 id=&quot;the-problem-of-problem-formulation&quot;&gt;The problem of problem formulation&lt;&#x2F;h1&gt;
+&lt;p&gt;Before we start, there is something really important that I need to tell you, problem formulation is also a data science problem&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#pff&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; (you collect data, find patterns, and use them to do a good guess, yes that&#x27;s it). Also, there is another important thing, when you have a problem or a goal, you must simplify reality, and as a consequence, you have a distorted vision of the world, and that may be enough. Without this distortion, the problem may be too complex to do something about it. So imperfect models are still useful, they make decisions possible&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#pff&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Back to the problem formulation. This can be done by an individual or team. Each has variations, advantages and disadvantages, it&#x27;s a multivariable higher-order problem by itself. Something important to keep in mind is the variables in play and understanding them. Let&#x27;s go deeper and see some different scenarios where problem formulation can happen:&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;individual&quot;&gt;Individual&lt;&#x2F;h2&gt;
+&lt;figure class=&quot;quote&quot;&gt;
+&lt;blockquote class=&quot;quote-body&quot;&gt;
+&lt;p&gt;At Bell Labs, the mathematician Richard Hamming used to divide his fellow researchers into two groups: those who worked behind closed doors and those whose doors were always open. The closed door people were more focused and worked harder to produce good immediate results, but they failed in the long term.&lt;&#x2F;p&gt;
+
+&lt;footer class=&quot;quote-attribution&quot;&gt;
+&amp;mdash; &lt;a href=&quot;https:&#x2F;&#x2F;ieeexplore.ieee.org&#x2F;stamp&#x2F;stamp.jsp?tp=&amp;amp;arnumber=5910443&quot;&gt;In Research, the Problem Is the Problem - Robert W. Lucky&lt;&#x2F;a&gt;
+&lt;&#x2F;footer&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Individuals have limited time, information, memory and cognitive resources&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#bounded&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#seven&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. Can also have different interpretations of the vision, the mission, or the values&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#roger&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, be driven by self-interest and maybe operate with guile&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s important to know that complex issues reside in many different individuals perspectives&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#complex&quot;&gt;6&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; with different experiences. Also, research suggests that individual problem formulation can be described as inappropriate&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; or as a selection-bias problem&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#bias&quot;&gt;7&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. But, the individual is part of the group, their view is important for independent symptom generation, useful for further integration and validation by others.&lt;&#x2F;p&gt;
+&lt;p&gt;The problems of the individual are also their strength, no need to translate communication across different mental models, no discussions around terminology, assumptions and causality, quite useful for a first quick generation. Ok, with that in mind, it&#x27;s important to know that for complex strategic problems, an individual approach can be limited, since it rarely spans the problem space&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;creating-a-team&quot;&gt;Creating a team&lt;&#x2F;h2&gt;
+&lt;p&gt;When selecting a group of people to do the formulation of the problem, it&#x27;s necessary to select stakeholders and individuals (with different mental models) that are sensitive or aware of the problem and has information that is able to synthesize&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#roger&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. It&#x27;s important that the actor has practical, intellectual, cognitive and emotional aptitudes&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#deseco&quot;&gt;8&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. Since we are talking about different mental models, a broader cognitive divergency may result in translation cost (terms, concepts, and assumptions differ), harder perspective structure (merge different perspectives into better formulations), conscious or unconscious tendencies to avoid or generate conflicts, and, lower comprehension if such gaps are not filled or minimized&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;One other problem to be aware is &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Groupthink&quot;&gt;&lt;em&gt;groupthink&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, where groups can be overly optimistic (taking more risk ideas), create &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mindguard&quot;&gt;mindguard&lt;&#x2F;a&gt;s, develop stereotype views, expresses disregard for arguments considered contrary of loyal members, creating self-censorship (accepting status quo) and illusory unanimity&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#groupthink&quot;&gt;9&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. It&#x27;s also important to note that if the group is over stress and time pressure, &lt;em&gt;groupthink&lt;&#x2F;em&gt; may happen as well&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#groupdecision&quot;&gt;10&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s also important to not include only people that agree (consensus), if the team has a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Devil%27s_advocate&quot;&gt;&lt;em&gt;promotor fidei&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; or create a &lt;a href=&quot;https:&#x2F;&#x2F;www.lucidmeetings.com&#x2F;glossary&#x2F;dialectical-inquiry&quot;&gt;dialectical inquire&lt;&#x2F;a&gt;, it may improve the formulation of the problem with better generation of recommendations and underlying assumptions&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#devil&quot;&gt;11&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#devil2&quot;&gt;12&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: The perception of a psychological safe environment may result in actors to speak up, express themselves, take inter-personal risks, admit failures and openly discuss errors &#x2F; weakness&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#safety&quot;&gt;13&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;In the end, the idea is to purposely compose a team that captures the heterogeneity of ideas while simultaneously attenuating impediments&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;With that said, let&#x27;s explore some types of groups.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;homogenous-motivation-and-heterogenous-cognition&quot;&gt;Homogenous motivation and heterogenous cognition&lt;&#x2F;h2&gt;
+&lt;p&gt;When being part of a team, the problems of a single actor can be mitigated by different individual motivations and heterogenous cognition, however, it may not solve problems related to homogenous motivations and objectives, resulting in &lt;em&gt;groupthink&lt;&#x2F;em&gt; and its problems. This can happen when a group is cohesive and isolated&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#groupthink&quot;&gt;9&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. The problems around this group formation is a subset of heterogenous motivation and cognition, as pointed in &lt;em&gt;Creating a team&lt;&#x2F;em&gt;, a series of problems may&#x2F;will occur, but mostly from communication, integration and cognitive (conflict)&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;heterogenous-motivation-and-cognition&quot;&gt;Heterogenous motivation and cognition&lt;&#x2F;h2&gt;
+&lt;p&gt;This group formation helps to mitigate a couple of problems from &lt;em&gt;Homogenous motivation and heterogenous cognition&lt;&#x2F;em&gt; and also pointed in &lt;em&gt;Creating a team&lt;&#x2F;em&gt;. With the heterogenous motivation, &lt;em&gt;groupthink&lt;&#x2F;em&gt; (single-interest framing) is unlikely to happen, conflict interest will probably be exposed, assumptions justification may increase and, as consequence, representational gap will be reduced. But, the same problems may happen by different reasons. It&#x27;s possible to have a dominant frame by high stakeholders&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#gabe&quot;&gt;14&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. Information may not be shared, distorted or emphasized, in order to manipulate the problem formulation for personal benefit&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. The team may jump to a solution, to reduce time in the problem formulation or to engage in dominant activity, if an actor shares a particular solution prematurely, it may affect the search and formulations of alternatives&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. There is also the possibility of other actors to engage more in dominance and alternative proposals by noticing that someone else is behaving in political interest&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#microformulation&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;homogenous-cognitive-and-homogenous-information&quot;&gt;Homogenous cognitive and homogenous information&lt;&#x2F;h2&gt;
+&lt;p&gt;Teams created by low diversity in cognitive (expertise, assumptions, problem-solving methods) and information, may add little beyond the individual problem formulation and less compared with the heterogenous cognitive and information. The main difference compared with other groups are time spent in translation and integration, without such differences, the group may operate as in an &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Echo_chamber_(media)&quot;&gt;&lt;em&gt;echo chamber&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;, where participants can amplify and reinforce beliefs with the possibility of increase social behaviour.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;how-to-formulate-the-problem&quot;&gt;How to formulate the problem&lt;&#x2F;h1&gt;
+&lt;p&gt;The following is proposed by &lt;em&gt;Microfoundations Of Strategic Problem Formulation by Markus Baer, Kurt T. Dirks, and Jackson A. Nickerson&lt;&#x2F;em&gt; (in my vision at least), the problem formulation should be done in two phases, &lt;em&gt;framing&lt;&#x2F;em&gt; and &lt;em&gt;formulation&lt;&#x2F;em&gt;:&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;framing&quot;&gt;Framing:&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Define an initial symptom to trigger the actors.
+&lt;ul&gt;
+&lt;li&gt;E.g: Users replace Raspberry Pi with other hardware for autonomy, image processing, AI, etc.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Set the rules: Only symptoms and evidences, no causes or solutions.
+&lt;ul&gt;
+&lt;li&gt;Avoid directing points of view or interest by discussing solutions and causes.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Actors write down all symptoms with supported evidence individually.
+&lt;ul&gt;
+&lt;li&gt;Mitigate influence, dominance and early consensus while avoiding opinion or personal bias.&lt;&#x2F;li&gt;
+&lt;li&gt;E.g: Support tickets, forum posts, custom integrators, competitors mentions, etc.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Each actor takes turn to reveal one symptom until all symptoms are revealed.
+&lt;ul&gt;
+&lt;li&gt;Again, mitigate influence, dominance and early consensus.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Each symptom and evidence is then discussed to be excluded or included.
+&lt;ul&gt;
+&lt;li&gt;Improve comprehension and information sharing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;The team compiles a document with all symptoms and evidences (web of symptoms).&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;formulation&quot;&gt;Formulation:&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;For each symptom, the members write down the causes individually (no solutions).
+&lt;ul&gt;
+&lt;li&gt;Create a web of causes avoid prematurely elimination or consensus.&lt;&#x2F;li&gt;
+&lt;li&gt;E.g: The Raspberry Pi does not have enough compute power for intensive tasks.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Each person reveals one cause at a time until all causes are considered.&lt;&#x2F;li&gt;
+&lt;li&gt;Discuss whether each cause plausibly explains the symptom.
+&lt;ul&gt;
+&lt;li&gt;Improve comprehension and information sharing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Compile the accepted causes and supporting reasoning in a document.&lt;&#x2F;li&gt;
+&lt;li&gt;Share the compiled document with the team and external stakeholders to detect missing points and share comprehensiveness.
+&lt;ul&gt;
+&lt;li&gt;Avoid blind spots and improve comprehension and information sharing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;br&#x2F;&gt;
+&lt;p&gt;The important point of this approach is how it mitigates the possible problems described previously related to individuals and groups organization. An important point to take is that is not necessary to use the proposed process, but to understand and be aware of the problems and the idea behind the steps that could help to mitigate and improve problem formulation tasks.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;personal-final-notes&quot;&gt;Personal final notes&lt;&#x2F;h1&gt;
+&lt;p&gt;First, this article was mostly based in my personal search around the matter, many days in a café and a lot of &lt;em&gt;chai latte&lt;&#x2F;em&gt;. As consequence, think of it as the work of an individual, with all the consequences that was previously mentioned here.&lt;&#x2F;p&gt;
+&lt;p&gt;The following notes are just things that will not be further explored here but are important to have in mind:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Conflict&lt;&#x2F;em&gt; is something that I personally believe that&#x27;s necessary, don&#x27;t think of it as people fighting, but as people discussing the problems of the proposal and exploring the span of consequences to finally calculate trade-offs (empirically)&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#devil&quot;&gt;11&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Neurodiversity may play an important role in problem formulation tasks, where such cognitive outliers may provide a broader problem formulation perspective with non-linear thinking and pattern-resistant minds, things that a conventional AI cannot replicate. &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#divergent&quot;&gt;15&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; &lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#divergent2&quot;&gt;16&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h1 id=&quot;references&quot;&gt;References&lt;&#x2F;h1&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;pff&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;1901.02547&quot;&gt;Problem Formulation and Fairness - Samir Passi and Solon Barocas&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;bounded&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Bounded_rationality&quot;&gt;Bounded Rationality&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;seven&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;3&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Magical_Number_Seven,_Plus_or_Minus_Two&quot;&gt;The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Processing Information&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;roger&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;4&lt;&#x2F;sup&gt;
+&lt;p&gt;Managing the problem formulation process: guidelines for team leaders and facilitators - Roger J. Volkema&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;microformulation&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;5&lt;&#x2F;sup&gt;
+&lt;p&gt;Microfoundations Of Strategic Problem Formulation - Markus Baer, Kurt T. Dirks, and Jackson A. Nickerson&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;complex&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;6&lt;&#x2F;sup&gt;
+&lt;p&gt;Challenging Strategic Planning Assumptions - Richard O. Mason and Ian I. Mitroff&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;bias&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;7&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Selection_bias&quot;&gt;Selection bias&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;deseco&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;8&lt;&#x2F;sup&gt;
+&lt;p&gt;Definition and Selection of Competencies: Theoretical and Conceptual Foundations&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;groupthink&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;9&lt;&#x2F;sup&gt;
+&lt;p&gt;Devil’s Advocacy and Dialectical Inquiry: Antidotes to Groupthink - Fred C. Lunenburg&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;groupdecision&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;10&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.referenceforbusiness.com&#x2F;management&#x2F;Gr-Int&#x2F;Group-Decision-Making.html&quot;&gt;Group Decision Making - Tim Barnett&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;devil&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;11&lt;&#x2F;sup&gt;
+&lt;p&gt;Group Approaches for Improving Strategic Decision Making: A Comparative Analysis of Dialectical Inquiry, Devil&#x27;s Advocacy, and Consensus - David M. Schweiger, William R. Sandberg and James W. Ragan&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;devil2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;12&lt;&#x2F;sup&gt;
+&lt;p&gt;The Utilization Of Individual Capabilities In Making Group Approaches To Strategic Decision - David M. Schweiger And William R. Sandberg&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;safety&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;13&lt;&#x2F;sup&gt;
+&lt;p&gt;Transformational Leadership And Creative Problem-Solving: The Mediating Role Of Psychological Safety And Reﬂexivity - Abraham C., Zachary S., Galy B., Roni R. and Tali S.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;gabe&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;14&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.twoaveragegamers.com&#x2F;gabe-newell-stopped-making-games&#x2F;&quot;&gt;Why Gabe Newell Quit Making Games (It’s Weirder Than You Think) - Fred&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;divergent&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;15&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.gartner.com&#x2F;en&#x2F;newsroom&#x2F;press-releases&#x2F;2024-02-29-gartner-predicts-20-percent-of-sales-organizationsi-in-fortune-500-companies-will-actively-recruit-neurodivergent-talent-to-improve-business-performance-by-2027&quot;&gt;Gartner Predicts 20% of Sales Organizations in Fortune 500 Companies Will Actively Recruit Neurodivergent Talent to Improve Business Performance by 2027&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;divergent2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;16&lt;&#x2F;sup&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=V5ouNJMIIcs&quot;&gt;Ai Takes Away Jobs | Which Jobs Are Safe in Ai World? Palantir CEO Alex Karp on Autism, Dyslexia&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;!-- Need to read:
+    DEMOGRAPHY AND DIVERSITY IN ORGANIZATIONS: A REVIEW OF 40 YEARS OF RESEARCH
+    Concept of competence: A conceptual clarification - Franz E. Weinert
+    Cultural Intelligence in Global Teams; A Fusion Model Of Collaboration - Maddy Janssens and Jeanne M. Brett
+    Beyond productivity loss in brainstorming groups
+--&gt;</description>
+        </item>
+    </channel>
+</rss>

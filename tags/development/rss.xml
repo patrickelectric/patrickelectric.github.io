@@ -7,53 +7,7 @@
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://patrickelectric.work/tags/development/rss.xml" rel="self" type="application/rss+xml"/>
-        <lastBuildDate>Mon, 31 Aug 2020 13:55:39 +0000</lastBuildDate>
-        <item>
-            <title>How to rock: Doing the right thing</title>
-            <pubDate>Mon, 31 Aug 2020 13:55:39 +0000</pubDate>
-            <link>https://patrickelectric.work/blog/2020/how-to-rock-contribution-tips/</link>
-            <guid>https://patrickelectric.work/blog/2020/how-to-rock-contribution-tips/</guid>
-            <description>&lt;p&gt;After a couple of years collaborating with open source&#x2F;free software projects, I started to help newcomers to contribute and push the development practices further. This post will try to itemize the most important items that can used for software collaboration.
-Before starting, be sure to follow my &lt;a href=&quot;&#x2F;tags&#x2F;how-to-rock&quot;&gt;previous posts&lt;&#x2F;a&gt;, this post complements what already exists.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
-&lt;p&gt;Now, I&#x27;m going to throw some good practices of code development and contribution, and during this post I&#x27;ll explain why such practices can be archived without much effort:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Avoid creating multiple PRs for the same work&lt;&#x2F;strong&gt;, update the ones that are still open.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;E.g: You created a Pull Request called &quot;Feature: add button&quot;, some modifications will be necessary after the review process, and for that you&#x27;ll need to update the same branch over creating new ones. That&#x27;s necessary to help the project maintainers to see previous comments and your development history, avoid repository noise and unnecessary PRs in the project history. Creating multiple PRs will only make the maintainers confuse and unable to track old comments, suggestions and your code changes between PRs.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Create atomic and self-contained commits&lt;&#x2F;strong&gt;, avoid doing multiple things in the same commit.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;E.g: You have created a commit to fix the serial communication class, and inside the same commit you are doing 3 different things, removing trailing spaces, fixing a pointer validation check and a typo in the documentation of a totally different class. This can appear to be silly and bureaucratic, but there are good reasons to break this simple commit and at least 3 different commits, one for the pointer check, a second one for the typo and a third one for the trailing space.
-&lt;ul&gt;
-&lt;li&gt;It makes your work more clear when the maintainer does the review per commit&lt;&#x2F;li&gt;
-&lt;li&gt;Makes it easier for developers to cherry-pick your work avoiding conflicts&lt;&#x2F;li&gt;
-&lt;li&gt;Makes it easier to fix conflicts when doing rebases over the master branch&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;Helps developers to read the project history&lt;&#x2F;li&gt;
-&lt;li&gt;Developers usually track lines history to understand the changes behind a functionality, it&#x27;s common to search with &lt;code&gt;git grep&lt;&#x2F;code&gt; history from commits or lines changes in specific commits to understand the code, function, class or a small feature.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Create atomic and self-sustained PRs&lt;&#x2F;strong&gt;, avoid doing multiple things in the same PR, like different features. They may appear simple with small pieces of code&#x2F;functionality but they can escalate quickly after a review process, and if both features are somehow related or dependently, it&#x27;s recommended to break it in multiple PRs with code to maintain compatibility with current code base. A huge PR can drag developer and maintainer in a rabbit hole, making the PR to be not merged, keeping it simple is the best way to merge it and get the sweet serotonin boost.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;E.g: You have applied a PR for software notifications, and somehow you also added a URL fetch functionality to grab new software versions, etc. After the first review, the maintainer asks to create a more abstracted way to fetch api and to deal with network requirements, this will start to convolute the PR, moving the initial idea of the notification feature to an entire network REST API architecture. With that, it&#x27;s better to break the PR in two, one that only provides the notification software and interface feature and a second PR that is used for the REST API.&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Do your own review&lt;&#x2F;strong&gt;, the final and probably most important tip of all. Doing you own review will train your mind and eyes to detect poor code standards or bad practices, it&#x27;ll also make your PR be merged easily and faster, since you&#x27;ll be able to catch problems before the reviewer feedback. Some reviewers may think that reviewing your own PR is a must, since we are talking about open source projects and free software, you should understand that the people that are reviewing your code are not obligated to do so, the majority are collaborating and donating their own time to help the development and maintenance of such projects, doing your own review is also sign of empathy about the project and maintainer time.&lt;&#x2F;p&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-</description>
-        </item>
+        <lastBuildDate>Mon, 24 Aug 2020 13:55:39 +0000</lastBuildDate>
         <item>
             <title>How to rock: Flowing with git</title>
             <pubDate>Mon, 24 Aug 2020 13:55:39 +0000</pubDate>
