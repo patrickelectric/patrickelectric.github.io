@@ -205,6 +205,102 @@ a.sidebar-nav-item:focus {
 }
 
 /*
+ * Side note (collapsible)
+ *
+ * Used by the `sidenote` shortcode. A small <details> block to hide
+ * supporting commentary that isn't part of the main thread.
+ */
+
+.sidenote {
+  margin: 0.75rem 0;
+  padding-left: 0.6rem;
+  border-left: 2px solid #ddd;
+  font-size: 0.85rem;
+}
+
+.sidenote > summary {
+  cursor: pointer;
+  color: #888;
+  list-style: none;
+  user-select: none;
+}
+
+.sidenote > summary::-webkit-details-marker {
+  display: none;
+}
+
+.sidenote > summary::before {
+  content: "▸ ";
+  color: #aaa;
+}
+
+.sidenote[open] > summary::before {
+  content: "▾ ";
+}
+
+.sidenote-body {
+  padding: 0.25rem 0;
+  color: #666;
+}
+
+.sidenote-body > :first-child {
+  margin-top: 0;
+}
+
+.sidenote-body > :last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Quote (with attribution)
+ *
+ * Used by the `quote` shortcode. Pull-quote styling with optional
+ * author/source attribution underneath.
+ */
+
+.quote {
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.quote-body {
+  margin: 0;
+  padding: .5rem 1rem;
+  border-left: .25rem solid #d0d0d0;
+  color: #555;
+  font-style: italic;
+}
+
+.quote-body > :first-child {
+  margin-top: 0;
+}
+
+.quote-body > :last-child {
+  margin-bottom: 0;
+}
+
+.quote-body > p {
+  margin-bottom: 0;
+}
+
+.quote-attribution {
+  margin-top: 0;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #888;
+  font-style: normal;
+}
+
+.quote-author {
+  font-weight: 600;
+}
+
+.quote-source {
+  font-style: italic;
+}
+
+/*
  * Themes
  *
  * As of v1.1, Hyde includes optional themes to color the sidebar and links
