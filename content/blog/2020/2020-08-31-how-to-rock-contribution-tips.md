@@ -1,6 +1,7 @@
 +++
 title = 'How to rock: Doing the right thing'
 date = 2020-08-31T13:55:39z
+draft = true
 [taxonomies]
 tags = [ "how-to-rock", "kde", "development", "tutorial" ]
 [extra]
