@@ -1,0 +1,10 @@
+<figure class="quote">
+<blockquote class="quote-body">
+{{ body | markdown(inline=false) | safe }}
+{%- if source %}
+<footer class="quote-attribution">
+&mdash; {{ source | markdown(inline=true) | safe }}
+</footer>
+{%- endif %}
+</blockquote>
+</figure>

@@ -1,0 +1,7 @@
+{%- set label = title | default(value="Side note") -%}
+<details class="sidenote"{% if open %} open{% endif %}>
+<summary>{{ label }}</summary>
+<div class="sidenote-body">
+{{ body | markdown(inline=false) | safe }}
+</div>
+</details>
