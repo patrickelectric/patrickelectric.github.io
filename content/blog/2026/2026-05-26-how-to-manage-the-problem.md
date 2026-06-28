@@ -8,13 +8,13 @@ tags = [ "how-to-manage", "problem", "product" ]
 header = "/assets/how-to-manage-the-problem/area.png"
 +++
 
-This is the first post about [how-to-manage series](https://patrickelectric.work/tags/how-to-manage/), a future collection that hopefully will help managers in different areas. This one in particular is the base for decision making to truly understand the problem (and the problem of understanding the problem). Highly based on _Microfoundations Of Strategic Problem Formulation by Markus Baer, Kurt T. Dirks, and Jackson A. Nickerson_.
+This is the first post about [how-to-manage series](https://patrickelectric.work/tags/how-to-manage/), a future collection that hopefully will help managers in different areas. This one in particular is the base for decision making and to understand the problem (and the problem of understanding the problem). Highly based on _Microfoundations Of Strategic Problem Formulation by Markus Baer, Kurt T. Dirks, and Jackson A. Nickerson_.
 
 <!-- more -->
 
 # Before dealing with the problem
 
-Ok, you have a _problem_, that can also be an opportunity or a crisis, something that you need to deal with or needs to be solved. The first thing that you need to do is to formulate it (or characterize), put some time and think carefully about it. The important point is: how you approach and solve the problem will be determined by how you formulate it[^pff].
+Ok, you have a _problem_, that can also be an opportunity or a crisis, something that you need to deal with or needs to be solved. The first thing that needs to be done is to formulate it, put some time and think carefully about it. The important point is: how you approach and solve the problem will be determined by how you characterize it[^pff].
 
 {% quote(source="Charles Franklin Kettering") %}
 A problem well stated is a problem half solved.
@@ -30,7 +30,7 @@ Putting ideas together and developing all the details of a particular problem ca
 
 # The problem of problem formulation
 
-Before we start, there is something really important that I need to tell you, problem formulation is also a data science problem[^pff] (you collect data, find patterns, and use them to do a good guess, yes that's it). Also, there is another important thing, when you have a problem or a goal, you must simplify reality, and as a consequence, you have a distorted vision of the world, and that may be enough. Without this distortion, the problem may be too complex to do something about it. So imperfect models are still useful, they make decisions possible[^pff].
+Before we start, there is something really important that I need to tell you, problem formulation is also a data science problem[^pff] (you collect data, find patterns, and use them to do a good guess, yes that's it). Also, there is another important thing, when you have a problem or a goal, you must simplify reality, and as a consequence, you have a distorted vision of the world, and that may be enough. Without this distortion, the problem may be too complex to do something about it. So, imperfect models are still useful, they make decisions possible[^pff].
 
 Back to the problem formulation. This can be done by an individual or team. Each has variations, advantages and disadvantages, it's a multivariable higher-order problem by itself. Something important to keep in mind is the variables in play and understanding them. Let's go deeper and see some different scenarios where problem formulation can happen:
 
@@ -44,21 +44,19 @@ Individuals have limited time, information, memory and cognitive resources[^boun
 
 It's important to know that complex issues reside in many different individuals perspectives[^complex] with different experiences. Also, research suggests that individual problem formulation can be described as inappropriate[^microformulation] or as a selection-bias problem[^bias]. But, the individual is part of the group, their view is important for independent symptom generation, useful for further integration and validation by others.
 
-The problems of the individual are also their strength, no need to translate communication across different mental models, no discussions around terminology, assumptions and causality, quite useful for a first quick generation. Ok, with that in mind, it's important to know that for complex strategic problems, an individual approach can be limited, since it rarely spans the problem space[^microformulation].
+The problems of the individual are also their strength, no need to translate communication across different mental models, no discussions around terminology, assumptions and causality. Quite useful for a first quick generation. Ok, with that in mind, it's important to know that for complex strategic problems, an individual approach can be limited, since it rarely spans the problem space[^microformulation].
 
 ## Creating a team
 
 When selecting a group of people to do the formulation of the problem, it's necessary to select stakeholders and individuals (with different mental models) that are sensitive or aware of the problem and has information that is able to synthesize[^roger]. It's important that the actor has practical, intellectual, cognitive and emotional aptitudes[^deseco]. Since we are talking about different mental models, a broader cognitive divergency may result in translation cost (terms, concepts, and assumptions differ), harder perspective structure (merge different perspectives into better formulations), conscious or unconscious tendencies to avoid or generate conflicts, and, lower comprehension if such gaps are not filled or minimized[^microformulation].
 
-One other problem to be aware is [_groupthink_](https://en.wikipedia.org/wiki/Groupthink), where groups can be overly optimistic (taking more risk ideas), create [mindguard](https://en.wikipedia.org/wiki/Mindguard)s, develop stereotype views, expresses disregard for arguments considered contrary of loyal members, creating self-censorship (accepting status quo) and illusory unanimity[^groupthink]. It's also important to note that if the group is over stress and time pressure, _groupthink_ may happen as well[^groupdecision].
+Another problem to be aware is [_groupthink_](https://en.wikipedia.org/wiki/Groupthink), where groups can be overly optimistic (taking more risk ideas), create [mindguard](https://en.wikipedia.org/wiki/Mindguard)s, develop stereotype views, expresses disregard for arguments considered contrary of loyal members, creating self-censorship (accepting status quo) and illusory unanimity[^groupthink]. It's also important to note that if the group is over stress and time pressure, _groupthink_ may happen as well[^groupdecision].
 
-It's also important to not include only people that agree (consensus), if the team has a [_promotor fidei_](https://en.wikipedia.org/wiki/Devil%27s_advocate) or create a [dialectical inquire](https://www.lucidmeetings.com/glossary/dialectical-inquiry), it may improve the formulation of the problem with better generation of recommendations and underlying assumptions[^devil] [^devil2].
+It's important to not include only people that agree (consensus), if the team has a [_promotor fidei_](https://en.wikipedia.org/wiki/Devil%27s_advocate) or create a [dialectical inquire](https://www.lucidmeetings.com/glossary/dialectical-inquiry), it may improve the formulation of the problem with better generation of recommendations and underlying assumptions[^devil] [^devil2].
 
 > Note: The perception of a psychological safe environment may result in actors to speak up, express themselves, take inter-personal risks, admit failures and openly discuss errors / weakness[^safety].
 
 In the end, the idea is to purposely compose a team that captures the heterogeneity of ideas while simultaneously attenuating impediments[^microformulation].
-
-With that said, let's explore some types of groups.
 
 ## Homogenous motivation and heterogenous cognition
 
@@ -70,7 +68,7 @@ This group formation helps to mitigate a couple of problems from _Homogenous mot
 
 ## Homogenous cognitive and homogenous information
 
-Teams created by low diversity in cognitive (expertise, assumptions, problem-solving methods) and information, may add little beyond the individual problem formulation and less compared with the heterogenous cognitive and information. The main difference compared with other groups are time spent in translation and integration, without such differences, the group may operate as in an [_echo chamber_](https://en.wikipedia.org/wiki/Echo_chamber_(media)), where participants can amplify and reinforce beliefs with the possibility of increase social behaviour.
+Teams created by low cognitive diversity (expertise, assumptions, problem-solving methods) and information, may add little beyond the individual problem formulation and less compared with high cognitive diversity and information. The main difference compared with other groups are time spent in translation and integration, without such differences, the group may operate as in an [_echo chamber_](https://en.wikipedia.org/wiki/Echo_chamber_(media)), where participants can amplify and reinforce beliefs with the possibility of increase social behaviour.
 
 # How to formulate the problem
 
@@ -103,13 +101,13 @@ The following is proposed by _Microfoundations Of Strategic Problem Formulation 
 
 <br/>
 
-The important point of this approach is how it mitigates the possible problems described previously related to individuals and groups organization. An important point to take is that is not necessary to use the proposed process, but to understand and be aware of the problems and the idea behind the steps that could help to mitigate and improve problem formulation tasks.
+The important point of this approach is how it mitigates the possible problems described previously, related to individuals and groups organization. An important point to take is that is not necessary to use the proposed process, but to understand and be aware of the problems and the idea behind each step that could mitigate and improve problem formulation.
 
 # Personal final notes
 
 First, this article was mostly based in my personal search around the matter, many days in a café and a lot of _chai latte_. As consequence, think of it as the work of an individual, with all the consequences that was previously mentioned here.
 
-The following notes are just things that will not be further explored here but are important to have in mind:
+The following notes are just things that will not be further explored here, but are important to have in mind:
 - _Conflict_ is something that I personally believe that's necessary, don't think of it as people fighting, but as people discussing the problems of the proposal and exploring the span of consequences to finally calculate trade-offs (empirically)[^devil].
 - Neurodiversity may play an important role in problem formulation tasks, where such cognitive outliers may provide a broader problem formulation perspective with non-linear thinking and pattern-resistant minds, things that a conventional AI cannot replicate. [^divergent] [^divergent2].
 
