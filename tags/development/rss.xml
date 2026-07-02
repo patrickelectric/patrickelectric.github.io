@@ -15,30 +15,30 @@
             <guid>https://patrickelectric.work/blog/2020/how-to-rock-flowing-with-git/</guid>
             <description>&lt;p&gt;Git is awesome, git rocks, git is like a super advanced car, but if you don&#x27;t read the manual, you&#x27;ll never know the features!&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h1 id=&quot;useful-tips&quot;&gt;Useful tips&lt;&#x2F;h1&gt;
-&lt;p&gt;The idea behind this section is to point some important things that I learned in the pass years while reading some great books, such as: &lt;a href=&quot;https:&#x2F;&#x2F;isbnsearch.org&#x2F;isbn&#x2F;9781783553754&quot;&gt;Mastering Git&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;book&#x2F;en&#x2F;v2&quot;&gt;Pro Git(it&#x27;s free!)&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The idea behind this section is to point some important things that I learned in the past years while reading some great books, such as: &lt;a href=&quot;https:&#x2F;&#x2F;isbnsearch.org&#x2F;isbn&#x2F;9781783553754&quot;&gt;Mastering Git&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;book&#x2F;en&#x2F;v2&quot;&gt;Pro Git(it&#x27;s free!)&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;tig&quot;&gt;Tig&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;What&#x27;s the use of having access to everything, if you can&#x27;t visualize it.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;Git is really great, but what matters a great tool if the user interface is not as polished as we desire to be. &lt;strong&gt;&lt;code&gt;Tig&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt; is one of the greatest tools to be used with Git, is the UI that mostly programmers are missing to visualize and understand what is going on in the git repository. If you didn&#x27;t know about it, install and use it now.&lt;&#x2F;p&gt;
+&lt;p&gt;Git is really great, but what good is a great tool if the user interface is not as polished as we desire it to be. &lt;strong&gt;&lt;code&gt;Tig&lt;&#x2F;code&gt;&lt;&#x2F;strong&gt; is one of the greatest tools to be used with Git, it is the UI that most programmers are missing to visualize and understand what is going on in the git repository. If you didn&#x27;t know about it, install and use it now.&lt;&#x2F;p&gt;
 &lt;figure&gt;
   &lt;img src=&quot;&amp;#x2F;assets&amp;#x2F;how_to_rock&amp;#x2F;tig-all.png&quot; class=&quot;center&quot;&gt;
   &lt;figcaption&gt;
     tig --all
   &lt;&#x2F;figcaption&gt;
 &lt;&#x2F;figure&gt;
-&lt;p&gt;&lt;code&gt;Tig&lt;&#x2F;code&gt; also allow a bunch of useful arguments, such as &lt;code&gt;log&lt;&#x2F;code&gt;, &lt;code&gt;show&lt;&#x2F;code&gt;, &lt;code&gt;status&lt;&#x2F;code&gt;, &lt;code&gt;reflog&lt;&#x2F;code&gt;, &lt;code&gt;blame&lt;&#x2F;code&gt;, &lt;code&gt;grep&lt;&#x2F;code&gt;, &lt;code&gt;refs&lt;&#x2F;code&gt;, &lt;code&gt;stash&lt;&#x2F;code&gt; and others, we are going to talk about some of these later.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;Tig&lt;&#x2F;code&gt; also allows a bunch of useful arguments, such as &lt;code&gt;log&lt;&#x2F;code&gt;, &lt;code&gt;show&lt;&#x2F;code&gt;, &lt;code&gt;status&lt;&#x2F;code&gt;, &lt;code&gt;reflog&lt;&#x2F;code&gt;, &lt;code&gt;blame&lt;&#x2F;code&gt;, &lt;code&gt;grep&lt;&#x2F;code&gt;, &lt;code&gt;refs&lt;&#x2F;code&gt;, &lt;code&gt;stash&lt;&#x2F;code&gt; and others, we are going to talk about some of these later.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;git-commit-fixup&quot;&gt;Git commit --fixup&lt;&#x2F;h2&gt;
 &lt;p&gt;Oh my, you need to fix an old commit on your PR ? That&#x27;s a great use of &lt;code&gt;fixup&lt;&#x2F;code&gt;.
-You can create a commit that fixes an old commit with &lt;code&gt;git commit -a --fixup 00112233&lt;&#x2F;code&gt;, but who has time to write hashs or copying&#x2F;pasting it ?&lt;&#x2F;p&gt;
+You can create a commit that fixes an old commit with &lt;code&gt;git commit -a --fixup 00112233&lt;&#x2F;code&gt;, but who has time to write hashes or copy&#x2F;paste them ?&lt;&#x2F;p&gt;
 &lt;p&gt;For that, you can create a helpful git alias such as:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# git fix-old number
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Will apply a fixup in the n-old commit
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;fix-old&lt;&#x2F;span&gt;&lt;span&gt; = &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;!f() { git commit --fixup=&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt; rev-parse HEAD&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;((&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;))); }; f&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;With that, you can use &lt;code&gt;fit fix-old 3&lt;&#x2F;code&gt; to fix the &lt;code&gt;HEAD~3&lt;&#x2F;code&gt; commit.&lt;&#x2F;p&gt;
+&lt;p&gt;With that, you can use &lt;code&gt;git fix-old 3&lt;&#x2F;code&gt; to fix the &lt;code&gt;HEAD~3&lt;&#x2F;code&gt; commit.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;git-rebase-i-interactive-rebase&quot;&gt;Git rebase -i (Interactive rebase)&lt;&#x2F;h2&gt;
-&lt;p&gt;Interactive rebase is a powerful command, and much more powerful and human friend with interactive mode.&lt;&#x2F;p&gt;
+&lt;p&gt;Interactive rebase is a powerful command, and it becomes much more powerful and human friendly with interactive mode.&lt;&#x2F;p&gt;
 &lt;figure&gt;
   &lt;img src=&quot;&amp;#x2F;assets&amp;#x2F;how_to_rock&amp;#x2F;rebase-i.png&quot; class=&quot;center&quot;&gt;
   &lt;figcaption&gt;
@@ -47,7 +47,7 @@ You can create a commit that fixes an old commit with &lt;code&gt;git commit -a 
 &lt;&#x2F;figure&gt;
 &lt;p&gt;Oh well, you can see the &lt;code&gt;autosquash&lt;&#x2F;code&gt; option there, this is something that I do to apply fixups automatically on the correct commits, neat right ?&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;git-reflog&quot;&gt;Git reflog&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;code&gt;git reflog&lt;&#x2F;code&gt; is one of the most important commands, it provides access to everything that is tracked or was tracked by git, all commands and actions that was done in the entire history of the project can be accessed, it&#x27;s possible to checkout and see the history of development tree in any moment, before or during a rebase, the history of a branch before a terrible idea in the code, a point between a merge conflict, everything is possible to recover or to start from a previous point, if you have done any git command with tracked files, you&#x27;ll not loose it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;git reflog&lt;&#x2F;code&gt; is one of the most important commands, it provides access to everything that is tracked or was tracked by git, all commands and actions that were done in the entire history of the project can be accessed, it&#x27;s possible to checkout and see the history of development tree in any moment, before or during a rebase, the history of a branch before a terrible idea in the code, a point between a merge conflict, everything is possible to recover or to start from a previous point, if you have done any git command with tracked files, you&#x27;ll not lose it.&lt;&#x2F;p&gt;
 &lt;p&gt;For an awesome experience, I recommend to use &lt;code&gt;tig&lt;&#x2F;code&gt; with &lt;code&gt;reflog&lt;&#x2F;code&gt; (&lt;code&gt;tig reflog&lt;&#x2F;code&gt;) to see a user-friendly history of &lt;code&gt;reflog&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;figure&gt;
   &lt;img src=&quot;&amp;#x2F;assets&amp;#x2F;how_to_rock&amp;#x2F;tig-reflog.png&quot; class=&quot;center&quot;&gt;
@@ -61,10 +61,10 @@ You can create a commit that fixes an old commit with &lt;code&gt;git commit -a 
     git add -p, add only what you need
   &lt;&#x2F;figcaption&gt;
 &lt;&#x2F;figure&gt;
-&lt;p&gt;The &lt;code&gt;--patch&lt;&#x2F;code&gt; argument is a great feature, you can use it with &lt;code&gt;add&lt;&#x2F;code&gt;, &lt;code&gt;checkout&lt;&#x2F;code&gt;, &lt;code&gt;stash&lt;&#x2F;code&gt; and others, it allows your to select what you need in your commit,
+&lt;p&gt;The &lt;code&gt;--patch&lt;&#x2F;code&gt; argument is a great feature, you can use it with &lt;code&gt;add&lt;&#x2F;code&gt;, &lt;code&gt;checkout&lt;&#x2F;code&gt;, &lt;code&gt;stash&lt;&#x2F;code&gt; and others, it allows you to select what you need in your commit,
 it helps to avoid adding unnecessary stuff in your commit and only adding what is needed for an atomic patch.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;git-stash&quot;&gt;Git stash&lt;&#x2F;h2&gt;
-&lt;p&gt;Sometimes we want to remove everything that we are working on, a bunch of uncommitted or unstaged code around your project, but at the same time, we are a big afraid to remove and loose all this code. The answer for your problems is git stash, git will get everything that is not staged.&lt;&#x2F;p&gt;
+&lt;p&gt;Sometimes we want to remove everything that we are working on, a bunch of uncommitted or unstaged code around your project, but at the same time, we are a bit afraid to remove and lose all this code. The answer for your problems is git stash, git will get everything that is not staged.&lt;&#x2F;p&gt;
 &lt;p&gt;To visualize what was stashed, you can run &lt;code&gt;git stash show stash@{0} --all&lt;&#x2F;code&gt; where &lt;code&gt;0&lt;&#x2F;code&gt; can be the nth stash. You can also visualize it with &lt;code&gt;tig stash&lt;&#x2F;code&gt;;&lt;&#x2F;p&gt;
 &lt;p&gt;If you want to apply any stashed code, you can do it with &lt;code&gt;git stash apply stash@{0}&lt;&#x2F;code&gt;, again, where &lt;code&gt;0&lt;&#x2F;code&gt; can be the nth stash.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;git-cherry-pick&quot;&gt;Git cherry-pick&lt;&#x2F;h2&gt;
@@ -105,7 +105,7 @@ it helps to avoid adding unnecessary stuff in your commit and only adding what i
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├── &lt;&#x2F;span&gt;&lt;span&gt;objects &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# All our references will be here, soon we are going to see how and what
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;│   &lt;&#x2F;span&gt;&lt;span&gt;├── info &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Bunch of internal things that are stored, not going to talk about it
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;│   &lt;&#x2F;span&gt;&lt;span&gt;└── pack &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Store compressed files, not going to talk about it
-&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;└── &lt;&#x2F;span&gt;&lt;span&gt;refs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# All friend references are here, branches, remotes, tags, stags
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;└── &lt;&#x2F;span&gt;&lt;span&gt;refs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# All friend references are here, branches, remotes, tags, stashes
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├── &lt;&#x2F;span&gt;&lt;span&gt;heads &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Local branches
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├── &lt;&#x2F;span&gt;&lt;span&gt;remotes &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remote repositories (it&amp;#39;ll be populated after you add the first remote)
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;│   &lt;&#x2F;span&gt;&lt;span&gt;└── origin &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Remote name
@@ -119,7 +119,7 @@ I believe that may be a weird thing to describe our magical tool with such words
 &lt;p&gt;Let&#x27;s populate our repository and create a simple commit:&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Create a file: &lt;code&gt;touch README.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;Let put something inside to make it more funny.
+&lt;li&gt;Let&#x27;s put something inside to make it funnier.
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;cat README.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -129,7 +129,7 @@ I believe that may be a weird thing to describe our magical tool with such words
 &lt;li&gt;Now our working directory is not empty, we have something there! But sadly, not tracked by git, we can change that.&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
-&lt;li&gt;Add this files to be tracked by git, or indexed: &lt;code&gt;git add README.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Add this file to be tracked by git, or indexed: &lt;code&gt;git add README.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;li&gt;Wait a minute, we did something with git right ? Let&#x27;s see what changed:&lt;pre data-lang=&quot;fish&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-fish &quot;&gt;&lt;code class=&quot;language-fish&quot; data-lang=&quot;fish&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;.git
 &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt;   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;...
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;├── &lt;&#x2F;span&gt;&lt;span&gt;index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# It&amp;#39;s populated now
@@ -184,14 +184,14 @@ and &lt;a href=&quot;https:&#x2F;&#x2F;mincong.io&#x2F;2018&#x2F;04&#x2F;28&#x2F
 &lt;p&gt;Ok, now that we know that &lt;em&gt;index&lt;&#x2F;em&gt; is pointing to this hash, let&#x27;s check the objects folder.
 As I said before, &lt;strong&gt;objects&lt;&#x2F;strong&gt; folder will store all the references that exist, it should be our yellow pages. First, let&#x27;s understand how to read it.
 There is a folder called &lt;strong&gt;10&lt;&#x2F;strong&gt;, and after that a file that has the name of &lt;strong&gt;ddd6d257e01349d514541981aeecea6b2e741d&lt;&#x2F;strong&gt;, if you put both together you are going to end up with our hash that we found in the &lt;em&gt;index&lt;&#x2F;em&gt; file.&lt;&#x2F;p&gt;
-&lt;p&gt;Just for our curiosity, this hash is calculated based in the following format &lt;code&gt;{TYPE} {SIZE}{NULL_CHAR}{CONTENT}&lt;&#x2F;code&gt;, the type will tell git if the hash points to a tree or a blob, the tree can have multiple blobs (like a folder), and a blob is a file. In our case, the string that defines this hash is the following:&lt;&#x2F;p&gt;
+&lt;p&gt;Just for our curiosity, this hash is calculated based on the following format &lt;code&gt;{TYPE} {SIZE}{NULL_CHAR}{CONTENT}&lt;&#x2F;code&gt;, the type will tell git if the hash points to a tree or a blob, the tree can have multiple blobs (like a folder), and a blob is a file. In our case, the string that defines this hash is the following:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;hashlib
 &lt;&#x2F;span&gt;&lt;span&gt;hashlib.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sha1&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blob 7&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Hello!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hexdigest&lt;&#x2F;span&gt;&lt;span&gt;()
 &lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;10ddd6d257e01349d514541981aeecea6b2e741d&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;For more information, &lt;a href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;book&#x2F;en&#x2F;v2&#x2F;Git-Internals-Git-Objects&quot;&gt;check Git Internals Git Objects&lt;&#x2F;a&gt;, it&#x27;s a great friday night reading.&lt;&#x2F;p&gt;
+&lt;p&gt;For more information, &lt;a href=&quot;https:&#x2F;&#x2F;git-scm.com&#x2F;book&#x2F;en&#x2F;v2&#x2F;Git-Internals-Git-Objects&quot;&gt;check Git Internals Git Objects&lt;&#x2F;a&gt;, it&#x27;s a great Friday night reading.&lt;&#x2F;p&gt;
 &lt;p&gt;Ok! Now we are ready to commit!&lt;&#x2F;p&gt;
-&lt;p&gt;Hey, wait, what is inside of this files object files ?
+&lt;p&gt;Hey, wait, what is inside of these object files ?
 Oh my, ok, for now, this is where the git magic happens, it&#x27;s a binary object that contains information about the diff, don&#x27;t bother about it, but if you are really willing to know, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;gitster&#x2F;git&#x2F;blob&#x2F;master&#x2F;Documentation&#x2F;technical&#x2F;pack-format.txt&quot;&gt;check it here&lt;&#x2F;a&gt; (Please open an issue if you know a better and friendly reference).&lt;&#x2F;p&gt;
 &lt;p&gt;Back to the commit!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;commit&quot;&gt;Commit&lt;&#x2F;h2&gt;
@@ -244,15 +244,15 @@ this tree has a single file on it, our old friendly &lt;strong&gt;README.md&lt;&
     &amp;quot;Git Internals Git Objects&amp;quot; from Git SCM is licensed under CC BY 3.0
   &lt;&#x2F;figcaption&gt;
 &lt;&#x2F;figure&gt;&lt;h2 id=&quot;wrap-up-git-commit-logic-and-git-internals&quot;&gt;Wrap up git commit logic and git internals&lt;&#x2F;h2&gt;
-&lt;p&gt;Git, as a &lt;em&gt;simple content tracker&lt;&#x2F;em&gt;, uses a simple logic to manage all the files, as you saw, git works with the filesystem as a dictionary, where the filenames define the key and the content of such files are the content of this dictionary key, you can think about it as a content-addressable filesystem.&lt;&#x2F;p&gt;
-&lt;p&gt;Since we have finished talking about git manages our commits, files and everything else, let us finish this deep introductory part with how the commit and the object creation works.&lt;&#x2F;p&gt;
+&lt;p&gt;Git, as a &lt;em&gt;simple content tracker&lt;&#x2F;em&gt;, uses a simple logic to manage all the files, as you saw, git works with the filesystem as a dictionary, where the filenames define the key and the content of such files is the content of this dictionary key, you can think about it as a content-addressable filesystem.&lt;&#x2F;p&gt;
+&lt;p&gt;Since we have finished talking about how git manages our commits, files and everything else, let us finish this deep introductory part with how the commit and the object creation works.&lt;&#x2F;p&gt;
 &lt;figure&gt;
   &lt;img src=&quot;&amp;#x2F;assets&amp;#x2F;how_to_rock&amp;#x2F;git&amp;#x2F;reset-workflow.png&quot; class=&quot;center&quot;&gt;
   &lt;figcaption&gt;
     &amp;quot;Reset workflow&amp;quot; from Git SCM is licensed under CC BY 3.0
   &lt;&#x2F;figcaption&gt;
 &lt;&#x2F;figure&gt;
-&lt;p&gt;The previous is a good simple example of how a commit works, first we have a untracked file in our working directory, we stage this file (&lt;code&gt;git add&lt;&#x2F;code&gt;) and after that we commit this file (&lt;code&gt;git commit&lt;&#x2F;code&gt;) the commit does update the &lt;em&gt;HEAD&lt;&#x2F;em&gt; (the hash where we are right now). And doing a checkout to a different hash (or &lt;em&gt;HEAD&lt;&#x2F;em&gt;) will result in a change of the working directory to match what was commited.&lt;&#x2F;p&gt;
+&lt;p&gt;The previous is a good simple example of how a commit works, first we have an untracked file in our working directory, we stage this file (&lt;code&gt;git add&lt;&#x2F;code&gt;) and after that we commit this file (&lt;code&gt;git commit&lt;&#x2F;code&gt;), the commit does update the &lt;em&gt;HEAD&lt;&#x2F;em&gt; (the hash where we are right now). And doing a checkout to a different hash (or &lt;em&gt;HEAD&lt;&#x2F;em&gt;) will result in a change of the working directory to match what was committed.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;cool-extensions-to-have&quot;&gt;Cool extensions to have:&lt;&#x2F;h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;dandavison&#x2F;delta&quot;&gt;delta&lt;&#x2F;a&gt;: A syntax-highlighting pager for git, diff, and grep output&lt;&#x2F;li&gt;
