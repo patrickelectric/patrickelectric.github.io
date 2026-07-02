@@ -14,24 +14,24 @@ Git is awesome, git rocks, git is like a super advanced car, but if you don't re
 
 # Useful tips
 
-The idea behind this section is to point some important things that I learned in the pass years while reading some great books, such as: [Mastering Git](https://isbnsearch.org/isbn/9781783553754) and [Pro Git(it's free!)](https://git-scm.com/book/en/v2).
+The idea behind this section is to point some important things that I learned in the past years while reading some great books, such as: [Mastering Git](https://isbnsearch.org/isbn/9781783553754) and [Pro Git(it's free!)](https://git-scm.com/book/en/v2).
 
 ## Tig
 
 > What's the use of having access to everything, if you can't visualize it.
 
-Git is really great, but what matters a great tool if the user interface is not as polished as we desire to be. **`Tig`** is one of the greatest tools to be used with Git, is the UI that mostly programmers are missing to visualize and understand what is going on in the git repository. If you didn't know about it, install and use it now.
+Git is really great, but what good is a great tool if the user interface is not as polished as we desire it to be. **`Tig`** is one of the greatest tools to be used with Git, it is the UI that most programmers are missing to visualize and understand what is going on in the git repository. If you didn't know about it, install and use it now.
 
 {% img(url="/assets/how_to_rock/tig-all.png") %}
  tig --all
 {% end %}
 
-`Tig` also allow a bunch of useful arguments, such as `log`, `show`, `status`, `reflog`, `blame`, `grep`, `refs`, `stash` and others, we are going to talk about some of these later.
+`Tig` also allows a bunch of useful arguments, such as `log`, `show`, `status`, `reflog`, `blame`, `grep`, `refs`, `stash` and others, we are going to talk about some of these later.
 
 ## Git commit --fixup
 
 Oh my, you need to fix an old commit on your PR ? That's a great use of `fixup`.
-You can create a commit that fixes an old commit with `git commit -a --fixup 00112233`, but who has time to write hashs or copying/pasting it ?
+You can create a commit that fixes an old commit with `git commit -a --fixup 00112233`, but who has time to write hashes or copy/paste them ?
 
 For that, you can create a helpful git alias such as:
 ```bash
@@ -40,11 +40,11 @@ For that, you can create a helpful git alias such as:
 fix-old = "!f() { git commit --fixup=$(git rev-parse HEAD~$(($1-1))); }; f"
 ```
 
-With that, you can use `fit fix-old 3` to fix the `HEAD~3` commit.
+With that, you can use `git fix-old 3` to fix the `HEAD~3` commit.
 
 ## Git rebase -i (Interactive rebase)
 
-Interactive rebase is a powerful command, and much more powerful and human friend with interactive mode.
+Interactive rebase is a powerful command, and it becomes much more powerful and human friendly with interactive mode.
 
 {% img(url="/assets/how_to_rock/rebase-i.png") %}
  git rebase -i --autosquash origin/master
@@ -54,7 +54,7 @@ Oh well, you can see the `autosquash` option there, this is something that I do 
 
 ## Git reflog
 
-`git reflog` is one of the most important commands, it provides access to everything that is tracked or was tracked by git, all commands and actions that was done in the entire history of the project can be accessed, it's possible to checkout and see the history of development tree in any moment, before or during a rebase, the history of a branch before a terrible idea in the code, a point between a merge conflict, everything is possible to recover or to start from a previous point, if you have done any git command with tracked files, you'll not loose it.
+`git reflog` is one of the most important commands, it provides access to everything that is tracked or was tracked by git, all commands and actions that were done in the entire history of the project can be accessed, it's possible to checkout and see the history of development tree in any moment, before or during a rebase, the history of a branch before a terrible idea in the code, a point between a merge conflict, everything is possible to recover or to start from a previous point, if you have done any git command with tracked files, you'll not lose it.
 
 For an awesome experience, I recommend to use `tig` with `reflog` (`tig reflog`) to see a user-friendly history of `reflog`.
 
@@ -68,12 +68,12 @@ checkout, rebase, reset, cherry-pick, the history is all there and you can check
 git add -p, add only what you need
 {% end %}
 
-The `--patch` argument is a great feature, you can use it with `add`, `checkout`, `stash` and others, it allows your to select what you need in your commit,
+The `--patch` argument is a great feature, you can use it with `add`, `checkout`, `stash` and others, it allows you to select what you need in your commit,
 it helps to avoid adding unnecessary stuff in your commit and only adding what is needed for an atomic patch.
 
 ## Git stash
 
-Sometimes we want to remove everything that we are working on, a bunch of uncommitted or unstaged code around your project, but at the same time, we are a big afraid to remove and loose all this code. The answer for your problems is git stash, git will get everything that is not staged.
+Sometimes we want to remove everything that we are working on, a bunch of uncommitted or unstaged code around your project, but at the same time, we are a bit afraid to remove and lose all this code. The answer for your problems is git stash, git will get everything that is not staged.
 
 To visualize what was stashed, you can run `git stash show stash@{0} --all` where `0` can be the nth stash. You can also visualize it with `tig stash`;
 
@@ -123,7 +123,7 @@ What init will do ? You may ask, well, it creates a folder with a bunch of cool 
     ├── objects # All our references will be here, soon we are going to see how and what
     │   ├── info # Bunch of internal things that are stored, not going to talk about it
     │   └── pack # Store compressed files, not going to talk about it
-    └── refs # All friend references are here, branches, remotes, tags, stags
+    └── refs # All friend references are here, branches, remotes, tags, stashes
         ├── heads # Local branches
         ├── remotes # Remote repositories (it'll be populated after you add the first remote)
         │   └── origin # Remote name
@@ -141,13 +141,13 @@ I believe that may be a weird thing to describe our magical tool with such words
 Let's populate our repository and create a simple commit:
 
 1. Create a file: `touch README.md`
-2. Let put something inside to make it more funny.
+2. Let's put something inside to make it funnier.
     - `cat README.md`
     ```txt
     Hello!
     ```
     - Now our working directory is not empty, we have something there! But sadly, not tracked by git, we can change that.
-3. Add this files to be tracked by git, or indexed: `git add README.md`
+3. Add this file to be tracked by git, or indexed: `git add README.md`
 4. Wait a minute, we did something with git right ? Let's see what changed:
     ````fish
     .git
@@ -210,7 +210,7 @@ Ok, now that we know that *index* is pointing to this hash, let's check the obje
 As I said before, **objects** folder will store all the references that exist, it should be our yellow pages. First, let's understand how to read it.
 There is a folder called **10**, and after that a file that has the name of **ddd6d257e01349d514541981aeecea6b2e741d**, if you put both together you are going to end up with our hash that we found in the *index* file.
 
-Just for our curiosity, this hash is calculated based in the following format `{TYPE} {SIZE}{NULL_CHAR}{CONTENT}`, the type will tell git if the hash points to a tree or a blob, the tree can have multiple blobs (like a folder), and a blob is a file. In our case, the string that defines this hash is the following:
+Just for our curiosity, this hash is calculated based on the following format `{TYPE} {SIZE}{NULL_CHAR}{CONTENT}`, the type will tell git if the hash points to a tree or a blob, the tree can have multiple blobs (like a folder), and a blob is a file. In our case, the string that defines this hash is the following:
 
 ```python
 import hashlib
@@ -218,12 +218,12 @@ hashlib.sha1(b'blob 7\0Hello!\n').hexdigest()
 '10ddd6d257e01349d514541981aeecea6b2e741d'
 ```
 
-For more information, [check Git Internals Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects), it's a great friday night reading.
+For more information, [check Git Internals Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects), it's a great Friday night reading.
 
 
 Ok! Now we are ready to commit!
 
-Hey, wait, what is inside of this files object files ?
+Hey, wait, what is inside of these object files ?
 Oh my, ok, for now, this is where the git magic happens, it's a binary object that contains information about the diff, don't bother about it, but if you are really willing to know, [check it here](https://github.com/gitster/git/blob/master/Documentation/technical/pack-format.txt) (Please open an issue if you know a better and friendly reference).
 
 Back to the commit!
@@ -285,15 +285,15 @@ And after some more commits, we end up with multiple commits, that each commit h
 
 ## Wrap up git commit logic and git internals
 
-Git, as a *simple content tracker*, uses a simple logic to manage all the files, as you saw, git works with the filesystem as a dictionary, where the filenames define the key and the content of such files are the content of this dictionary key, you can think about it as a content-addressable filesystem.
+Git, as a *simple content tracker*, uses a simple logic to manage all the files, as you saw, git works with the filesystem as a dictionary, where the filenames define the key and the content of such files is the content of this dictionary key, you can think about it as a content-addressable filesystem.
 
-Since we have finished talking about git manages our commits, files and everything else, let us finish this deep introductory part with how the commit and the object creation works.
+Since we have finished talking about how git manages our commits, files and everything else, let us finish this deep introductory part with how the commit and the object creation works.
 
 {% img(url="/assets/how_to_rock/git/reset-workflow.png") %}
 "Reset workflow" from Git SCM is licensed under CC BY 3.0
 {% end %}
 
-The previous is a good simple example of how a commit works, first we have a untracked file in our working directory, we stage this file (`git add`) and after that we commit this file (`git commit`) the commit does update the *HEAD* (the hash where we are right now). And doing a checkout to a different hash (or *HEAD*) will result in a change of the working directory to match what was commited.
+The previous is a good simple example of how a commit works, first we have an untracked file in our working directory, we stage this file (`git add`) and after that we commit this file (`git commit`), the commit does update the *HEAD* (the hash where we are right now). And doing a checkout to a different hash (or *HEAD*) will result in a change of the working directory to match what was committed.
 
 # Cool extensions to have:
 - [delta](https://github.com/dandavison/delta): A syntax-highlighting pager for git, diff, and grep output
