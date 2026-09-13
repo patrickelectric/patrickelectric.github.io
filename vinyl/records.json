@@ -111570,6 +111570,217 @@
       "estimated_weight": 230,
       "blocked_from_sale": false,
       "is_offensive": false
+    },
+    {
+      "id": 34640962,
+      "status": "Accepted",
+      "year": 2025,
+      "resource_url": "https://api.discogs.com/releases/34640962",
+      "uri": "https://www.discogs.com/release/34640962-Ronald-Jenkees-Rhodes-Deep",
+      "artists": [
+        {
+          "name": "Ronald Jenkees",
+          "anv": "",
+          "join": "",
+          "role": "",
+          "tracks": "",
+          "id": 1287768,
+          "resource_url": "https://api.discogs.com/artists/1287768",
+          "thumbnail_url": "https://i.discogs.com/MEKF97cdJ8Fh0Fw8WETH5ZbQmfWYmGry2S83e5r87kw/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODc3/NjgtMTI4MjM4NDMz/NC5qcGVn.jpeg"
+        }
+      ],
+      "artists_sort": "Ronald Jenkees",
+      "labels": [
+        {
+          "name": "Not On Label (Ronald Jenkees Self-Released)",
+          "catno": "02265174",
+          "entity_type": "1",
+          "entity_type_name": "Label",
+          "id": 212556,
+          "resource_url": "https://api.discogs.com/labels/212556"
+        }
+      ],
+      "series": [],
+      "companies": [],
+      "formats": [
+        {
+          "name": "Vinyl",
+          "qty": "1",
+          "descriptions": [
+            "LP",
+            "Album"
+          ],
+          "text": "Neon Violet"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "community": {
+        "have": 37,
+        "want": 8,
+        "rating": {
+          "count": 4,
+          "average": 5.0
+        },
+        "submitter": {
+          "username": "willhelm94",
+          "resource_url": "https://api.discogs.com/users/willhelm94"
+        },
+        "contributors": [
+          {
+            "username": "willhelm94",
+            "resource_url": "https://api.discogs.com/users/willhelm94"
+          },
+          {
+            "username": "jimmymyshocksblues",
+            "resource_url": "https://api.discogs.com/users/jimmymyshocksblues"
+          },
+          {
+            "username": "gaussianbean",
+            "resource_url": "https://api.discogs.com/users/gaussianbean"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "status": "Accepted"
+      },
+      "format_quantity": 1,
+      "date_added": "2025-07-25T12:48:13-07:00",
+      "date_changed": "2026-09-13T11:05:41-07:00",
+      "num_for_sale": 1,
+      "lowest_price": 99.95,
+      "master_id": 1165541,
+      "master_url": "https://api.discogs.com/masters/1165541",
+      "title": "Rhodes Deep",
+      "country": "US",
+      "released": "2025-07-15",
+      "notes": "Comes signed if requested.",
+      "released_formatted": "15 Jul 2025",
+      "identifiers": [
+        {
+          "type": "Matrix / Runout",
+          "value": "301839E1/A"
+        }
+      ],
+      "videos": [
+        {
+          "uri": "https://www.youtube.com/watch?v=ktUCyezuZF0",
+          "title": "New Album: Rhodes Deep (Bandcamp Pre-Order)",
+          "description": "Pre-order the album: https://ronaldjenkees.bandcamp.com/album/rhodes-deep\n\nYou get 3 tracks right now, the rest delivers Friday the 14th (yay 14 not 13!)\n\nAlbum will be delivered to digital stores (Apple Music, etc.) on the release date. \n\nTo those of you",
+          "duration": 241,
+          "embed": true
+        }
+      ],
+      "genres": [
+        "Electronic"
+      ],
+      "styles": [
+        "Synth-pop",
+        "Drum n Bass"
+      ],
+      "tracklist": [
+        {
+          "position": "A-1",
+          "type_": "track",
+          "title": "Rhodes Deep",
+          "duration": "4:06"
+        },
+        {
+          "position": "A-2",
+          "type_": "track",
+          "title": "Dr. Goose Robbins",
+          "duration": "5:14"
+        },
+        {
+          "position": "A-3",
+          "type_": "track",
+          "title": "Expensive Ice Chill Cuts Deluxe",
+          "duration": "4:58"
+        },
+        {
+          "position": "A-4",
+          "type_": "track",
+          "title": "Arp Island",
+          "duration": "4:07"
+        },
+        {
+          "position": "A-5",
+          "type_": "track",
+          "title": "So Alive ",
+          "duration": "2:50"
+        },
+        {
+          "position": "B-1",
+          "type_": "track",
+          "title": "Try The Bass",
+          "duration": "4:59"
+        },
+        {
+          "position": "B-2",
+          "type_": "track",
+          "title": "Aquatic Jambiance",
+          "duration": "5:12"
+        },
+        {
+          "position": "B-3",
+          "type_": "track",
+          "title": "Spearmint",
+          "duration": "4:43"
+        },
+        {
+          "position": "B-4",
+          "type_": "track",
+          "title": "Unusual Weather",
+          "duration": "4:06"
+        }
+      ],
+      "extraartists": [
+        {
+          "name": "Ben Luce",
+          "anv": "",
+          "join": "",
+          "role": "Artwork By",
+          "tracks": "",
+          "id": 0,
+          "resource_url": ""
+        }
+      ],
+      "images": [
+        {
+          "type": "primary",
+          "uri": "https://i.discogs.com/Kx9n5h_nf5grlld--uS6yoZuX8d-7SQXkVDlLJO0c3o/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTY3NTQw/NTEtNTcyMy5qcGVn.jpeg",
+          "resource_url": "https://i.discogs.com/Kx9n5h_nf5grlld--uS6yoZuX8d-7SQXkVDlLJO0c3o/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTY3NTQw/NTEtNTcyMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dPj5OurGp6POQkqWpD0VpnVsf7Z8C7akXop_ym6ttjM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTY3NTQw/NTEtNTcyMy5qcGVn.jpeg",
+          "width": 600,
+          "height": 599
+        },
+        {
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1E4hsz8dz03H6_wrfT9gVB2YQlwwQO_4C_GMw3B-zf8/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTY3NTQw/MzktODkwNy5qcGVn.jpeg",
+          "resource_url": "https://i.discogs.com/1E4hsz8dz03H6_wrfT9gVB2YQlwwQO_4C_GMw3B-zf8/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTY3NTQw/MzktODkwNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/TSb6nCUyyv0w3MaP8Fwt-01GfwgvDugpmiiLst0H-VM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTY3NTQw/MzktODkwNy5qcGVn.jpeg",
+          "width": 600,
+          "height": 594
+        },
+        {
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jEbL0zzVbL91LSDjL6UPLlomU7S9djhUmRRQZ2MOecM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTM0NzI5/MTUtNjYxNS5qcGVn.jpeg",
+          "resource_url": "https://i.discogs.com/jEbL0zzVbL91LSDjL6UPLlomU7S9djhUmRRQZ2MOecM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTM0NzI5/MTUtNjYxNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YfmnPa6MuRqohzWmyIwM_Yjia3la5aeA1ln4kPZqOgc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTM0NzI5/MTUtNjYxNS5qcGVn.jpeg",
+          "width": 600,
+          "height": 450
+        },
+        {
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZBdunp0Bb5sYz_oY2AMScUsSTvpUFMMchHY9EkS-4yE/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTM0NzI5/MjYtMTg2OS5qcGVn.jpeg",
+          "resource_url": "https://i.discogs.com/ZBdunp0Bb5sYz_oY2AMScUsSTvpUFMMchHY9EkS-4yE/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTM0NzI5/MjYtMTg2OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/00gX0k8cmhRXH3S40tArIOWgvvWjdMaiB5axd0cTG1Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTM0NzI5/MjYtMTg2OS5qcGVn.jpeg",
+          "width": 600,
+          "height": 450
+        }
+      ],
+      "thumb": "https://i.discogs.com/dPj5OurGp6POQkqWpD0VpnVsf7Z8C7akXop_ym6ttjM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0NjQw/OTYyLTE3NTY3NTQw/NTEtNTcyMy5qcGVn.jpeg",
+      "estimated_weight": 230,
+      "blocked_from_sale": false,
+      "is_offensive": false
     }
   ],
   "owned": [
