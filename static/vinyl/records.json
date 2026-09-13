@@ -111381,6 +111381,195 @@
       "estimated_weight": 230,
       "blocked_from_sale": false,
       "is_offensive": false
+    },
+    {
+      "id": 31737341,
+      "status": "Accepted",
+      "year": 2024,
+      "resource_url": "https://api.discogs.com/releases/31737341",
+      "uri": "https://www.discogs.com/release/31737341-Ronald-Jenkees-Disorganized-Fun",
+      "artists": [
+        {
+          "name": "Ronald Jenkees",
+          "anv": "",
+          "join": "",
+          "role": "",
+          "tracks": "",
+          "id": 1287768,
+          "resource_url": "https://api.discogs.com/artists/1287768",
+          "thumbnail_url": "https://i.discogs.com/MEKF97cdJ8Fh0Fw8WETH5ZbQmfWYmGry2S83e5r87kw/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODc3/NjgtMTI4MjM4NDMz/NC5qcGVn.jpeg"
+        }
+      ],
+      "artists_sort": "Ronald Jenkees",
+      "labels": [
+        {
+          "name": "Not On Label (Ronald Jenkees Self-Released)",
+          "catno": "none",
+          "entity_type": "1",
+          "entity_type_name": "Label",
+          "id": 212556,
+          "resource_url": "https://api.discogs.com/labels/212556"
+        }
+      ],
+      "series": [],
+      "companies": [
+        {
+          "name": "Welcome To 1979",
+          "catno": "none",
+          "entity_type": "10",
+          "entity_type_name": "Manufactured By",
+          "id": 386129,
+          "resource_url": "https://api.discogs.com/labels/386129",
+          "thumbnail_url": "https://i.discogs.com/kynaQySFaZgmOFlJnSOvPwHMvURbywViojL0syoPzEk/rs:fit/g:sm/q:90/h:393/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTM4NjEy/OS0xNDM1Nzk1MjU0/LTI3MzguanBlZw.jpeg"
+        }
+      ],
+      "formats": [
+        {
+          "name": "Vinyl",
+          "qty": "1",
+          "descriptions": [
+            "LP"
+          ],
+          "text": "Turquoise"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "community": {
+        "have": 84,
+        "want": 38,
+        "rating": {
+          "count": 9,
+          "average": 4.89
+        },
+        "submitter": {
+          "username": "bslavergne",
+          "resource_url": "https://api.discogs.com/users/bslavergne"
+        },
+        "contributors": [
+          {
+            "username": "bslavergne",
+            "resource_url": "https://api.discogs.com/users/bslavergne"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "status": "Accepted"
+      },
+      "format_quantity": 1,
+      "date_added": "2024-09-14T16:21:34-07:00",
+      "date_changed": "2024-09-15T01:45:22-07:00",
+      "num_for_sale": 1,
+      "lowest_price": 190.0,
+      "master_id": 3485668,
+      "master_url": "https://api.discogs.com/masters/3485668",
+      "title": "Disorganized Fun",
+      "country": "US",
+      "released": "2024-09-00",
+      "released_formatted": "Sep 2024",
+      "identifiers": [
+        {
+          "type": "Barcode",
+          "value": "198168929308"
+        }
+      ],
+      "videos": [],
+      "genres": [
+        "Electronic",
+        "Hip Hop"
+      ],
+      "styles": [
+        "Instrumental",
+        "Hip Hop"
+      ],
+      "tracklist": [
+        {
+          "position": "A1",
+          "type_": "track",
+          "title": "Disorganized Fun",
+          "duration": ""
+        },
+        {
+          "position": "A2",
+          "type_": "track",
+          "title": "Fifteen Fifty",
+          "duration": ""
+        },
+        {
+          "position": "A3",
+          "type_": "track",
+          "title": "Guitar Sound",
+          "duration": ""
+        },
+        {
+          "position": "A4",
+          "type_": "track",
+          "title": "Synth One",
+          "duration": ""
+        },
+        {
+          "position": "B1",
+          "type_": "track",
+          "title": "Outer Space",
+          "duration": ""
+        },
+        {
+          "position": "B2",
+          "type_": "track",
+          "title": "Throwing Fire",
+          "duration": ""
+        },
+        {
+          "position": "B3",
+          "type_": "track",
+          "title": "Stay Crunchy",
+          "duration": ""
+        },
+        {
+          "position": "B4",
+          "type_": "track",
+          "title": "Inverted Mean",
+          "duration": ""
+        },
+        {
+          "position": "B5",
+          "type_": "track",
+          "title": "Minimal MC",
+          "duration": ""
+        }
+      ],
+      "extraartists": [
+        {
+          "name": "Kori Michele Handwerker",
+          "anv": "",
+          "join": "",
+          "role": "Artwork By",
+          "tracks": "",
+          "id": 0,
+          "resource_url": ""
+        },
+        {
+          "name": "Ronald Jenkees",
+          "anv": "",
+          "join": "",
+          "role": "Written By, Producer",
+          "tracks": "",
+          "id": 1287768,
+          "resource_url": "https://api.discogs.com/artists/1287768"
+        }
+      ],
+      "images": [
+        {
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TPFW5qBEJTj2xiCiELXwCjTvO_VaGzfeSbmZ3qPwglU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNzM3/MzQxLTE3MjYzNTYx/MzQtNjIyNy5wbmc.jpeg",
+          "resource_url": "https://i.discogs.com/TPFW5qBEJTj2xiCiELXwCjTvO_VaGzfeSbmZ3qPwglU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNzM3/MzQxLTE3MjYzNTYx/MzQtNjIyNy5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/wBVNc9-Nt-CTdGvDx-3wmB5vWjRAG-zdvWaKNNyz2aY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNzM3/MzQxLTE3MjYzNTYx/MzQtNjIyNy5wbmc.jpeg",
+          "width": 600,
+          "height": 600
+        }
+      ],
+      "thumb": "https://i.discogs.com/wBVNc9-Nt-CTdGvDx-3wmB5vWjRAG-zdvWaKNNyz2aY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNzM3/MzQxLTE3MjYzNTYx/MzQtNjIyNy5wbmc.jpeg",
+      "estimated_weight": 230,
+      "blocked_from_sale": false,
+      "is_offensive": false
     }
   ],
   "owned": [
