@@ -110693,6 +110693,694 @@
       "estimated_weight": 460,
       "blocked_from_sale": false,
       "is_offensive": false
+    },
+    {
+      "id": 8187625,
+      "status": "Accepted",
+      "year": 1968,
+      "resource_url": "https://api.discogs.com/releases/8187625",
+      "uri": "https://www.discogs.com/release/8187625-Carmen-McRae-The-Sound-Of-Silence",
+      "artists": [
+        {
+          "name": "Carmen McRae",
+          "anv": "",
+          "join": "",
+          "role": "",
+          "tracks": "",
+          "id": 34183,
+          "resource_url": "https://api.discogs.com/artists/34183",
+          "thumbnail_url": "https://i.discogs.com/sw7x2c-CAs9jYwmlxc8f6eU_6k1sf0X7Q7KrXIl8G58/rs:fit/g:sm/q:90/h:214/w:140/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0MTgz/LTAwMS5qcGc.jpeg"
+        }
+      ],
+      "artists_sort": "Carmen McRae",
+      "labels": [
+        {
+          "name": "Atlantic",
+          "catno": "SD 8200",
+          "entity_type": "1",
+          "entity_type_name": "Label",
+          "id": 681,
+          "resource_url": "https://api.discogs.com/labels/681",
+          "thumbnail_url": "https://i.discogs.com/PvGehzQPvOW9qMVS-EDAeOmU6qODkqTEQ5bW03gpVyo/rs:fit/g:sm/q:90/h:426/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTY4MS0x/NTEwNjgyMTM0LTgz/NTAucG5n.jpeg"
+        }
+      ],
+      "series": [],
+      "companies": [
+        {
+          "name": "Atlantic Recording Corporation",
+          "catno": "",
+          "entity_type": "14",
+          "entity_type_name": "Copyright (c)",
+          "id": 23937,
+          "resource_url": "https://api.discogs.com/labels/23937",
+          "thumbnail_url": "https://i.discogs.com/jZjSYAVRpExbW53RcsYGsNM2qn9G7zXCv1S5e7iLyzQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTIzOTM3/LTE3ODE1MDQxMDAt/ODMxNC5qcGVn.jpeg"
+        },
+        {
+          "name": "Atlantic Recording Corporation",
+          "catno": "",
+          "entity_type": "10",
+          "entity_type_name": "Manufactured By",
+          "id": 23937,
+          "resource_url": "https://api.discogs.com/labels/23937",
+          "thumbnail_url": "https://i.discogs.com/jZjSYAVRpExbW53RcsYGsNM2qn9G7zXCv1S5e7iLyzQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTIzOTM3/LTE3ODE1MDQxMDAt/ODMxNC5qcGVn.jpeg"
+        },
+        {
+          "name": "Presswell",
+          "catno": "",
+          "entity_type": "17",
+          "entity_type_name": "Pressed By",
+          "id": 130920,
+          "resource_url": "https://api.discogs.com/labels/130920",
+          "thumbnail_url": "https://i.discogs.com/ysV-e6sWbExpfZeN9fnDYcNiNvIjmBIqrwjhLWvN2j4/rs:fit/g:sm/q:90/h:135/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTEzMDky/MC0xMzQwNDE4NTUw/LTI4NDUuanBlZw.jpeg"
+        },
+        {
+          "name": "Longwear Plating",
+          "catno": "",
+          "entity_type": "29",
+          "entity_type_name": "Mastered At",
+          "id": 438055,
+          "resource_url": "https://api.discogs.com/labels/438055",
+          "thumbnail_url": "https://i.discogs.com/T8FFHK4EXRdRZajSHLw6icAzKU4AJp_XKdz3uOaSz0I/rs:fit/g:sm/q:90/h:490/w:445/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9MLTQzODA1/NS0xNTk2OTk0NTMy/LTI1NzkuanBlZw.jpeg"
+        }
+      ],
+      "formats": [
+        {
+          "name": "Vinyl",
+          "qty": "1",
+          "descriptions": [
+            "LP",
+            "Album",
+            "Stereo"
+          ],
+          "text": "PR"
+        }
+      ],
+      "data_quality": "Needs Vote",
+      "community": {
+        "have": 341,
+        "want": 84,
+        "rating": {
+          "count": 22,
+          "average": 3.73
+        },
+        "submitter": {
+          "username": "jazzcornerneuwied",
+          "resource_url": "https://api.discogs.com/users/jazzcornerneuwied"
+        },
+        "contributors": [
+          {
+            "username": "jazzcornerneuwied",
+            "resource_url": "https://api.discogs.com/users/jazzcornerneuwied"
+          },
+          {
+            "username": "SkivhallenMajorna",
+            "resource_url": "https://api.discogs.com/users/SkivhallenMajorna"
+          },
+          {
+            "username": "JazzcornerND",
+            "resource_url": "https://api.discogs.com/users/JazzcornerND"
+          },
+          {
+            "username": "jeckman",
+            "resource_url": "https://api.discogs.com/users/jeckman"
+          },
+          {
+            "username": "les-plaisirs-demodes",
+            "resource_url": "https://api.discogs.com/users/les-plaisirs-demodes"
+          },
+          {
+            "username": "perryoakridge",
+            "resource_url": "https://api.discogs.com/users/perryoakridge"
+          },
+          {
+            "username": "jazzro-till",
+            "resource_url": "https://api.discogs.com/users/jazzro-till"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "status": "Accepted"
+      },
+      "format_quantity": 1,
+      "date_added": "2016-02-29T11:03:02-08:00",
+      "date_changed": "2020-10-13T02:49:01-07:00",
+      "num_for_sale": 46,
+      "lowest_price": 0.5,
+      "master_id": 596774,
+      "master_url": "https://api.discogs.com/masters/596774",
+      "title": "The Sound Of Silence",
+      "country": "US",
+      "released": "1968",
+      "notes": "Ⓒ 1968 Atlantic Recording Corporation \n1841 Broadway, New York, N.Y.\nPrinted in U.S.A.",
+      "released_formatted": "1968",
+      "identifiers": [
+        {
+          "type": "Matrix / Runout",
+          "value": "STA-681385 PR",
+          "description": "Side A label"
+        },
+        {
+          "type": "Matrix / Runout",
+          "value": "STA-681386 PR",
+          "description": "Side B label"
+        },
+        {
+          "type": "Matrix / Runout",
+          "value": "ST - A - 681385 - B LW AT",
+          "description": "Side A runout, etched"
+        },
+        {
+          "type": "Matrix / Runout",
+          "value": "ST - A - 681386 - A LWP AT",
+          "description": "Side B runout, etched"
+        }
+      ],
+      "videos": [
+        {
+          "uri": "https://www.youtube.com/watch?v=F2agdTMKC3M",
+          "title": "Carmen McRae / Sound of Silence",
+          "description": "",
+          "duration": 180,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=3FEG_1lsmgg",
+          "title": "Gloomy Sunday",
+          "description": "Provided to YouTube by Rhino Atlantic\n\nGloomy Sunday · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1968 Atlantic Records\n\nVocals: Carmen Mcrae\nWriter: Javor\nWriter: L. Javor\nWriter: Lewis\nWriter: R. Seress\nWriter: S. Lewis\nWriter: Seress\n\nAuto-generated by Y",
+          "duration": 246,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=9pYn74wCfhk",
+          "title": "Carmen McRae / I Sold My Heart To The Junkman",
+          "description": "LYRICS\n\nI gave my heart to you, the one that I trusted\nYou brought it back to me all broken and busted\nSo I sold my heart to the junkman\nAnd I'll never fall in love again\n\nYou took my heart because you thought you could use it\nJust like a little toy you b",
+          "duration": 219,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=F2agdTMKC3M",
+          "title": "Carmen McRae / Sound of Silence",
+          "description": "",
+          "duration": 180,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=NQkxbtGd5gk",
+          "title": "Watch What Happens",
+          "description": "Provided to YouTube by Warner Music Group\n\nWatch What Happens · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1967 Atlantic Recording Corporation\n\nVocals: Carmen Mcrae\nWriter: Gimbel\nWriter: LEGRAND\n\nAuto-generated by YouTube.",
+          "duration": 156,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=Nkys2lmSBTg",
+          "title": "My Heart Reminds Me",
+          "description": "Provided to YouTube by Warner Music Group\n\nMy Heart Reminds Me · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1967 Atlantic Recording Corporation\n\nVocals: Carmen Mcrae\nWriter: Bargoni\nWriter: Danpa\nWriter: Stillman\n\nAuto-generated by YouTube.",
+          "duration": 151,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=3FEG_1lsmgg",
+          "title": "Gloomy Sunday",
+          "description": "Provided to YouTube by Warner Music Group\n\nGloomy Sunday · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1968 Atlantic Records\n\nVocals: Carmen Mcrae\nWriter: Javor\nWriter: L. Javor\nWriter: Lewis\nWriter: R. Seress\nWriter: S. Lewis\nWriter: Seress\n\nAuto-generated ",
+          "duration": 246,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=FP9TAvFSnOU",
+          "title": "Don't Go Away",
+          "description": "Provided to YouTube by Warner Music Group\n\nDon't Go Away · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1968 Atlantic Records\n\nVocals: Carmen Mcrae\nWriter: M. Guryan\n\nAuto-generated by YouTube.",
+          "duration": 137,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=sPjIxxLiXp4",
+          "title": "The Folks Who Live On The Hill",
+          "description": "Provided to YouTube by Warner Music Group\n\nThe Folks Who Live On The Hill · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1968 Atlantic Records\n\nWriter: J. Kern\nWriter: O. Hammerstein\n\nAuto-generated by YouTube.",
+          "duration": 269,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=DAH0SlidQp8",
+          "title": "MacArthur Park",
+          "description": "Provided to YouTube by Warner Music Group\n\nMacArthur Park · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1968 Atlantic Records\n\nComposer: J. Webb\n\nAuto-generated by YouTube.",
+          "duration": 242,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=24ZovC9dDMY",
+          "title": "Can You Tell",
+          "description": "Provided to YouTube by Warner Music Group\n\nCan You Tell · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1968 Atlantic Records\n\nVocals: Carmen Mcrae\nWriter: M. Guryan\n\nAuto-generated by YouTube.",
+          "duration": 135,
+          "embed": true
+        },
+        {
+          "uri": "https://www.youtube.com/watch?v=9MYn8HdAhBU",
+          "title": "I Sold My Heart To The Junkman",
+          "description": "Provided to YouTube by Warner Music Group\n\nI Sold My Heart To The Junkman · Carmen McRae\n\nThe Sound Of Silence\n\n℗ 1968 Atlantic Records\n\nWriter: L. Rene\nWriter: O. Rene\n\nAuto-generated by YouTube.",
+          "duration": 224,
+          "embed": true
+        }
+      ],
+      "genres": [
+        "Jazz"
+      ],
+      "styles": [
+        "Vocal"
+      ],
+      "tracklist": [
+        {
+          "position": "A1",
+          "type_": "track",
+          "title": "The Sound Of Silence",
+          "extraartists": [
+            {
+              "name": "Paul Simon",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 106474,
+              "resource_url": "https://api.discogs.com/artists/106474"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "A2",
+          "type_": "track",
+          "title": "I Got It Bad And That Ain't Good",
+          "extraartists": [
+            {
+              "name": "Duke Ellington",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 145257,
+              "resource_url": "https://api.discogs.com/artists/145257"
+            },
+            {
+              "name": "Paul Francis Webster",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 290092,
+              "resource_url": "https://api.discogs.com/artists/290092"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "A3",
+          "type_": "track",
+          "title": "MacArthur Park",
+          "extraartists": [
+            {
+              "name": "Jimmy Webb",
+              "anv": "Jim Webb",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 266406,
+              "resource_url": "https://api.discogs.com/artists/266406"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "A4",
+          "type_": "track",
+          "title": "Watch What Happens",
+          "extraartists": [
+            {
+              "name": "Michel Legrand",
+              "anv": "Michel Le Grand",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 84236,
+              "resource_url": "https://api.discogs.com/artists/84236"
+            },
+            {
+              "name": "Norman Gimbel",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 566915,
+              "resource_url": "https://api.discogs.com/artists/566915"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "A5",
+          "type_": "track",
+          "title": "Stardust",
+          "extraartists": [
+            {
+              "name": "Hoagy Carmichael",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 301368,
+              "resource_url": "https://api.discogs.com/artists/301368"
+            },
+            {
+              "name": "Mitchell Parish",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 521962,
+              "resource_url": "https://api.discogs.com/artists/521962"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "A6",
+          "type_": "track",
+          "title": "Don't Go Away",
+          "extraartists": [
+            {
+              "name": "Margo Guryan",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 461538,
+              "resource_url": "https://api.discogs.com/artists/461538"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "B1",
+          "type_": "track",
+          "title": "Gloomy Sunday",
+          "extraartists": [
+            {
+              "name": "Laszlo Javor",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 695642,
+              "resource_url": "https://api.discogs.com/artists/695642"
+            },
+            {
+              "name": "Rezső Seress",
+              "anv": "Rezso Seress",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 1052707,
+              "resource_url": "https://api.discogs.com/artists/1052707"
+            },
+            {
+              "name": "Sam Lewis",
+              "anv": "Sam M. Lewis",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 593439,
+              "resource_url": "https://api.discogs.com/artists/593439"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "B2",
+          "type_": "track",
+          "title": "I Sold My Heart To The Junkman",
+          "extraartists": [
+            {
+              "name": "Leon Rene",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 675267,
+              "resource_url": "https://api.discogs.com/artists/675267"
+            },
+            {
+              "name": "Otis Rene",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 675264,
+              "resource_url": "https://api.discogs.com/artists/675264"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "B3",
+          "type_": "track",
+          "title": "Poor Butterfly",
+          "extraartists": [
+            {
+              "name": "John L. Golden",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 1041592,
+              "resource_url": "https://api.discogs.com/artists/1041592"
+            },
+            {
+              "name": "Raymond Hubbell",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 1041594,
+              "resource_url": "https://api.discogs.com/artists/1041594"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "B4",
+          "type_": "track",
+          "title": "My Heart Reminds Me",
+          "extraartists": [
+            {
+              "name": "Al Stillman",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 539034,
+              "resource_url": "https://api.discogs.com/artists/539034"
+            },
+            {
+              "name": "Camillo Bargoni",
+              "anv": "C. Bargoni",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 679016,
+              "resource_url": "https://api.discogs.com/artists/679016"
+            },
+            {
+              "name": "Danpa",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 1488016,
+              "resource_url": "https://api.discogs.com/artists/1488016"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "B5",
+          "type_": "track",
+          "title": "The Folks Who Live On The Hill",
+          "extraartists": [
+            {
+              "name": "Jerome Kern",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 166685,
+              "resource_url": "https://api.discogs.com/artists/166685"
+            },
+            {
+              "name": "Oscar Hammerstein II",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 253375,
+              "resource_url": "https://api.discogs.com/artists/253375"
+            }
+          ],
+          "duration": ""
+        },
+        {
+          "position": "B6",
+          "type_": "track",
+          "title": "Can You Tell",
+          "extraartists": [
+            {
+              "name": "Margo Guryan",
+              "anv": "",
+              "join": "",
+              "role": "Written-By",
+              "tracks": "",
+              "id": 461538,
+              "resource_url": "https://api.discogs.com/artists/461538"
+            }
+          ],
+          "duration": ""
+        }
+      ],
+      "extraartists": [
+        {
+          "name": "Jimmy Jones (3)",
+          "anv": "",
+          "join": "",
+          "role": "Arranged By",
+          "tracks": "A2, A4, A5, B5",
+          "id": 307373,
+          "resource_url": "https://api.discogs.com/artists/307373"
+        },
+        {
+          "name": "Shorty Rogers",
+          "anv": "",
+          "join": "",
+          "role": "Arranged By",
+          "tracks": "A1, A3, A6, B1 to B4, B6",
+          "id": 312417,
+          "resource_url": "https://api.discogs.com/artists/312417"
+        },
+        {
+          "name": "Stanislaw Zagorski",
+          "anv": "",
+          "join": "",
+          "role": "Design [Cover]",
+          "tracks": "",
+          "id": 1846418,
+          "resource_url": "https://api.discogs.com/artists/1846418"
+        },
+        {
+          "name": "Burt Korall",
+          "anv": "",
+          "join": "",
+          "role": "Liner Notes",
+          "tracks": "",
+          "id": 1317142,
+          "resource_url": "https://api.discogs.com/artists/1317142"
+        },
+        {
+          "name": "Jack O'Brian",
+          "anv": "",
+          "join": "",
+          "role": "Liner Notes",
+          "tracks": "",
+          "id": 2178056,
+          "resource_url": "https://api.discogs.com/artists/2178056"
+        },
+        {
+          "name": "Leonard Feather",
+          "anv": "",
+          "join": "",
+          "role": "Liner Notes",
+          "tracks": "",
+          "id": 342667,
+          "resource_url": "https://api.discogs.com/artists/342667"
+        },
+        {
+          "name": "Sid Mark",
+          "anv": "",
+          "join": "",
+          "role": "Liner Notes",
+          "tracks": "",
+          "id": 1852887,
+          "resource_url": "https://api.discogs.com/artists/1852887"
+        },
+        {
+          "name": "Carmen McRae",
+          "anv": "",
+          "join": "",
+          "role": "Performer, Vocals",
+          "tracks": "",
+          "id": 34183,
+          "resource_url": "https://api.discogs.com/artists/34183"
+        },
+        {
+          "name": "Jerry Schatzberg",
+          "anv": "",
+          "join": "",
+          "role": "Photography By [Cover Photo]",
+          "tracks": "",
+          "id": 515432,
+          "resource_url": "https://api.discogs.com/artists/515432"
+        },
+        {
+          "name": "Nesuhi Ertegun",
+          "anv": "",
+          "join": "",
+          "role": "Producer",
+          "tracks": "",
+          "id": 251691,
+          "resource_url": "https://api.discogs.com/artists/251691"
+        },
+        {
+          "name": "Andy Richardson",
+          "anv": "",
+          "join": "",
+          "role": "Recorded By, Engineer",
+          "tracks": "",
+          "id": 706438,
+          "resource_url": "https://api.discogs.com/artists/706438"
+        }
+      ],
+      "images": [
+        {
+          "type": "primary",
+          "uri": "https://i.discogs.com/SuODHS2gU5T7yL26BPpww4p5zKx90lkQ1ISr5v12K9M/rs:fit/g:sm/q:90/h:600/w:577/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDUw/Mi01NjY1LmpwZWc.jpeg",
+          "resource_url": "https://i.discogs.com/SuODHS2gU5T7yL26BPpww4p5zKx90lkQ1ISr5v12K9M/rs:fit/g:sm/q:90/h:600/w:577/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDUw/Mi01NjY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/IwPu4677BuH2pWOglNKPf_OrI3vW3a16tCwRLSasl1s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDUw/Mi01NjY1LmpwZWc.jpeg",
+          "width": 577,
+          "height": 600
+        },
+        {
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ssEQ_wJQvwPAN0nPbpAYN-HQexr2T8qjre1N9gzf7oU/rs:fit/g:sm/q:90/h:600/w:586/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTUyMDAxOTky/Mi0zMDg5LmpwZWc.jpeg",
+          "resource_url": "https://i.discogs.com/ssEQ_wJQvwPAN0nPbpAYN-HQexr2T8qjre1N9gzf7oU/rs:fit/g:sm/q:90/h:600/w:586/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTUyMDAxOTky/Mi0zMDg5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/inLDGLtQbrFdhDYLvcJASWLwejxYP_FqSFVlvWmHlEo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTUyMDAxOTky/Mi0zMDg5LmpwZWc.jpeg",
+          "width": 586,
+          "height": 600
+        },
+        {
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_04DxsT4WlPRn1agouVHeYEXu4nX3ZKjXTPnKP784U8/rs:fit/g:sm/q:90/h:534/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDQ5/NC0yMDM3LmpwZWc.jpeg",
+          "resource_url": "https://i.discogs.com/_04DxsT4WlPRn1agouVHeYEXu4nX3ZKjXTPnKP784U8/rs:fit/g:sm/q:90/h:534/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDQ5/NC0yMDM3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Lk-JnehHvGbG9K4NgBQWjDNrY7w337w8K7Sw-TNBis4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDQ5/NC0yMDM3LmpwZWc.jpeg",
+          "width": 600,
+          "height": 534
+        },
+        {
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HoIsfQi-asjNqNJIBFXCsFSNXH2fDoq5F-qPVI8yFEg/rs:fit/g:sm/q:90/h:548/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDQ5/NC00MTQwLmpwZWc.jpeg",
+          "resource_url": "https://i.discogs.com/HoIsfQi-asjNqNJIBFXCsFSNXH2fDoq5F-qPVI8yFEg/rs:fit/g:sm/q:90/h:548/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDQ5/NC00MTQwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/riT2pijXjdm-khRtfG6nDpFA55HbUODD4xXm7KEEqW4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDQ5/NC00MTQwLmpwZWc.jpeg",
+          "width": 600,
+          "height": 548
+        }
+      ],
+      "thumb": "https://i.discogs.com/IwPu4677BuH2pWOglNKPf_OrI3vW3a16tCwRLSasl1s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgxODc2/MjUtMTQ1Njc3NDUw/Mi01NjY1LmpwZWc.jpeg",
+      "estimated_weight": 230,
+      "blocked_from_sale": false,
+      "is_offensive": false
     }
   ],
   "owned": [
